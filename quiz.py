@@ -9,7 +9,7 @@ except ModuleNotFoundError:
   import tomli as tomllib
 
 NUM_QUESTIONS_PER_QUIZ = 5
-QUESTIONS_PATH = pathlib.Path(__file__).parent / "questions.toml"
+QUESTIONS_PATH = pathlib.Path(__file__).parent #/ "questions.toml"
 
 def run_quiz():
   questions = prepare_questions(
@@ -23,7 +23,11 @@ def run_quiz():
   print(f"\nYou got {num_correct} correct out of {num} questions")
 
 def prepare_questions(path, num_questions):
-  topic_info = tomllib.loads(path.read_text())
+  topic_info = {}
+  for subpath in path.glob("*.toml"):
+    topic_info.update(tomllib.loads(subpath.read_text()))
+
+  #topic_info = tomllib.loads(path.read_text())
   topics = {
     topic["label"]: topic["questions"] for topic in topic_info.values()
   }
