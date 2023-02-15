@@ -1,0 +1,4154 @@
+# questions.toml
+
+[imp]
+label = "Implementation"
+
+[[imp.questions]]
+question = "Adam is setting up a public key infrastructure (PKI) and knows that keeping the passphrases and encryption keys used to generate new keys is a critical part of how to ensure that the root certificate authority remains secure. Which of the following techniques is not a common solution to help prevent insider threats"
+answers = ["Require a new passphrase every time the certificate is used."]
+alternatives = [
+    "Use a split knowledge process for the password or key.",
+    "Require dual control.",
+    "Implement separation of duties."
+]
+explanation = """
+Dual control, which requires two individuals to perform a
+function; split knowledge, which splits the passphrase or key
+between two or more people; and separation of duties, which
+ensures that a single individual does not control or oversee the
+entire process all help prevent insider threats when managing a
+PKI. Requiring a new passphrase when a certificate is used is
+not a reasonable solution and would require reissuing the
+certificate.
+"""
+
+[[imp.questions]]
+question = "Naomi is designing her organization's wireless network and wants to ensure that the design places access points in areas where they will provide optimum coverage. She also wants to plan for any sources of RF interference as part of her design. What should Naomi do first?"
+answers = ["Conduct a site survey."]
+alternatives = [
+    "Contact the FCC for a wireless map.",
+    "Disable all existing access points.",
+    "Conduct a port scan to find all existing access points."
+]
+explanation = """
+A site survey is the process of identifying where access points
+should be located for best coverage and identifying existing
+sources of RF interference, including preexisting wireless
+networks and other devices that may use the same radio
+frequency spectrum. By conducting a site survey, Naomi can
+guide the placement of her access points as well as create a
+channel design that will work best for her organization.
+"""
+
+[[imp.questions]]
+question = "Chris is preparing to implement an 802.1X-enabled wireless infrastructure. He knows that he wants to use an Extensible Authentication Protocol; (EAP)-based protocol that does not require client-side certificates. Which of the following options should he choose?"
+answers = ["PEAP"]
+alternatives = [
+    "EAP-MD5",
+    "LEAP",
+    "EAP-TLS"
+]
+explanation = """
+The option that best meets the needs described above is
+PEAP, the Protected Extensible Authentication Protocol. PEAP
+relies on server-side certificates and relies on tunneling to
+ensure communications security. EAP-MD5 is not
+recommended for wireless networks and does not support
+mutual authentication of the wireless client and network. LEAP,
+the Lightweight Extensible Authentication Protocol, uses WEP
+keys for its encryption and is not recommended due to security
+issues. Finally, EAP-TLS, or EAP Transport Layer Security,
+requires certificates on both the client and server, consuming
+more management overhead.
+"""
+
+[[imp.questions]]
+question = "What term is commonly used to describe lateral traffic movement within a network"
+answers = ["East-west traffic"]
+alternatives = [
+    "Side-stepping",
+    "Slider traffic",
+    "Peer interconnect"
+]
+explanation = """
+East-west traffic is traffic sent laterally inside a network.
+Some networks focus security tools at the edges or places where
+networks interconnect, leaving internal, or east-west, traffic
+open. In zero-trust environments, internal traffic is not
+presumed to be trustworthy, reducing the risks of this type of
+lateral communication. Side-stepping, slider traffic, and peer
+interconnect were all made up for this question, although peer
+interconnect may sound similar to peer-to-peer traffic, which
+may be lateral in many networks.
+"""
+
+[[imp.questions]]
+question = "Charlene wants to use the security features built into HTTP headers. Which of the following is not an HTTP header security option?"
+answers = ["Disabling SQL injection"]
+alternatives = [
+    "Requiring transport security",
+    "Preventing cross-site scripting",
+    "Helping prevent MIME sniffing"
+]
+explanation = """
+Although preventing Multipurpose Internet Mail Extensions
+(MIME) sniffing may sound humorous, MIME sniffing can be
+used in cross-site scripting attacks, and the X-Content-Type-Options header helps prevent MIME sniffing. HTTP security-oriented headers can also set X-Frame options, turn on cross-site scripting protection, set content security policies, and
+require transport security. There isn't a "Disable SQL injection"
+header, however!
+"""
+
+[[imp.questions]]
+question = "Charlene wants to provision her organization's standard set of marketing information to mobile devices throughout her organization. What MDM  feature is best suited to this task?"
+answers = ["Content management"]
+alternatives = [
+    "Application management",
+    "Remote wipe",
+    "Push notifications"
+]
+explanation = """
+Mobile device management (MDM) suites often provide the
+ability to manage content on devices as well as applications.
+Using content management tools can allow Charlene to
+provision files, documents, and media to the devices that staff
+members in her organization are issued. Application
+management would be useful for apps. Remote wipe can remove
+data and applications from the device if it is lost or stolen, or an
+employee leaves the organization. Push notifications are useful
+when information needs to be provided to the device user.
+"""
+
+[[imp.questions]]
+question = "Denny wants to deploy antivirus for his organization and wants to ensure that it will stop the most malware. What deployment model should Denny select?"
+answers = ["Install antivirus from one vendor on PCs and from another vendor on the server to provide a greater chance of catching malware."]
+alternatives = [
+    "Install antivirus from the same vendor on individual PCs and servers to best balance visibility, support, and security.",
+    "Install antivirus from more than one vendor on all PCs and servers to maximize coverage.",
+    "Install antivirus only on workstations to avoid potential issues with server performance."
+]
+explanation = """
+In this scenario, Denny specifically needs to ensure that he
+stops the most malware. In situations like this, vendor diversity
+is the best way to detect more malware, and installing a different
+vendor's antivirus (AV) package on servers like email servers
+and then installing a managed package for PCs will result in the
+most detections in almost all cases. Installing more than one AV
+package on the same system is rarely recommended, since this
+often causes performance issues and conflicts between the
+packages—in fact, at times AV packages have been known to
+detect other AV packages because of the deep hooks they place
+into the operating system to detect malicious activity!
+"""
+
+[[imp.questions]]
+question = "When Amanda visits her local coffee shop, she can connect to the open wireless without providing a password or logging in, but she is immediately redirected to a website that asks for her email address. Once she provides it, she is able to browse the Internet normally. What type of technology has Amanda encountered?"
+answers = ["A captive portal"]
+alternatives = [
+    "A preshared key",
+    "Port security",
+    "A Wi-Fi protected access"
+]
+explanation = """
+Amanda has encountered a captive portal. Captive portals
+redirect all traffic to the portal page, either to allow the portal to
+collect information or to display the page itself. Once users have
+completed the requirements that the portal puts in place, they
+are permitted to browse the Internet. This may be accomplished
+by assigning a new IP address or by allowing the connected IP
+address to have access to the Internet using a firewall rule or
+other similar method. Preshared keys are used in wireless
+networks for authentication. Port security is used for wired
+networks, and WPA stands for Wi-Fi Protected Access, as in
+WPA, WPA-2, and WPA-3.
+"""
+
+[[imp.questions]]
+question = "Charles has been asked to implement DNSSEC for his organization. Which of the following does it provide?"
+answers = ["Integrity"]
+alternatives = [
+    "Confidentiality",
+    "Availability",
+    "All of the above"
+]
+explanation = """
+Domain Name System Security Extensions, or DNSSEC,
+provides the ability to validate DNS data and denial of existence,
+and provides data integrity for DNS. It does not provide
+confidentiality or availability controls. If Charles needs to
+provide those, he will have to implement additional controls.
+"""
+
+[[imp.questions]]
+question = "Sarah has implemented an OpenID-based authentication system that relies on existing Google accounts. What role does Google play in a federated environment like this?"
+answers = [" An IdP"]
+alternatives = [
+    "An RP",
+    "An SP",
+    "An RA"
+]
+explanation = """
+Google is acting as an identity provider, or IdP. An IdP
+creates and manages identities for federations. An RP is a
+relying party, which relies on an identity provider. An SP is a
+service provider, and an RA is a registration authority involved
+in the process for providing cryptographic certificates.
+"""
+
+[[imp.questions]]
+question = "Ian needs to connect to a system via an encrypted channel so that he can use a command-line shell. What protocol should he use?"
+answers = ["SSH"]
+alternatives = [
+    "Telnet",
+    "HTTPS",
+    "TLS"
+]
+explanation = """
+SSH, or Secure Shell, is a secure protocol used to connect to
+command-line shells. SSH can also be used to tunnel other
+protocols, making it a useful and frequently used tool for system
+administrators, security professionals, and attackers. Using
+HTTPS or Transport Layer Security (TLS) for a secure command
+line is rare, and Telnet is an insecure protocol.
+"""
+
+[[imp.questions]]
+question = "Casey is considering implementing password key devices for her organization. She wants to use a broadly adopted open standard for authentication and needs her keys to support that. Which of the following standards should she look for her keys to implement, in addition to being able to connect via USB, Bluetooth, and NFC?"
+answers = ["FIDO"]
+alternatives = [
+    "SAML",
+    "ARF",
+    "OpenID"
+]
+explanation = """
+Of the options provided, only FIDO U2F, an open standard
+provided by the Fast IDentity Online Alliance, is a standard for
+security keys. Other standards that you may encounter include
+OTP (One Time Password), SmartCard, OATH-HOTP, and
+OpenPGP. Of note, OATH, the Initiative for Open Authentiation
+provides standards both HMAC-based one time password
+(HOTP) and TOTP, or time-based one time passwords. SAML
+(Security Assertion Markup Language) and OpenID are both
+used in authentication processes but not for security keys. ARF
+was made up for this question.
+"""
+
+[[imp.questions]]
+question = "Nadia is concerned about the content of her emails to her friend Danielle being read as they move between servers. What technology can she use to encrypt her emails, and whose key should she use to encrypt the message?"
+answers = ["S/MIME, Danielle's public key"]
+alternatives = [
+    "S/MIME, her private key",
+    "Secure POP3, her public key",
+    "Secure POP3, Danielle's private key"
+]
+explanation = """
+Nadia should use Secure/Multipurpose Internet Mail
+Extensions (S/MIME), which supports asymmetric encryption
+and should then use Danielle's public key to encrypt the email so
+that only Danielle can decrypt the messages and read them.
+Secure POP3 would protect messages while they're being
+downloaded but would not protect the content of the messages
+between servers.
+"""
+
+[[imp.questions]]
+question = "What type of communications is SRTP most likely to be used for?"
+answers = ["VoIP"]
+alternatives = [
+    "Email",
+    "Web",
+    "File transfer"
+]
+explanation = """
+SRTP is a secure version of the Real-Time Transport
+Protocol and is used primarily for Voice over IP (VoIP) and
+multimedia streaming or broadcast. SRTP, as currently
+implemented, does not fully protect packets, leaving RTP
+headers exposed, potentially exposing information that might
+provide attackers with information about the data being
+transferred.
+"""
+
+[[imp.questions]]
+question = "Olivia is implementing a load-balanced web application cluster. Her organization already has a redundant pair of load balancers, but each unit is not rated to handle the maximum designed throughput of the cluster by itself. Olivia has recommended that the load balancers be implemented in an active/active design. What concern should she raise as part of this recommendation?"
+answers = ["If one of the load balancers fails, it could lead to service degradation."]
+alternatives = [
+    "The load balancer cluster cannot be patched without a service outage.",
+    "The load balancer cluster is vulnerable to a denial-of-service attack.",
+    "None of the above"
+]
+explanation = """
+Olivia should make her organization aware that a failure in
+one of the active nodes would result in less maximum
+throughput and a potential for service degradation. Since
+services are rarely run at maximum capacity, and many can have
+maintenance windows scheduled, this does not mean that the
+load balancers cannot be patched. There is nothing in this
+design that makes the load balancers more vulnerable to denial
+of service than they would be under any other design.
+"""
+
+[[imp.questions]]
+question = "What two ports are most commonly used for FTPS traffic?"
+answers = ["21, 990"]
+alternative = [
+    "21, 22",
+    "433, 1433",
+    "20, 21"
+]
+explanation = """
+File Transfer Protocol Secure (FTPS) typically uses port 990
+for implicit FTPS and port 21, the normal FTP command port, is
+used for explicit FTPS. Port 22 is used for SSH, 433 was used for
+the Network News Transfer Protocol (NNTP), 1433 is used for
+Microsoft SQL, and port 20 is used for FTP.
+"""
+
+[[imp.questions]]
+question = "What occurs when a certificate is stapled?"
+answers = ["Both the certificate and OCSP responder are sent together to prevent additional retrievals during certificate path validation."]
+alternatives = [
+    "The certificate is stored in a secured location that prevents the certificate from being easily removed or modified.",
+    "Both the host certificate and the root certificate authority's private key are attached to validate the authenticity of the chain.",
+    "The certificate is attached to other certificates to demonstrate the entire certificate chain."
+]
+explanation = """
+Certificate stapling allows the server that is presenting a
+certificate to provide a more efficient way to check the
+revocation status of the certificate via the Online Certificate
+Status Protocol (OCSP) by including the OCSP response with the
+handshake for the certificate. This provides both greater security
+because clients know that the certificate is valid, and greater
+efficiency because they don't have to perform a separate
+retrieval to check the certificate's status. The rest of the options
+were made up and are not certificate stapling.
+"""
+
+[[imp.questions]]
+question = "Greg is setting up a public key infrastructure (PKI). He creates an offline root certificate authority (CA) and then needs to issue certificates to users and devices. What system or device in a PKI receives certificate signing requests (CSRs) from applications, systems, and users?"
+answers = ["An RA"]
+alternatives = [
+    "An intermedia CA",
+    "A CRL",
+    "None of the above"
+]
+explanation = """
+A registration authority, or RA, receives requests for new
+certificates as well as renewal requests for existing certificates.
+They can also receive revocation requests and similar tasks. An
+intermedia CA is trusted by the root CA to issue certificates. A
+CRL is a certificate revocation list.
+"""
+
+[[imp.questions]]
+question = "Mark is responsible for managing his company's load balancer and wants to use a load-balancing scheduling technique that will take into account the current server load and active sessions. Which of the following techniques should he choose?"
+answers = ["Least connection"]
+alternatives = [
+    "Source IP hashing",
+    "Weighted response time",
+    "Round robin"
+]
+explanation = """
+Least connection-based load balancing takes load into
+consideration and sends the next request to the server with the
+least number of active sessions. Round robin simply distributes
+requests to each server in order, whereas weighted time uses
+health checks to determine which server responds the most
+quickly on an ongoing basis and then sends the traffic to that
+server. Finally, source IP hashing uses the source and
+destination IP addresses to generate a hash key and then uses
+that key to track sessions, allowing interrupted sessions to be
+reallocated to the same server and thus allowing the sessions to
+continue.
+"""
+
+[[imp.questions]]
+question = "During a security review, Matt notices that the vendor he is working with lists their IPSec virtual private network (VPN) as using AH protocol for security of the packets that it sends. What concern should Matt note to his team about this?"
+answers = ["AH does not provide confidentiality."]
+alternatives = [
+    "AH does not provide data integrity.",
+    "AH does not provide replay protection.",
+    "None of the above; AH provides confidentiality, authentication, and replay protection."
+]
+explanation = """
+IPSec's Authentication Header (AH) protocol does not
+provide data confidentiality because it secures only the header,
+not the payload. That means that AH can provide integrity and
+replay protection but leaves the rest of the data at risk. Matt
+should note this and express concerns about why the VPN is not
+using Encapsulating Security Protocol (ESP).
+"""
+
+[[imp.questions]]
+question = "Michelle wants to secure mail being retrieved via the Post Office Protocol Version 3 (POP3) because she knows that it is unencrypted by default. What is her best option to do this while leaving POP3 running on its default port?"
+answers = ["Use TLS via port 110."]
+alternatives = [
+    "Use TLS via port 25.",
+    "Use IKE via port 25.",
+    "Use IKE via port 110."
+]
+explanation = """
+Michelle knows that POP3 runs on port 110 by default, and
+that TLS (via STARTTLS as an extension) allows POP3 clients to
+request a secure connection without needing to use the alternate
+port 995 used in some configurations. Port 25 is the default port
+for Simple Mail Transfer Protocol (SMTP), and IKE is used for
+IPSec.
+"""
+
+[[imp.questions]]
+question = "Daniel works for a mid-sized financial institution. The company has recently moved some of its data to a cloud solution. Daniel is concerned that the cloud provider may not support the same security policies as the company's internal network. What is the best way to mitigate this concern?"
+answers = ["Implement a cloud access security broker."]
+alternatives = [
+    "Perform integration testing.",
+    "Establish cloud security policies.",
+    "Implement security as a service."
+]
+explanation = """
+A cloud access security broker (CASB) is a software tool or
+service that sits between an organization's on-premises network
+and a cloud provider's infrastructure. A CASB acts as a
+gatekeeper, allowing the organization to extend the reach of
+their security policies into the cloud.
+"""
+
+[[imp.questions]]
+question = "The company that Angela works for has deployed a Voice over IP (VoIP) environment that uses SIP. What threat is the most likely issue for their phone calls?"
+answers = ["Call interception"]
+alternatives = [
+    "Vishing",
+    "War dialing",
+    "Denial-of-service attacks"
+]
+explanation = """
+Angela's company has deployed a version of Session
+Initiation Protocol (SIP) that doesn't use Transport Layer
+Security (TLS) to maintain confidentiality. She should switch to
+a SIP Secure (SIPS) implementation to protect the
+confidentiality of phone conversations. Vishing, or voice
+phishing; war dialing, which attempts to map all numbers for a
+phone service, typically to find modems; and denial of service
+are all less likely on a VoIP network, although they could occur.
+"""
+
+[[imp.questions]]
+question = "Alaina is concerned about the security of her NTP time synchronization service because she knows that protocols like TLS and BGP are susceptible to problems if fake NTP messages were able to cause time mismatches between systems. What tool could she use to quickly protect her NTP traffic between Linux systems?"
+answers = ["SSH tunneling"]
+alternatives = [
+    "An IPSec VPN",
+    "RDP",
+    "A TLS VPN"
+]
+explanation = """
+The fastest way for Alaina to implement secure transport for
+her Network Time Protocol (NTP) traffic will typically be to
+simply tunnel the traffic via Secure Shell (SSH) from the NTP
+server to her Linux systems. An IPSec virtual private network
+(VPN) between devices will typically take more work to set up
+and maintain, although this could be scripted, and a Transport
+Layer Security (TLS) VPN would require additional work since it
+is intended for web traffic. RDP is the Remote Desktop Protocol
+and is primarily used for Windows systems and would not be a
+good choice. In most environments, however, NTP traffic does
+not receive any special security, and NTP sources are trusted to
+perform without exceptional security measures.
+"""
+
+
+[[imp.questions]]
+question = """Ramon is building a new web service and is considering which parts of the service should use Transport Layer Security (TLS). Components of the application include:
+1. Authentication
+2. A payment form
+3. User data, including address and shopping cart
+4. A user comments and reviews section
+
+Where should he implement TLS?
+"""
+answers = ["At all points in the infrastructure"]
+alternatives = [
+    "At points 1 and 2, and 4",
+    "At points 2 and 3, and 4",
+    "At points 1, 2, and 3"
+]
+explanation = """
+The safest and most secure answer is that Ramon should
+simply implement TLS for the entire site. Although TLS does
+introduce some overhead, modern systems can handle large
+numbers of simultaneous TLS connections, making a secure
+website an easy answer in almost all cases.
+"""
+
+[[imp.questions]]
+questions = "Katie's organization uses File Transfer Protocol (FTP) for contractors to submit their work product to her organization. The contractors work on sensitive customer information, and then use organizational credentials provided by Katie's company to log in and transfer the information. What sensitive information could attackers gather if they were able to capture the network traffic involved in this transfer?"
+answers = ["Usernames, passwords, and file content"]
+alternatives = [
+    "Nothing, because FTP is a secure protocol",
+    "IP addresses for both client and server",
+    "The content of the files that were uploaded"
+]
+explanation = """
+Although IP addresses for public servers and clients are not
+typically considered sensitive, the usernames, passwords, and
+files that the contractors use would be. Katie should consider
+helping her organization transition to a secure FTP or other
+service to protect her organization's customers and the
+organization itself.
+"""
+
+[[imp.questions]]
+questions = "What security benefits are provided by enabling DHCP snooping or DHCP sniffing on switches in your network?"
+answers = ["All of the above"]
+alternatives = [
+    "Prevention of malicious or malformed DHCP traffic",
+    "Prevention of rogue DHCP servers",
+    "Collection of information about DHCP bindings"
+]
+explanation = """
+Dynamic Host Configuration Protocol (DHCP) sniffing or
+snooping can be enabled to prevent rogue DHCP servers as well
+as malicious or malformed DHCP traffic. It also allows the
+capture and collection of DHCP binding information to let
+network administrators know who is assigned what IP address.
+"""
+
+[[imp.questions]]
+questions = """ Aaron wants to use a certificate for the following production
+hosts:
+www.example.com
+blog.example.com
+news.example.com
+What is the most efficient way for him to provide Transport Layer Security (TLS) for all of these systems? """
+answers = ["Use a wildcard certificate."]
+alternatives = [
+    "Use self-signed certificates.",
+    "Use an EV certificate.",
+    "Use an SSL certificate."
+]
+explanation = """
+Aaron can use a wildcard certificate to cover all the hosts
+inside of a set of subdomains. Wildcards only cover a single level
+of subdomain, however, so if he purchased *. example.com, he
+could not use *. blog.example.com. A self-signed certificate will
+cause errors for visitors and should not be used for production
+purposes. Self-signed certificates will create errors in most
+browsers and so are not used in production environments.
+Extended validation (EV) certificates will not provide this
+functionality, and Secure Sockets Layer (SSL) is no longer in use
+with the switch to TLS for security reasons.
+"""
+
+[[imp.questions]]
+questions = "Cassandra is concerned about attacks against her network's Spanning Tree Protocol (STP). She wants to ensure that a new switch introduced by an attacker cannot change the topology by asserting a lower bridge ID than the current configuration. What should she implement to prevent this?"
+answers = ["Enable Root Guard."]
+alternatives = [
+    "Enable BridgeProtect.",
+    "Set the bridge ID to a negative number.",
+    "Disable Spanning Tree protocol."
+]
+explanation = """
+Root Guard can be set on a per-port basis to protect ports
+that will never be set up to be the root bridge for a VLAN. Since
+this shouldn't change regularly, it is safe to set for most ports in
+a network. Spanning tree is used to prevent loops, so disabling
+STP would actually make this problem more likely. Bridge IDs
+cannot be negative, and BridgeProtect was made up for this
+question.
+"""
+
+[[imp.questions]]
+question =  "Charles finds a PFX formatted file on the system he is reviewing. What is a PFX file capable of containing?"
+answers = ["A server certificate, intermediate certificates, and the private key"]
+alternatives = [
+    "Only certificates and chain certificates, not private keys",
+    "Only a private key",
+    "None of the above, because PFX files are used for certificate requests only"
+]
+explanation = """
+A Personal Information Exchange (PFX) formatted file is a
+binary format used to store server certificates, as well as
+intermediary certificates, and it can also contain the server's
+private key. Privacy Enhanced Mail (PEM) files can contain
+multiple PEM certificates and a private key, but most systems
+store certificates and the key separately. Distinguished Encoding
+Rules (DER) format files are frequently used with Java
+platforms and can store all types of certificates and private keys.
+P7B, or PKCS#7, formatted files can contain only certificates
+and certificate chains, not private keys. For the exam, you
+should also know that a CER is a file extension for an SSL
+certificate file format used by web servers to help verify the
+identity and security of the site in question. SSL certificates are
+provided by a third-party security certificate authority such as
+VeriSign, GlobalSign, or Thawte.
+A P12 file contains a digital certificate that uses PKCS#12 (Public
+Key Cryptography Standard #12) encryption. The P12 file
+contains both the private and the public key, as well as
+information about the owner (name, email address, etc.), all
+being certified by a third party. With such a certificate, a user
+can identify themselves and authenticate themselves to any
+organization trusting the third party.
+"""
+
+[[imp.questions]]
+question = """ Which device would most likely process the following rules?
+PERMIT IP ANY EQ 443
+DENY IP ANY ANY
+"""
+answers = ["Firewall"]
+alternatives = [
+    "NIPS",
+    "HIPS",
+    "Content filter"
+]
+explanation = """
+A firewall has two types of rules. One type is to allow specific
+traffic on a given port. The other type of rule is to deny traffic.
+What is shown here is a typical firewall rule. Options A, B, and C
+are incorrect. The rule shown is clearly a firewall rule.
+"""
+
+[[imp.questions]]
+question = "Ted wants to use IP reputation information to protect his network and knows that third parties provide that information. How can he get this data, and what secure protocol is he most likely to use to retrieve it?"
+answers = ["A subscription service, HTTPS"]
+alternatives = [
+    "A subscription service, SAML",
+    "A VDI, XML",
+    "An FDE, XML"
+]
+explanation = """
+Many subscription services allow for data retrieval via
+HTTPS. Ted can subscribe to one or more threat feeds or
+reputation services, and then feed that information to an
+intrusion detection system (IDS), intrusion prevention system
+(IPS), next -generation firewall, or similar network security tool.
+Security Assertion Markup Language (SAML) is used to make
+assertions about identities and authorization, a VDI is a virtual
+desktop environment, and FDE is full-disk encryption.
+"""
+
+[[imp.questions]]
+question = "What does setting the secure attribute for an HTTP cookie result in?"
+answers = ["Cookies will be sent only over HTTPS."]
+alternatives = [
+    "Cookies will be stored in encrypted form.",
+    "Cookies will be stored in hashed form.",
+    "Cookies must be accessed using a cookie key."
+]
+explanation = """
+Secure cookies are HTTP cookies that have the secure flag
+set, thus requiring them to only be sent via a secure channel like
+HTTPS. They are not stored in encrypted form or hashed, and
+cookie keys were made up for this question.
+"""
+
+[[imp.questions]]
+question = "Charles wants to use IPSec and needs to be able to determine the IPSec policy for traffic based on the port it is being sent to on the remote system. Which IPSec mode should he use?"
+answers = ["IPSec transport mode"]
+alternatives = [
+    "IPSec tunnel mode",
+    "IPSec IKE mode",
+    "IPSec PSK mode"
+]
+explanation = """
+Unlike IPSec's tunnel mode, IPSec transport mode allows
+different policies per port. The IP addresses in the outer header
+for transport mode packets are used to determine the policy
+applied to the packet. IPSec doesn't have a PSK mode, but WPA-2 does. IKE is used to set up security associations in IPSec but
+doesn't allow this type of mode setting.
+"""
+
+[[imp.questions]]
+question = "Wi-Fi Protected Setup (WPS) includes four modes for adding devices to a network. Which mode has significant security concerns due to a brute-force exploit?"
+answers = ["PIN"]
+alternatives = [
+    "USB",
+    "Push button",
+    "Near-field communication"
+]
+explanation = """
+WPS personal identification numbers (PINs) were revealed
+to be a problem in 2011, when a practical brute-force attack
+against WPS PIN setup modes was demonstrated. WPS suffers
+from a variety of other security issues and is not used for
+enterprise security. WPS remains in use in home environments
+for ease of setup.
+"""
+[[imp.questions]]
+question = "Claire wants to check whether a certificate has been revoked. What protocol is used to validate certificates?"
+answers = ["OCSP"]
+alternatives = [
+    "RTCP",
+    "CRBL",
+    "PKCRL"
+]
+explanation = """
+The Online Certificate Status Protocol, or OCSP, is used to
+determine the status of a certificate. RTCP, CRBL, and PKCRL
+were all made up for this question.
+"""
+
+[[imp.questions]]
+question = "Nick is responsible for cryptographic keys in his company. What is the best way to deauthorize a public key?"
+answers = ["Publish that certificate in the CRL."]
+alternatives = [
+    "Send out a network alert.",
+    "Delete the digital certificate.",
+    "Notify the RA."
+]
+explanation = """
+Certificate revocation lists (CRLs) are designed specifically
+for revoking certificates. Since public keys are distributed via
+certificates, this is the most effective way to deauthorize a public
+key. Option A is incorrect. Simply notifying users that a
+key/certificate is no longer valid is not effective. Option B is
+incorrect. Deleting a certificate is not always possible and
+ignores the possibility of a duplicate of that certificate existing.
+Option D is incorrect. The registration authority (RA) is used in
+creating new certificates, not in revoking them.
+"""
+
+[[imp.questions]]
+question = "What two connection methods are used for most geofencing applications?"
+answers = ["GPS and Wi-Fi"]
+alternatives = [
+    "Cellular and GPS",
+    "USB and Bluetooth",
+    "Cellular and Bluetooth"
+]
+explanation = """
+Global Positioning System (GPS) data and data about local
+Wi-Fi networks are the two most commonly used protocols to
+help geofencing applications determine where they are. When a
+known Wi-Fi signal is gained or lost, the geofencing application
+knows it is within range of that network. GPS data is even more
+useful because it can work in most locations and provide
+accurate location data. Although Bluetooth is sometimes used
+for geofencing, its limited range means that it is a third choice.
+Cellular information would require accurate tower-based
+triangulation, which means it is not typically used for geofencing
+applications, and of course USB is a wired protocol.
+"""
+
+[[imp.questions]]
+question = "Gabriel is setting up a new e-commerce server. He is concerned about security issues. Which of the following would be the best location to place an e-commerce server?"
+answers = ["DMZ"]
+alternatives = [
+    "Intranet",
+    "Guest network",
+    "Extranet"
+]
+explanation = """
+The demilitarized zone (DMZ) is a zone between an outer
+firewall and an inner firewall. It is specifically designed as a
+place to locate public-facing servers. The outer firewall is more
+permissive, thus allowing public access to the servers in the
+DMZ. However, the inner firewall is more secure, thus
+preventing outside access to the corporate network.
+"""
+
+[[imp.questions]]
+question = "Janelle is the security administrator for a small company. She is trying to improve security throughout the network. Which of the following steps should she take first?"
+answers = ["Turn off unneeded services on all computers."]
+alternatives = [
+    "Implement antimalware on all computers.",
+    "Implement acceptable use policies.",
+    "Set password reuse policies."
+]
+explanation = """
+The first step in security is hardening the operating system,
+and one of the most elementary aspects of that is turning off
+unneeded services. This is true regardless of the operating
+system. Although installing antimalware, implementing usage
+policies, and setting password reuse policies are all good
+practices, turning off unnecessary services is typically the first
+step in securing a system..
+"""
+
+[[imp.questions]]
+question = "Ben is responsible for a new application with a worldwide user base that will allow users to sign up to access existing data about them. He would like to use a method of authentication that will permit him to verify that users are the correct people to match up with their accounts. How can he validate these users?"
+answers = ["Require them to use knowledge-based authentication."]
+alternatives = [
+    "Require that they present their Social Security number.",
+    "Require them to use a federated identity via Google.",
+    "Require them to validate an email sent to the account they signed up with."
+]
+explanation = """
+Knowledge-based authentication requires information that
+only the user is likely to know. Examples include things like
+previous tax payments, bill amounts, and similar information.
+Requesting a Social Security number is less secure and would
+only work for users in the United States. Federated identity via
+Google accounts does not meet this need because Google
+accounts do not have a user validation requirement. Finally,
+validation emails only prove that the user has access to an
+account that they provide, not that they are a specific individual.
+"""
+
+[[imp.questions]]
+question = "Jason wants to implement a remote access virtual private network (VPN) for users in his organization who primarily rely on hosted web applications. What common VPN type is best suited to this if he wants to avoid deploying client software to his end-user systems?"
+answers = ["A TLS VPN"]
+alternatives = [
+    "An RDP (Remote Desktop Protocol) VPN",
+    "An Internet Control Message Protocol (ICMP) VPN",
+    "An IPSec VPN"
+]
+explanation = """
+A Transport Layer Security (TLS) VPN is frequently chosen
+when ease of use is important, and web applications are the
+primary usage mode. IPSec VPNs are used for site-to-site VPNs
+and for purposes where other protocols may be needed, because
+they make the endpoint system appear to be on the remote
+network.
+"""
+
+[[imp.questions]]
+question = "Juan is a network administrator for an insurance company. His company has a number of traveling salespeople. He is concerned about confidential data on their laptops. What is the best way for him to address this?"
+answers = ["FDE"]
+alternatives = [
+    "TPM",
+    "SDN",
+    "DMZ"
+]
+explanation = """
+Full-disk encryption (FDE) fully encrypts the hard drive on a
+computer. This is an effective method for ensuring the security
+of data on a computer. Trusted Platform Modules (TPMs) are
+store keys and are used for boot integrity and other
+cryptographic needs and won't directly protect the data.
+Software-defined networking (SDN) is virtualized networking,
+and demilitarized zones (DMZs) are used to segment a network
+and won't affect this problem.
+"""
+
+[[imp.questions]]
+question = "Which design concept limits access to systems from outside users while protecting users and systems inside the LAN?"
+answers = ["DMZ"]
+alternatives = [
+    "VLAN",
+    "Router",
+    "Guest network"
+]
+explanation = """
+A DMZ (demilitarized zone) provides limited access to
+public-facing servers for outside users, but blocks outside users
+from accessing systems inside the LAN. It is a common practice
+to place web servers in the DMZ. A virtual LAN, or VLAN, is
+most often used to segment the internal network, routers direct
+traffic based on IP address, and a guest network allows internal
+users who are not employees to get access to the Internet.
+"""
+
+[[imp.questions]]
+question = "Nina wants to use information about her users like their birth dates, addresses, and job titles as part of her identity management system. What term is used to describe this type of information?"
+answers = ["Attributes"]
+alternatives = [
+    "Roles",
+    "Factors",
+    "Identifiers"
+]
+explanation = """
+Identity attributes are characteristics of an identity,
+including details like the individual's birth date, age, job title,
+address, or a multitude of other details about the identity. They
+are used to differentiate the identity from others and may also
+be used by the identity management system or connected
+systems in coordination with the identity itself. Roles describe
+the job or position an individual has in an organization, and
+factors are something you know, something you have, or
+something you are. Identifiers are not a common security or
+authentication term, although identity is.
+"""
+
+[[imp.questions]]
+question = "Megan is preparing a certificate signing request (CSR) and knows that she needs to provide a CN for her web server. What information will she put into the CN field for the CSR?"
+answers = ["The fully qualified domain name of the system"]
+alternatives = [
+    "Her name",
+    "The hostname",
+    "The company's name"
+]
+explanation = """
+The CN, or common name, for a certificate for a system is
+typically the fully qualified domain name (FQDN) for the server.
+If Megan was requesting a certificate for herself, instead of for a
+server, she would use her full name.
+"""
+
+[[imp.questions]]
+question = "Which of the following is the equivalent of a VLAN from a physical security perspective?"
+answers = ["Partitioning"]
+alternatives = [
+    "Perimeter security",
+    "Security zones",
+    "Firewall"
+]
+explanation = """
+Physically portioning your network is the physical equivalent
+of a virtual LAN, or VLAN. A VLAN is designed to emulate
+physical partitioning. Perimeter security does not segment the
+network. Security zones are useful but don't, by themselves,
+segment a network. Often a network is segmented, using
+physical partitions or VLAN, to create security zones. A firewall
+is meant to block certain traffic, not to segment the network,
+although a firewall can be part of a segmentation or security
+zone implementation.
+"""
+
+[[imp.questions]]
+question = "Nelson uses a tool that lists the specific applications that can be installed and run on a system. The tool uses hashes of the application's binary to identify each application to ensure that the application matches the filename provided for it. What type of tool is Nelson using?"
+answers = ["Whitelisting"]
+alternatives = [
+    "Antivirus",
+    "Blacklisting",
+    "Antimalware"
+]
+explanation = """
+Nelson is using a whitelisting (allowed list) tool. Tools like this allow only specific applications to be installed and run on a system and often use hashes of known good applications to ensure that the applications are those that are permitted. A blacklisting or blocked list tool prevents specific applications or files from being used, stored, or downloaded to a system. Although antivirus and antimalware tools may have similar features, the most accurate answer here is whitelisting.
+"""
+
+[[imp.questions]]
+question = "Which type of firewall examines the content and context of each packet it encounters?"
+answers = ["Stateful packet filtering firewall"]
+alternatives = [
+    "Packet filtering firewall",
+    "Application layer firewall",
+    "Gateway firewall"
+]
+explanation = """
+A stateful inspection firewall examines the content and
+context of each packet it encounters. This means that a stateful
+packet inspection (SPI) firewall understands the preceding
+packets that came from the same IP address, and thus the
+context of the communications. This makes certain attacks, like
+a SYN flood, almost impossible. Packet filtering firewalls
+examine each packet but not the context. Application-layer
+firewalls can use SPI or simple packet filtering, but their primary
+role is to examine application-specific issues. A common
+example is a web application firewall. A gateway firewall is
+simply a firewall at the network gateway. This does not tell us
+whether it is packet filtering or SPI.
+"""
+
+[[imp.questions]]
+question = "You're designing a new network infrastructure so that your company can allow unauthenticated users connecting from the Internet to access certain areas. Your goal is to protect the internal network while providing access to those areas. You decide to put the web server on a separate subnet open to public contact. What is this subnet called?"
+answers = ["DMZ"]
+alternatives = [
+    "Guest network",
+    "Intranet",
+    "VLAN"
+]
+explanation = """
+A demilitarized zone (DMZ) is a separate subnet coming off
+the separate router interface. Public traffic may be allowed to
+pass from the external public interface to the DMZ, but it won't
+be allowed to pass to the interface that connects to the internal
+private network. A guest network provides visitors with Internet
+access. An intranet consists of internal web resources.
+Frequently companies put up web pages that are accessible only
+from within the network for items like human resources
+notifications, vacation requests, and so forth. A virtual LAN, or
+VLAN, is used to segment your internal network.
+"""
+
+[[imp.questions]]
+question = "Madhuri's web application converts numbers that are input into fields by specifically typing them and then applies strict exception handling. It also sets a minimum and maximum length for the inputs that it allows and uses predefined arrays of allowed values for inputs like months or dates. What term describes the actions that Madhuri's application is performing?"
+answers = ["Input validation"]
+alternatives = [
+    "Buffer overflow prevention",
+    "String injection",
+    "Schema validation"
+]
+explanation = """
+The application includes input validation techniques that are
+used to ensure that unexpected or malicious input does not
+cause problems with the application. Input validation
+techniques will strip out control characters, validate data, and
+perform a variety of other actions to clean input before it is
+processed by the application or stored for future use. This
+validation may help prevent buffer overflows, but other
+techniques described here are not used for buffer overflow
+prevention. String injection is actually something this helps to
+prevent, and schema validation looks at data to ensure that
+requests match a schema, but again this is a narrower
+description than the broad range of input validation occurring in
+the description.
+"""
+
+[[imp.questions]]
+question = "You're outlining your plans for implementing a wireless network to upper management. What wireless security standard should you adopt if you don't want to use enterprise authentication but want to provide secure authentication for users that doesn't require a shared password or passphrase?"
+answers = ["WPA2"]
+alternatives = [
+    "WPA3",
+    "WPA",
+    "WEP"
+]
+explanation = """
+WPA3 supports SAE, or simultaneous authentication of
+equals, providing a more secure way to authenticate that limits
+the potential for brute-force attacks and allows individuals to
+use different passwords. WPA is not as secure as WPA2, and
+WEP is the oldest, and least secure, wireless security protocol.
+"""
+
+[[imp.questions]]
+question = "Brandon wants to ensure that his intrusion prevention system (IPS) is able to stop attack traffic. Which deployment method is most appropriate for this requirement?"
+answers = ["Inline, deployed as an IPS"]
+alternatives = [
+    "Passive via a tap, deployed as an IDS",
+    "Inline, deployed as an IDS",
+    "Passive via a tap, deployed as an IPS"
+]
+explanation = """
+In order to stop attack traffic, an IPS needs to be deployed
+inline. Deployments that use a network tap receive a copy of the
+data without being in the flow of traffic, which makes them ideal
+for detection but removes the ability to stop traffic. Deploying as
+an intrusion detection system (IDS) instead of an IPS means
+that the system will only detect, not stop, attacks.
+"""
+
+[[imp.questions]]
+question = "You are the chief security officer (CSO) for a large company. You have discovered malware on one of the workstations. You are concerned that the malware might have multiple functions and might have caused more security issues with the computer than you can currently detect. What is the best way to test this malware?"
+answers = ["Place the malware in a sandbox environment for testing."]
+alternatives = [
+    "Leave the malware on that workstation until it is tested.",
+    "It is not important to analyze or test it; just remove it from the machine.",
+    "Place the malware on a honeypot for testing."
+]
+explanation = """
+The correct answer is to use a sandboxed environment to
+test the malware and determine its complete functionality. A
+sandboxed system could be an isolated virtual machine (VM) or
+an actual physical machine that is entirely isolated from the
+network. Leaving the malware on a production system is never
+the correct approach. You should test or analyze the malware to
+determine exactly what malware it is, allowing you to respond to
+the threat properly. A honeypot is used for luring and trapping
+attackers, not for testing malware.
+"""
+
+[[imp.questions]]
+question = "You are trying to increase security at your company. You're currently creating an outline of all the aspects of security that will need to be examined and acted on. Which of the following terms describes the process of improving security in a trusted OS?"
+answers = ["Hardening"]
+alternatives = [
+    "FDE",
+    "SED",
+    "Baselining"
+]
+explanation = """
+Hardening is the process of improving the security of an
+operating system or application. One of the primary methods of
+hardening a trusted OS is to eliminate unneeded protocols. This
+is also known as creating a secure baseline that allows the OS to
+run safely and securely. FDE is full-disk encryption, a SED is a
+self-encrypting drive, and baselining is the process of
+establishing security standards.
+"""
+
+[[imp.questions]]
+question = "Melissa's website provides users who access it via HTTPS with a Transport Layer Security (TLS) connection. Unfortunately, Melissa forgot to renew her certificate, and it is presenting users with an error. What happens to the HTTPS connection when a certificate expires?"
+answers = ["Trust will be reduced, but traffic will still be encrypted."]
+alternatives = [
+    "All traffic will be unencrypted.",
+    "Traffic for users who do not click OK at the certificate error will be unencrypted.",
+    "Users will be redirected to the certificate authority's site for a warning until the certificate is renewed."
+]
+explanation = """
+Although trust in the site is likely to be reduced because
+users will receive warnings, the actual underlying encryption
+capabilities will not change. Users will not be redirected to the
+certificate authority's site, and if they click past the warnings,
+users will be able to continue normally and with an encrypted
+connection.
+"""
+
+[[imp.questions]]
+question = "Isaac is reviewing his organization's secure coding practices document for customer-facing web applications and wants to ensure that their input validation recommendations are appropriate. Which of the following is not a common best practice for input validation?"
+answers = ["Ensure validation occurs on a trusted client."]
+alternatives = [
+    "Ensure validation occurs on a trusted server.",
+    "Validate all client-supplied data before it is processed.",
+    "Validate expected data types and ranges."
+]
+explanation = """
+Isaac knows that trusting client systems to be secure is not a
+good idea, and thus ensuring that validation occurs on a trusted
+client is not an appropriate recommendation. Ensuring that
+validation occurs on a trusted server, that client data is
+validated, and that data types and ranges are reasonable are all
+good best practices for him to recommend.
+"""
+
+[[imp.questions]]
+question = "Frank knows that the systems he is deploying have a built-in TPM module. Which of the following capabilities is not a feature provided by a TPM?"
+answers = ["A cryptographic processor used to speed up SSL/TLS"]
+alternatives = [
+    "A random number generator",
+    "Remote attestation capabilities",
+    "The ability to bind and seal data"
+]
+explanation = """
+59. C. Trusted Platform Modules (TPMs) provide a random
+number generator, the ability to generate cryptographic keys,
+support for remote attestation as part of the boot process, as
+well as binding and sealing capabilities. They do not act as
+cryptographic processors to speed up Secure Sockets Layer
+(SSL) or Transport Layer Security (TLS) traffic.
+"""
+
+[[imp.questions]]
+question = "What is the primary use of hashing in databases?"
+answers = ["For indexing and retrieval"]
+alternatives = [
+    "To encrypt stored data, thus preventing exposure",
+    "To obfuscate data",
+    "To substitute for sensitive data, allowing it to be used without exposure"
+]
+explanation = """
+Hashing is commonly used in databases to increase the
+speed of indexing and retrieval since it is typically faster to
+search for a hashed key rather than the original value stored in a
+database. Hashing is not a form of encryption, meaning that it is
+not used to encrypt stored data. Hashing is not used to obfuscate
+data or to substitute for sensitive data.
+"""
+
+[[imp.questions]]
+question = "Hans is a security administrator for a large company. Users on his network visit a wide range of websites. He is concerned they might get malware from one of these many websites. Which of the following would be his best approach to mitigate this threat?"
+answers = ["Set browsers to allow only signed components."]
+alternatives = [
+    "Implement host-based antivirus.",
+    "Blacklist known infected sites.",
+    "Set browsers to block all active content (ActiveX, JavaScript, etc.)."
+]
+explanation = """
+The correct answer is to only allow signed components to be
+loaded in the browser. Code signing verifies the originator of the
+component (such as an ActiveX component) and thus makes
+malware far less likely. Although host-based antimalware is a
+good idea, it is not the best remedy for this specific threat.
+Blacklists cannot cover all sites that are infected—just the sites
+you know about. And given that users on Hans's network visit a
+lot of websites, blacklisting is likely to be ineffective. Finally, if
+you block all active content, many websites will be completely
+unusable.
+"""
+
+[[imp.questions]]
+question = "Zarmeena has implemented wireless authentication for her network using a passphrase that she distributes to each member of her organization. What type of authentication method has she implemented?"
+answers = ["PSK"]
+alternatives = [
+    "Enterprise",
+    "Open",
+    "Captive portal"
+]
+explanation = """
+Zarmeena has implemented a preshared key, or PSK,
+authentication method. This means that if she needs to change
+the key because a staff member leaves, she will need to have
+every device update their passphrase. For larger deployments,
+enterprise authentication can connect to an authentication and
+authorization service, allowing each user to authenticate as
+themselves. This also provides network administrators with a
+way to identify individual devices by their authenticated user.
+Open networks do not require authentication, although a captive
+portal can be used to require network users to provide
+information before they are connected to the Internet.
+"""
+
+[[imp.questions]]
+question = "Olivia is building a wireless network and wants to implement an Extensible Authentication Protocol (EAP)-based protocol for authentication. What EAP version should she use if she wants to prioritize reconnection speed and doesn't want to deploy client certificates for authentication?"
+answers = ["EAP-FAST"]
+alternatives = [
+    "EAP-TLS",
+    "PEAP",
+    "EAP-TTLS"
+]
+explanation = """
+EAP-FAST is specifically designed for organizations that
+want to quickly complete reconnections and does not require
+certificates to be installed at the endpoint device. EAP Tunneled
+Transport Layer Security (EAP-TTLS) requires client-side
+certificates; EAP-TLS requires mutual authentication, which can
+be slower; and Protected Extensible Authentication Protocol
+(PEAP) is similar to EAP-TTLS.
+"""
+
+[[imp.questions]]
+question = "You work at a large company. You are concerned about ensuring that all workstations have a common configuration, that no rogue software is installed, and that all patches are kept up to date. Which of the following would be the most effective for accomplishing this?"
+answers = ["Use VDI."]
+alternatives = [
+    "Implement restrictive policies.",
+    "Use an image for all workstations.",
+    "Implement strong patch management."
+]
+explanation = """
+The correct answer is to implement a virtual desktop
+infrastructure (VDI). If all the desktops are virtualized, then
+from a single central location you can manage patches,
+configuration, and software installation. This single
+implementation will solve all the issues mentioned in the
+question. Restrictive policies are a good idea but are often
+difficult to enforce. Imaging workstations will affect only their
+original configuration; it won't keep them patched or prevent
+rogue software from being installed. Finally, strong patch
+management will address only one of the three concerns.
+"""
+
+[[imp.questions]]
+question = "Naomi has deployed her organization's cloud-based virtual datacenters to multiple Google datacenter locations around the globe. What does this design provide for her systems?"
+answers = ["High availability across multiple zones"]
+alternatives = [
+    "Resistance to insider attacks",
+    "Decreased costs",
+    "Vendor diversity"
+]
+explanation = """
+Deploying to multiple locations is part of a high availability
+strategy that ensures that losing a datacenter or datacenters in a
+single region, or loss of network connectivity to that region, will
+not take an infrastructure down. This does not provide greater
+resistance to insider attacks, lower costs, or vendor diversity.
+"""
+
+[[imp.questions]]
+question = "Patrick wants to deploy a virtual private networking (VPN) technology that is as easy for end users to use as possible. What type of VPN should he deploy?"
+answers = ["An SSL/TLS VPN"]
+alternatives = [
+    "An IPSec VPN",
+    "An HTML5 L2TP VPN",
+    "An SAML VPN"
+]
+explanation = """
+66. B. A TLS-based VPN (often called an SSL-based VPN, despite
+SSL being outmoded) provides the easiest way for users to use
+VPN since it does not require a client. SSL VPNs also work only
+for specific applications rather than making a system appear as
+though it is fully on a remote network. HTML5 is not a VPN
+technology, but some VPN portals may be built using HTML5.
+Security Assertion Markup Language (SAML) is not a VPN
+technology. IPSec VPNs require a client or configuration and are
+thus harder for end users to use in most cases.
+"""
+
+[[imp.questions]]
+question = "Olivia is responsible for web application security for her company's e-commerce server. She is particularly concerned about XSS and SQL injection. Which technique would be most effective in mitigating these attacks?"
+answers = ["Proper input validation"]
+alternatives = [
+    "Proper error handling",
+    "The use of stored procedures",
+    "Code signing"
+]
+explanation = """
+These particular web application attacks are best mitigated
+with proper input validation. Any user input should be checked
+for indicators of cross-site scripting (XSS) or SQL injection.
+Error handling is always important, but it won't mitigate these
+particular issues. Stored procedures can be a good way of
+ensuring SQL commands are standardized, but that won't
+prevent these attacks. Code signing is used for code that is
+downloaded from a web application to the client computer; it is
+used to protect the client, not the web application.
+"""
+
+[[imp.questions]]
+question = "Isaac wants to prevent corporate mobile devices from being used outside of his company's buildings and corporate campus. What mobile device management (MDM) capability should he use to allow this?"
+answers = ["Geofencing"]
+alternatives = [
+    "Patch management",
+    "IP filtering",
+    "Network restrictions"
+]
+explanation = """
+Isaac can configure a geofence that defines his corporate
+buildings and campus. He can then set up a geofence policy that
+will only allow devices to work while they are inside that
+geofenced area. Patch management, IP filtering, and network
+restrictions are not suitable solutions for this.
+"""
+
+[[imp.questions]]
+question = "Sophia wants to test her company's web application to see if it is handling input validation and data validation properly. Which testing method would be most effective for this?"
+answers = ["Fuzzing"]
+alternatives = [
+    "Static code analysis",
+    "Baselining",
+    "Version control"
+]
+explanation = """
+Fuzzing is a technique whereby the tester intentionally
+enters incorrect values into input fields to see how the
+application will handle it. Static code analysis tools simply scan
+the code for known issues, baselining is the process of
+establishing security standards, and version control simply
+tracks changes in the code—it does not test the code.
+"""
+
+[[imp.questions]]
+question = "Alaina has implemented an HSM. Which of the following capabilities is not a typical HSM feature?"
+answers = ["Boot attestation"]
+alternatives = [
+    "Encryption and decryption for digital signatures",
+    "Secure management of digital keys",
+    "Strong authentication support"
+]
+explanation = """Although hardware security modules (HSMs) provide many
+cryptographic functions, they are not used for boot attestation. A
+TPM, or Trusted Platform Module, is used for secure boot
+attestation.
+"""
+
+[[imp.questions]]
+question = "Cynthia wants to issue contactless cards to provide access to the buildings she is tasked with securing. Which of the following technologies should she deploy?"
+answers = ["RFID"]
+alternatives = [
+    "Wi-Fi",
+    "Magstripe",
+    "HOTP"
+]
+explanation = """
+Cynthia should deploy Radio Frequency Identifier (RFID)
+cards, which can be read using contactless readers. RFID
+technology is common and relatively inexpensive, but without
+additional authentication, possession of a card is the only means
+of determining if someone is authorized to access a building or
+room. Wi-Fi is not used for contactless cards because of its
+power consumption and overhead. Magstripes require a reader
+rather than being contactless, and HOTP is a form of one-time
+password system.
+"""
+
+[[imp.questions]]
+question = "Alaina wants to prevent bulk gathering of email addresses and other directory information from her web-exposed LDAP directory. Which of the following solutions would not help with this?"
+answers = ["Implementing LDAPS"]
+alternatives = [
+    "Using a back-off algorithm",
+    "Requiring authentication",
+    "Rate limiting queries"
+]
+explanation = """
+72. B. Rate limiting and back-off algorithms both limit how quickly
+queries can be performed. Requiring authentication would
+restrict who could access the directory. Requiring LDAPS
+(Lightweight Directory Access Protocol over SSL) does not
+prevent enumeration, but it does provide security for the
+queried information as it transits networks.
+"""
+
+[[imp.questions]]
+question = "Alaina has been told that her organization uses a SAN certificate in their environment. What does this tell Alaina about the certificate in use in her organization?"
+answers = ["The certificate allows multiple hostnames to be protected by the same certificate."]
+alternatives = [
+    "It is used for a storage area network.",
+    "It is provided by SANS, a network security organization.",
+    "The certificate is part of a self-signed, self-assigned namespace."
+]
+explanation = """
+A SAN, or Subject Alternate Name, certificate allows
+multiple hostnames to be protected by the same certificate. It is
+not a type of certificate for SAN storage systems. A SAN
+certificate could be self-signed, but that does not make it a SAN
+certificate, and of course the security organization SANS is not a
+certificate authority.
+"""
+
+[[imp.questions]]
+question = "Edward is responsible for web application security at a large insurance company. One of the applications that he is particularly concerned about is used by insurance adjusters in the field. He wants to have strong authentication methods to mitigate misuse of the application. What would be his best choice?"
+answers = ["Authenticate the client with a digital certificate."]
+alternatives = [
+    "Implement a very strong password policy.",
+    "Secure application communication with Transport Layer Security (TLS).",
+    "Implement a web application firewall (WAF)."
+]
+explanation = """
+The correct answer is to assign digital certificates to the
+authorized users and to use these to authenticate them when
+logging in. This is an effective way to ensure that only authorized
+users can access the application. Although the remaining
+options are all good security measures, they are not the best way
+to authenticate the client and prevent unauthorized access to the
+application.
+"""
+
+[[imp.questions]]
+question = "Sarah is the CIO for a small company. The company uses several custom applications that have complicated interactions with the host operating system. She is concerned about ensuring that systems on her network are all properly patched. What is the best approach in her environment?"
+answers = ["Delegate patch management to managers of departments so that they can find the best patch management for their departments."]
+alternatives = [
+    "Implement automatic patching.",
+    "Implement a policy that has individual users patch their systems.",
+    "Immediately deploy patches to a test environment; then as soon as testing is complete, have a staged rollout to the production network."
+]
+explanation = """
+The correct answer is to first test patches. It is always
+possible that a patch might cause issues for one or more current
+applications. This is particularly a concern with applications that
+have a lot of interaction with the host operating system. An
+operating system patch can prevent the application from
+executing properly. But as soon as the patches are tested, a
+phased rollout to the company should begin. Automatic
+patching is not recommended in corporate environments
+because a patch could possibly interfere with one or more
+applications—thus, a managed patch deployment process is
+implemented that requires more administrative time but avoids
+outages due to patches with issues in an organization's specific
+environment. Having individual users patch their own machines
+is a bad idea and will lead to inconsistent patching and the
+application of untested patches. Delegating patch management
+to managers instead of IT staff can lead to problems, too, due to
+varying skillsets and practices.
+"""
+
+[[imp.questions]]
+question = "Gary uses a wireless analyzer to perform a site survey of his organization. Which of the following is not a common feature of a wireless analyzer's ability to provide information about the wireless networks around it?"
+answers = ["The ability to show the version of the RADIUS server used for authentication"]
+alternatives = [
+    "The ability to show signal strength of access points on a map of the facility",
+    "The ability to show a list of SSIDs available in a given location",
+    "The ability to show the version of the 802.11 protocol (n, ac, ax)"
+]
+explanation = """
+Although wireless analyzers provide in-depth information
+about Service Set Identifiers (SSIDs), signal strength, and
+protocol versions, the Remote Authentication Dial-In User
+Service (RADIUS) or Kerberos version number for the backend
+authentication servers is not something that they will typically
+be able to provide.
+"""
+
+[[imp.questions]]
+question = "Emiliano is a network administrator and is concerned about the security of peripheral devices. Which of the following would be a basic step he could take to improve security for those devices?"
+answers = ["Turn off remote access (SSH, Telnet, etc.) if not needed."]
+alternatives = [
+    "Implement FDE.",
+    "Utilize fuzz testing for all peripherals.",
+    "Implement digital certificates for all peripherals."
+]
+explanation = """
+The correct answer is to turn off any remote access to such
+devices that is not absolutely needed. Many peripheral devices
+come with SSH (Secure Shell), Telnet, or similar services. If you
+are not using them, turn them off. Many peripherals don't have
+disks to encrypt, making full-disk encryption (FDE) a less useful
+choice. Fuzz testing is used to test code, not devices, and
+peripherals are unlikely to support digital certificates in most
+cases.
+"""
+
+[[imp.questions]]
+question = "What type of code analysis is manual code review?"
+answers = ["Static code review"]
+alternatives = [
+    "Dynamic code review",
+    "Fagan code review",
+    "Fuzzing"
+]
+explanation = """
+Manual code review is a type of static code review where
+reviewers read through source code to attempt to find flaws in
+the code. Dynamic code review requires running the code, Fagan
+testing is a formal code review process that works through
+multiple phases of the development process, and fuzzing is a
+form of dynamic inspection that sends unexpected values to a
+running program.
+"""
+
+[[imp.questions]]
+question = "Samantha has used ssh-keygen to generate new SSH keys. Which SSH key should she place on the server she wants to access, and where is it typically stored on a Linux system?"
+answers = ["Her public SSH key, ~/.ssh"]
+alternatives = [
+    "Her public SSH key, /etc/",
+    "Her private SSH key, /etc/",
+    "Her private SSH key, ~/.ssh"
+]
+explanation = """
+Samantha should place her public SSH key in the .ssh
+directory in her home directory on the remote server. Private
+keys should never be outside of your control, and unlike many
+Linux configurations, SSH keys are not kept in the /etc/
+directory.
+"""
+
+[[imp.questions]]
+question = "Ixxia is a software development team manager. She is concerned about memory leaks in code. What type of testing is most likely to find memory leaks?"
+answers = ["Static code analysis"]
+alternatives = [
+    "Fuzzing",
+    "Stress testing",
+    "Normalization"
+]
+explanation = """
+The correct answer is to use static code analysis. Memory
+leaks are usually caused by failure to deallocate memory that has
+been allocated. A static code analyzer can check to see if all
+memory allocation commands ( malloc , alloc , etc.) have a
+matching deallocation command. Fuzzing involves entering data
+that is outside expected values to see how the application
+handles it. Stress testing involves testing how a system handles
+extreme workloads. Normalization is a technique for
+deduplicating a database.
+"""
+
+[[imp.questions]]
+question = "What IP address does a load balancer provide for external connections to connect to web servers in a load-balanced group?"
+answers = ["A virtual IP address"]
+alternatives = [
+    "The IP address for each server, in a prioritized order",
+    "The load balancer's IP address",
+    "The IP address for each server in a round-robin order"
+]
+explanation = """
+Load balancers provide a virtual IP, or VIP. Traffic sent to
+the VIP is directed to servers in the pool based on the load-balancing scheme that that pool is using—often a round-robin
+scheme, but other versions that include priority order and
+capacity tracking or ratings are also common. The load
+balancer's IP address is normally used to administer the system,
+and individual IP addresses for the clustered hosts are shielded
+by the load balancer to prevent traffic from consistently going to
+those hosts, thus creating a failure or load point.
+"""
+
+[[imp.questions]]
+question = "What term describes random bits that are added to a password before it is hashed and stored in a database?"
+answers = ["Salt"]
+alternatives = [
+    "Flavoring",
+    "Rainbow-armor",
+    "Bit-rot"
+]
+explanation = """
+In a well-implemented password hashing scheme, unique
+random bits called salts are added to each password before they
+are hashed. This makes generating a rainbow table or otherwise
+brute-forcing hashes for all of the passwords stored in a
+database extremely time-consuming. The remaining options
+were made up and are not actual security terms.
+"""
+
+[[imp.questions]]
+question = "Victor is a network administrator for a medium-sized company. He wants to be able to access servers remotely so that he can perform small administrative tasks from remote locations. Which of the following would be the best protocol for him to use?"
+answers = ["SSH"]
+alternatives = [
+    "Telnet",
+    "RSH",
+    "SNMP"
+]
+explanation = """
+The correct answer is to use Secure Shell (SSH). This
+protocol is encrypted. SSH also authenticates the user with
+public key cryptography. Telnet is insecure and does not encrypt
+data. RSH, or Remote Shell, sends at least some data
+unencrypted and is also insecure. SNMP, or Simple Network
+Management Protocol, is used to manage a network and is not
+used for remote communications.
+"""
+
+[[imp.questions]]
+question = "Dan configures a resource-based policy in his Amazon account. What control has he deployed?"
+answers = ["A control that determines who has access to the resource, and the actions they can take on it"]
+alternatives = [
+    "A control that determines the amount that service can cost before an alarm is sent",
+    "A control that determines the amount of a finite resource that can be consumed before an alarm is set",
+    "A control that determines what an identity can do"
+]
+explanation = """
+Resource-based policies are attached to resources and
+determine who has access to a resource, such as a group of
+sysadmins or developers, and what actions they can perform on
+the resource. Cloud services have different terms for monitoring
+their resource usage; these terms may vary from service to
+service.
+"""
+
+[[imp.questions]]
+question = "Charlene's company uses rack-mounted sensor appliances in their datacenter. What are sensors like these typically monitoring?"
+answers = ["Temperature and humidity"]
+alternatives = [
+    "Smoke and fire",
+    "Power quality and reliability",
+    "None of the above"
+]
+explanation = """
+Networked sensor appliances are deployed in many
+datacenters to gather information about temperature and
+humidity as part of the environmental monitoring system. Fire
+detection and suppression systems are not typically mounted in
+racks, and power quality and reliability is measured by PDUs
+(power distribution units), UPS (uninterruptable power
+supplies), and other power infrastructure.
+"""
+
+[[imp.questions]]
+question = "Laurel is reviewing the configuration for an email server in her organization and discovers that there is a service running on TCP port 993. What secure email service has she most likely discovered?"
+answers = ["Secure IMAP (IMAPS)"]
+alternatives = [
+    "Secure POP3",
+    "Secure SMTP",
+    "Secure MIME (SMIME)"
+]
+explanation = """
+Secure IMAP's default port is TCP 993. Laurel can easily
+guess that the system offers a TLS-protected version of IMAP for
+clients to use to retrieve email messages. The default port for
+secure POP is 995, and for secure SMTP the default port is 587.
+S/MIME does not have a specific port, as it is used to encrypt
+the content of email messages.
+"""
+
+[[imp.questions]]
+question = "What type of topology does an ad hoc wireless network use?"
+answers = ["Point-to-point"]
+alternatives = [
+    "Point-to-multipoint",
+    "Star",
+    "Bus"
+]
+explanation = """
+Ad hoc wireless networks operate in a point-to-point
+topology. Infrastructure mode access points work in a point-to-multipoint topology. Star and bus models are used in wired
+networks.
+"""
+
+[[imp.questions]]
+question = "What is the primary advantage of allowing only signed code to be installed on computers?"
+answers = ["It verifies who created the software."]
+alternatives = [
+    "It guarantees that malware will not be installed.",
+    "It improves patch management.",
+    "It executes faster on computers with a Trusted Platform Module (TPM)."
+]
+explanation = """
+Only using code that is digitally signed verifies the creator of
+the software. For example, if a printer/multifunction device
+(MFD) driver is digitally signed, this gives you confidence that it
+really is a printer driver from the vendor it purports to be from,
+and not malware masquerading as a printer driver. Signed
+software gives you a high degree of confidence that it is not
+malware but does not provide a guarantee. For example, the
+infamous Flame virus was signed with a compromised Microsoft
+digital certificate. Digital signing of software has no effect on
+patch management. Finally, digitally signed software will not
+execute faster or slower than unsigned software.
+"""
+
+[[imp.questions]]
+question = "Samantha has been asked to provide a recommendation for her organization about password security practices. Users have complained that they have to remember too many passwords as part of their job and that they need a way to keep track of them. What should Samantha recommend?"
+answers = ["Recommend a password vault or manager application."]
+alternatives = [
+    "Recommend that users write passwords down near their workstation.",
+    "Recommend that users use the same password for sites with similar data or risk profiles.",
+    "Recommend that users change their standard passwords slightly based on the site they are using."
+]
+explanation = """
+The Security+ exam refers to password managers as
+password vaults. Samantha should recommend a password vault
+that will allow her users to generate, store, and use many
+passwords securely. None of the other options are good advice
+for password use and storage.
+"""
+
+[[imp.questions]]
+question = "Matt has enabled port security on the network switches in his building. What does port security do?"
+answers = ["Filters by MAC address"]
+alternatives = [
+    "Prevents routing protocol updates from being sent from protected ports",
+    "Establishes private VLANs",
+    "Prevents duplicate MAC addresses from connecting to the network"
+]
+explanation = """
+Port security filters by MAC address, allowing whitelisted
+MAC addresses to connect to the port and blocking blacklisted
+MAC addresses. Port security can be static, using a
+predetermined list or dynamically allowing a specific number of
+addresses to connect, or it can be run in a combination mode of
+both static and dynamic modes.
+"""
+
+[[imp.questions]]
+question = "Tom is responsible for VPN connections in his company. His company uses IPSec for VPNs. What is the primary purpose of AH in IPSec?"
+answers = ["Authenticate the entire packet."]
+alternatives = [
+    "Encrypt the entire packet.",
+    "Encrypt just the header.",
+    "Authenticate just the header."
+]
+explanation = """
+Authentication headers (AHs) provide complete packet
+integrity, authenticating the packet and the header.
+Authentication headers do not provide any encryption at all, and
+authentication headers authenticate the entire packet, not just
+the header.
+"""
+
+[[imp.questions]]
+question = "Miles wants to ensure that his internal DNS cannot be queried by outside users. What DNS design pattern uses different internal and external DNS servers to provide potentially different DNS responses to users of those networks?"
+answers = ["Split horizon DNS"]
+alternatives = [
+    "DNSSEC",
+    "DMZ DNS",
+    "DNS proxying"
+]
+explanation = """
+A split horizon DNS implementation deploys distinct DNS
+servers for two or more environments, ensuring that those
+environments receive DNS information appropriate to the DNS
+view that their clients should receive. Domain Name System
+Security Extensions (DNSSEC) is a DNS security set of
+specifications to help protect DNS data. DMZ DNS and DNS
+proxying are not design patterns or common terms used in the
+security or networking field.
+"""
+
+[[imp.questions]]
+question = "Abigail is responsible for setting up a network-based intrusion prevention system (NIPS) on her network. The NIPS is located in one particular network segment. She is looking for a passive method to get a copy of all traffic to the NIPS network segment so that it can analyze the traffic. Which of the following would be her best choice?"
+answers = ["Using a network tap"]
+alternatives = [
+    "Using port mirroring",
+    "Setting the NIPS on a VLAN that is connected to all other segments",
+    "Setting up a NIPS on each segment"
+]
+explanation = """
+Network taps copy all traffic to another destination, allowing
+traffic visibility without a device inline. They are completely
+passive methods of getting network traffic to a central location.
+Port mirroring would get all the traffic to the network-based
+intrusion prevention system (NIPS) but is not completely
+passive. It requires the use of resources on switches to route a
+copy of the traffic. Incorrect switch configurations can cause
+looping. Configuring loop detection can prevent looped ports.
+Putting a network IPS on every segment can be very expensive
+and require extensive configuration work. Option D is incorrect.
+This is not the assignment. Setting up a NIPS on each segment
+would also dramatically increase administrative efforts.
+"""
+
+[[imp.questions]]
+question = "Amanda wants to allow users from other organizations to log in to her wireless network. What technology would allow her to do this using their own home organization's credentials?"
+answers = ["RADIUS federation"]
+alternatives = [
+    "Preshared keys",
+    "802.11q",
+    "OpenID Connect"
+]
+explanation = """
+Federating RADIUS allows organizations to permit users
+from other partner organizations to authenticate against their
+home systems, and then be allowed on to the local organization's
+network. An example of this is the eduroam federation used by
+higher education institutions to permit students, faculty, and
+staff to use college networks anywhere they go where eduroam is
+in place. Preshared keys are determined by the location
+organization and would not permit enterprise credentials from
+other organizations to be used. OpenID is used for web
+authentication, and 802.11q is a trunking protocol.
+"""
+
+[[imp.questions]]
+question = "Nathan wants to ensure that the mobile devices his organization has deployed can only be used in the company's facilities. What type of authentication should he deploy to ensure this?"
+answers = ["Context-aware authentication"]
+alternatives = [
+    "PINs",
+    "Biometrics",
+    "Content-aware authentication"
+]
+explanation = """
+Context-aware authentication can take into account
+information like geolocation to ensure that the devices can only
+be logged into when they are inside of the facility's boundaries.
+That means the devices will only be useful on-site and can help
+protect the data and applications on the devices. Neither PINs
+nor biometrics can do this, and content-aware authentication
+was made up for this question.
+"""
+
+[[imp.questions]]
+question = "Which of the following best describes a TPM?"
+answers = ["A secure cryptoprocessor"]
+alternatives = [
+    "Transport Protection Mode",
+    "A DNSSEC extension",
+    "Total Patch Management"
+]
+explanation = """
+A TPM, or Trusted Platform Module, is a secure
+cryptoprocessor used to provide a hardware root of trust for
+systems. They enable secure boot and boot attestation
+capabilities, and include a random number generator, the ability
+to generate cryptographic keys for specific uses, and the ability
+to bind and seal data used for processes the TPM supports.
+"""
+
+[[imp.questions]]
+question = "Janice is explaining how IPSec works to a new network administrator. She is trying to explain the role of IKE. Which of the following most closely matches the role of IKE in IPSec?"
+answers = ["It establishes the SAs."]
+alternatives = [
+    "It encrypts the packet.",
+    "It authenticates the packet.",
+    "It establishes the tunnel."
+]
+explanation = """
+Internet key exchange (IKE) is used to set up security
+associations (SAs) on each end of the tunnel. The security
+associations have all the settings (i.e., cryptographic algorithms,
+hashes) for the tunnel. IKE is not directly involved in encrypting
+or authenticating. IKE itself does not establish the tunnel—it
+establishes the SAs.
+"""
+
+[[imp.questions]]
+question = "What certificate is most likely to be used by an offline certificate authority (CA)?"
+answers = ["Root"]
+alternatives = [
+    "Machine/computer",
+    "User",
+    "Email"
+]
+explanation = """
+A root certificate is the base certificate that signs an entire
+certificate chain. A common security practice to protect these
+incredibly important certificates is to keep the root certificate
+and CA offline to prevent the potential of compromise or
+exposure. Machine/computer, user, and email certificates are
+deployed and used throughout organizations and, since they are
+used on a frequent basis, aren't likely be to kept offline.
+"""
+
+[[imp.questions]]
+question = "Emily manages the IDS/IPS for her network. She has a network-based intrusion prevention system (NIPS) installed and properly configured. It is not detecting obvious attacks on one specific network segment. She has verified that the NIPS is properly configured and working properly. What would be the most efficient way for her to address this?"
+answers = ["Implement port mirroring for that segment."]
+alternatives = [
+    "Install a NIPS on that segment.",
+    "Upgrade to a more effective NIPS.",
+    "Isolate that segment on its own VLAN."
+]
+explanation = """
+The NIPS is not seeing the traffic on that network segment.
+By implementing port mirroring, the traffic from that segment
+can be copied to the segment where the NIPS is installed.
+Installing a network IPS on the segment would require
+additional resources. This would work but is not the most
+efficient approach. Nothing in this scenario suggests that the
+NIPS is inadequate. It just is not seeing all the traffic. Finally,
+isolating the segment to its own VLAN would isolate that
+network segment but would still not allow the NIPS to analyze
+the traffic from that segment.
+"""
+
+[[imp.questions]]
+question = "Dana wants to protect data in a database without changing characteristics like the data length and type. What technique can she use to do this most effectively?"
+answers = ["Tokenization"]
+alternatives = [
+    "Hashing",
+    "Encryption",
+    "Rotation"
+]
+explanation = """
+Tokenization is used to protect data by substituting tokens
+for sensitive data without changing the length or data type. This
+allows databases to handle the data in the same way as it was
+prior to tokenization, ensuring that existing software will not
+run into problems due to the data being changed. Encryption
+provides similar protection but will normally change either the
+data length, the data type, or both. Hashing is one-way, which
+means it is not a good fit for many scenarios where tokenization
+or encryption will protect data. Rotation is not a security method
+used for this type of work.
+"""
+
+[[imp.questions]]
+question = "Elenora is responsible for log collection and analysis for a company with locations around the country. She has discovered that remote sites generate high volumes of log data, which can cause bandwidth consumption issues for those sites. What type of technology could she deploy to each site to help with this?"
+answers = ["Deploy a log aggregator."]
+alternatives = [
+    "Deploy a honeypot.",
+    "Deploy a bastion host.",
+    "None of the above"
+]
+explanation = """
+Elenora could deploy a log aggregator at each location to
+collect and aggregate the logs. Log collection and aggregation
+systems can then filter unneeded log entries, compress the logs,
+and forward desired logs to a central security system like a
+security information and event management (SIEM) or other log
+analysis collection and analysis tool. A honeypot acts like a
+desirable target, luring attackers in to capture data about their
+attacks. A bastion host is designed to resist attacks and normally
+provides a single service to the network on which it resides.
+"""
+
+[[imp.questions]]
+question = "Dani is performing a dynamic code analysis technique that sends a broad range of data as inputs to the application she is testing. The inputs include data that is both within the expected ranges and types for the program and data that is different and, thus, unexpected by the program. What code testing technique is Dani using?"
+answers = ["Fuzzing"]
+alternatives = [
+    "Timeboxing",
+    "Buffer overflow",
+    "Input validation"
+]
+explanation = """
+Fuzzing is an automated, dynamic software testing
+technique that sends unexpected and often invalid data to a
+program to test how it responds. The software is monitored to
+see how it responds to the input, providing additional assurance
+that the program has proper error handling and input validation
+built in. Timeboxing is an agile project management technique;
+buffer overflows may occur as part of fuzzing, but are not the
+only technique used or described here; and input validation can
+help stop fuzzing from causing problems for an application by
+preventing out-of-bounds or unwanted data from being
+accepted.
+"""
+
+[[imp.questions]]
+question = "Tina wants to ensure that rogue DHCP servers are not permitted on the network she maintains. What can she do to protect against this?"
+answers = ["Enable DHCP snooping."]
+alternatives = [
+    "Deploy an IDS to stop rogue DHCP packets.",
+    "Disable DHCP snooping.",
+    "Block traffic on the DHCP ports to all systems."
+]
+explanation = """
+Dynamic Host Configuration Protocol (DHCP) snooping can
+be set up on switches to monitor for and stop rogue DHCP traffic
+from unknown servers. Disabling DHCP snooping would remove
+this feature. Intrusion detection systems (IDSs) cannot stop
+traffic, and blocking DHCP traffic would prevent systems from
+acquiring dynamic IP addresses.
+"""
+[[imp.questions]]
+question = "Endpoint detection and response has three major components that make up its ability to provide visibility into endpoints. Which of the following is not one of those three parts?"
+answers = ["Malware analysis"]
+alternatives = [
+    "Data search",
+    "Data exploration",
+    "Suspicious activity detection"
+]
+explanation = """
+Endpoint detection and response (EDR) focuses on
+identifying anomalies and issues, but it is not designed to be a
+malware analysis tool. Instead, the ability to search and explore
+data, identify suspicious activities, and coordinate responses is
+what makes up an EDR tool.
+"""
+
+[[imp.questions]]
+question = "Isabelle is responsible for security at a mid-sized company. She wants to prevent users on her network from visiting job-hunting sites while at work. Which of the following would be the best device to accomplish this goal?"
+answers = ["Proxy server"]
+alternatives = [
+    "NAT",
+    "A packet filter firewall",
+    "NIPS"
+]
+explanation = """
+A web proxy can be used to block certain websites. It is
+common practice for network administrators to block either
+individual sites or general classes of sites (like job-hunting
+sites). Network address translation (NAT) is used to translate
+the private IP addresses of internal computers to public IP
+addresses. A packet filter firewall can block traffic on a given
+port or IP address or using a particular protocol, but generally
+they are not able to block specific websites. Network-based
+intrusion prevention systems (NIPSs) identify and block attacks;
+they cannot prevent users from visiting specific websites.
+"""
+
+[[imp.questions]]
+question = "What term describes a cloud system that stores, manages, and allows auditing of API keys, passwords, and certificates?"
+answers = ["A secrets manager"]
+alternatives = [
+    "A cloud PKI",
+    "A cloud TPM",
+    "A hush service"
+]
+explanation = """
+Secrets management services provide the ability to store
+sensitive data like application programming interface (API)
+keys, passwords, and certificates. They also provide the ability to
+manage, retrieve, and audit those secrets. A public key
+infrastructure (PKI) would focus on certificates and encryption
+keys, without passwords or API keys. A Trusted Platform
+Module (TPM) is associated with hardware, and a hush service
+was made up for this question.
+"""
+
+[[imp.questions]]
+question = "Fred is building a web application that will receive information from a service provider. What open standard should he design his application to use to work with many modern third-party identity providers?"
+answers = ["SAML"]
+alternatives = [
+    "Kerberos",
+    "LDAP",
+    "NTLM"
+]
+explanation = """
+SAML, the Security Assertion Markup Language, is used by
+many identity providers to exchange authorization and
+authentication data with service providers. Kerberos and LDAP
+(Lightweight Directory Access Protocol) are used inside many
+organizations, but Fred will find more success with SAML for
+popular web services. New Technology LAN Manager (NTLM)
+remains in use for Windows systems, but Kerberos is more
+commonly used for modern Windows domains and would not be
+used in the scenario described here.
+"""
+
+[[imp.questions]]
+question = "You are responsible for an e-commerce site. The site is hosted in a cluster. Which of the following techniques would be best in assuring availability?"
+answers = ["Load balancing"]
+alternatives = [
+    "A VPN concentrator",
+    "Aggregate switching",
+    "An SSL accelerator"
+]
+explanation = """
+Load balancing the cluster will prevent any single server
+from being overloaded. And if a given server is offline, other
+servers can take on its workload. Option A is incorrect. A VPN
+concentrator, as the name suggests, is used to initiate virtual
+private networks (VPNs). Option B is incorrect. Aggregate
+switching can shunt more bandwidth to the servers but won't
+mitigate the threat of one or more servers being offline. Option
+C is incorrect. SSL accelerators are a method of offloading
+processor-intensive public-key encryption for Transport Layer
+Security (TLS) and Secure Sockets Layer (SSL) to a hardware
+accelerator.
+"""
+
+[[imp.questions]]
+question = "What channels do not cause issues with channel overlap or overlap in U.S. installations of 2.4 GHz Wi-Fi networks?"
+answers = ["1, 6, and 11"]
+alternatives = [
+    "1, 3, 5, 7, 9, and 11",
+    "2, 6, and 10",
+    "Wi-Fi channels do not suffer from channel overlap."
+]
+explanation = """
+The three channels that do not overlap are 1, 6, and 11. The
+rest of the channels will overlap. In an ideal installation, these
+three channels can be used to maximize throughput and
+minimize interference.
+"""
+
+[[imp.questions]]
+question = "Ryan is concerned about the security of his company's web application. Since the application processes confidential data, he is most concerned about data exposure. Which of the following would be the most important for him to implement?"
+answers = ["TLS"]
+alternatives = [
+    "WAF",
+    "NIPS",
+    "NIDS"
+]
+explanation = """
+The correct answer is to encrypt all the web traffic to this
+application using Transport Layer Security (TLS). This is one of
+the most fundamental security steps to take with any website. A
+web application firewall (WAF) is probably a good idea, but it is
+not the most important thing for Ryan to implement. While a
+network-based intrusion prevention system (IPS) or intrusion
+detection system (IDS) may be a good idea, those should be
+considered after TLS is configured.
+"""
+
+[[imp.questions]]
+question = "Which of the following connection methods only works via a line-of-sight connection?"
+answers = ["Infrared"]
+alternatives = [
+    "Bluetooth",
+    "NFC",
+    "Wi-Fi"
+]
+explanation = """
+Infrared (IR) is the only line-of-sight method on the list.
+Although Near-Field Communication (NFC) and Bluetooth have
+a relatively short range, they can still operate through materials
+placed between them and the receiver, and Wi-Fi can do so at an
+even longer range.
+"""
+
+[[imp.questions]]
+question = "Carole is responsible for various network protocols at her company. The Network Time Protocol has been intermittently failing. Which of the following would be most affected?"
+answers = ["Kerberos"]
+alternatives = [
+    "RADIUS",
+    "CHAP",
+    "LDAP"
+]
+explanation = """
+The correct answer is that Kerberos uses various tickets,
+each with a time limit. The service tickets are typically only good
+for 5 minutes or less. This means that if the Network Time
+Protocol (NTP) is failing, valid tickets may appear to be expired.
+RADIUS, CHAP, and LDAP will not have any significant effect
+due to NTP failure.
+"""
+
+[[imp.questions]]
+question = "You are selecting an authentication method for your company's servers. You are looking for a method that periodically reauthenticates clients to prevent session hijacking. Which of the following would be your best choice?"
+answers = ["CHAP"]
+alternatives = [
+    "PAP",
+    "SPAP",
+    "OAuth"
+]
+explanation = """
+The correct answer is that Challenge Handshake
+Authentication Protocol (CHAP) periodically has the client
+reauthenticate. This is transparent to the user but is done
+specifically to prevent session hijacking. Password
+Authentication Protocol (PAP) is actually quite old and does not
+reauthenticate. In fact, it even sends the password in cleartext,
+so it should not be used any longer. SPAP (Shiva Password
+Authentication Protocol) adds password encryption to PAP but
+does not reauthenticate. OAuth is used in web authentication
+and does not reauthenticate.
+"""
+
+[[imp.questions]]
+question = "Naomi wants to deploy a firewall that will protect her endpoint systems from other systems in the same security zone of her network as part of a zero-trust design. What type of firewall is best suited to this type of deployment?"
+answers = ["Software firewalls"]
+alternatives = [
+    "Hardware firewalls",
+    "Virtual firewalls",
+    "Cloud firewalls"
+]
+explanation = """
+A software firewall is best suited to deployments to
+individual machines, particularly when endpoint systems are
+being protected. Hardware firewalls are typically deployed to
+protect network segments or groups of systems, and result in
+additional expense and management. Virtual and cloud firewalls
+are most often deployed in datacenters where virtual or cloud
+environments are in use, although a virtual firewall could be run
+on an endpoint.
+"""
+
+[[imp.questions]]
+question = "Lisa is setting up accounts for her company. She wants to set up accounts for the Oracle database server. Which of the following would be the best type of account to assign to the database service?"
+answers = ["Service"]
+alternatives = [
+    "User",
+    "Guest",
+    "Admin"
+]
+explanation = """
+A service account is the most appropriate in this scenario.
+Service accounts are given the least privileges the service needs
+and are used by the service, without the need for a human user.
+Although you could assign a user account, it is not as good a
+solution as using a service account. A guest account would never
+be a good idea for a service. Guest accounts are typically too
+limited. It's common practice to disable default accounts such as
+the Guest account. An admin account would give too many
+privileges to the service and violate the principle of least
+privileges.
+"""
+
+[[imp.questions]]
+question = "Gary wants to implement EAP-based protocols for his wireless authentication and wants to ensure that he uses only versions that support Transport Layer Security (TLS). Which of the following EAP-based protocols does not support TLS?"
+answers = ["LEAP"]
+alternatives = [
+    "EAP-TTLS",
+    "PEAP",
+    "EAP-TLS"
+]
+explanation = """
+Of these versions of Extensible Authentication Protocol
+(EAP), only Lightweight Extensible Authentication Protocol
+(LEAP) does not support TLS. EAP Tunneled Transport Layer
+Security (EAP-TTLS) actually extends TLS, but supports the
+underlying protocol. Protected Extensible Authentication
+Protocol (PEAP) encapsulates EAP within an encrypted TLS
+tunnel.
+"""
+
+[[imp.questions]]
+question = "Manny wants to download apps that aren't in the iOS App Store, as well as change settings at the OS level that Apple does not normally allow to be changed. What would he need to do to his iPhone to allow this?"
+answers = ["Jailbreak the phone."]
+alternatives = [
+    "Buy an app via a third-party app store.",
+    "Install an app via side-loading.",
+    "Install Android on the phone."
+]
+explanation = """
+Jailbreaking allows users to add software to an iPhone that
+isn't normally allowed, including third-party applications,
+changing system settings, themes, or default applications. Third-party application stores aren't available by default, and side-loading can be accomplished in iOS but doesn't do what Manny
+wants it to, and of course installing Android won't let Manny
+change iOS settings. If Manny does jailbreak his phone, his
+organization may notice if they're using a mobile device
+management (MDM) or unified endpoint management (UEM)
+application to track the status of the device.
+"""
+
+[[imp.questions]]
+question = "Many smartcards implement a wireless technology to allow them to be used without a card reader. What wireless technology is frequently used to allow the use of smartcards for entry-access readers and similar access controls?"
+answers = ["RFID"]
+alternatives = [
+    "Infrared",
+    "Wi-Fi",
+    "Bluetooth"
+]
+explanation = """
+Many smartcards implement Radio Frequency Identification
+(RFID) to allow them to be used for entry access and other
+purposes. Wi-Fi, Infrared, and Bluetooth generally require
+powered circuits to interact with systems, making them a poor
+fit for a smartcard that does not typically have a battery or other
+power source.
+"""
+
+[[imp.questions]]
+question = "Carl has been asked to set up access control for a server. The requirements state that users at a lower privilege level should not be able to see or access files or data at a higher privilege level. What access control model would best fit these requirements?"
+answers = ["MAC"]
+alternatives = [
+    "DAC",
+    "RBAC",
+    "SAML"
+]
+explanation = """
+Mandatory access control (MAC) is the correct solution. It
+will not allow lower privileged users to even see the data at a
+higher privilege level. Discretionary access control (DAC) has
+each data owner configure his or her own security. Role-based
+access control (RBAC) could be configured to meet the needs,
+but it's not the best solution for these requirements. Security
+Assertion Markup Language (SAML) is not an access control
+model.
+"""
+
+[[imp.questions]]
+question = "Jack wants to deploy a network access control (NAC) system that will stop systems that are not fully patched from connecting to his network. If he wants to have full details of system configuration, antivirus version, and patch level, what type of NAC deployment is most likely to meet his needs?"
+answers = ["Agent-based, preadmission"]
+alternatives = [
+    "Agentless, preadmission",
+    "Agentless, postadmission",
+    "Agent-based, postadmission"
+]
+explanation = """
+An agent-based, preadmission system will provide greater
+insight into the configuration of the system using the agent, and
+using a preadmission model will allow the system configuration
+to be tested before the system is allowed to connect to the
+network. Agentless NAC uses scanning and/or network
+inventory techniques and will typically not have as deep a level
+of insight into the configuration and software versions running
+on a system. Postadmission systems make enforcement
+decisions based on what users do after they gain admission to a
+network, rather than prior to gaining admission, allowing you to
+quickly rule out two of these options.
+"""
+
+[[imp.questions]]
+question = "Claire has been notified of a zero-day flaw in a web application. She has the exploit code, including a SQL injection attack that is being actively exploited. How can she quickly react to prevent this issue from impacting her environment if she needs the application to continue to function?"
+answers = ["Deploy a fix via her WAF."]
+alternatives = [
+    "Deploy a detection rule to her IDS.",
+    "Manually update the application code after reverse-engineering it.",
+    "Install the vendor provided patch."
+]
+explanation = """
+Claire's best option is to deploy a detection and fix via her
+web application firewall (WAF) that will detect the SQL injection
+attempt and prevent it. An intrusion detection system (IDS) only
+detects attacks and cannot stop them. Manually updating the
+application code after reverse-engineering it will take time, and
+she may not even have the source code or the ability to modify it.
+Finally, vendor patches for zero days typically take some time to
+come out even in the best of circumstances, meaning that Claire
+could be waiting on a patch for quite a while if that is the option
+she chooses.
+"""
+
+[[imp.questions]]
+question = "Eric wants to provide company-purchased devices, but his organization prefers to provide end users with choices among devices that can be managed and maintained centrally. What mobile device deployment model best fits this need?"
+answers = ["CYOD"]
+alternatives = [
+    "BYOD",
+    "COPE",
+    "VDI"
+]
+explanation = """
+CYOD, or choose your own device, allows users to choose a
+device that is corporate owned and paid for. Choices may be
+limited to set of devices, or users may be allowed to choose
+essentially any device depending on the organization's
+deployment decisions. BYOD allows users to bring their own
+device, whereas COPE, or corporate-owned, personally enabled,
+provides devices to users that they can then use for personal use.
+VDI uses a virtual desktop infrastructure as an access layer for
+any security model where specialized needs or security
+requirements may require access to remote desktop or
+application services.
+"""
+
+[[imp.questions]]
+question = "Derek is in charge of his organization's certificate authorities and wants to add a new certificate authority. His organization already has three certificate authorities operating in a mesh: A.South American CA, B. the United States CA, and C, the European Union CA. As they expand into Australia, he wants to add D. the Australian CA. Which CAs will Derek need to issue certificates to from D. to ensure that systems in the Australian domain are able to access servers in A, B, and C's domains?"
+answers = ["He needs to issue certificates from D to each of the other CAs systems and then have the other CAs issue D a certificate."]
+alternatives = [
+    "He needs all the other systems to issue D certificates so that his systems will be trusted there.",
+    "He needs to provide the private key from D to each of the other CAs.",
+    "He needs to receive the private key from each of the other CAs and use it to sign the root certificate for D."
+]
+explanation = """
+The key element here is that the certificate authorities (CA)
+are operating in a mesh, meaning no CA is the root CA and that
+each must trust the others. To accomplish this, Derek first needs
+to issue certificates from D to each of the other Cas and then
+have the others issue D a certificate. Private keys should never
+be exchanged, and of course if he only has the other systems
+issue D certificates, they won't recognize his server.
+"""
+
+[[imp.questions]]
+question = "Claire is concerned about an attacker getting information regarding network devices and their configuration in her company. Which protocol should she implement that would be most helpful in mitigating this risk while providing management and reporting about network devices?"
+answers = ["SNMPv3"]
+alternatives = [
+    "RADIUS",
+    "TLS",
+    "SFTP"
+]
+explanation = """
+If Claire is using Simple Network Management Protocol
+(SNMP) to manage and monitor her network devices, she should
+make sure she is using SNMPv3 and that it is properly
+configured. SNMPv3 can provide information about the status
+and configuration of her network devices. Remote
+Authentication Dial-In User Service (RADIUS) might be used to
+authenticate to the network, but Transport Layer Security (TLS)
+and SSH File Transfer Protocol (SFTP) are not specifically used
+for the purposes described.
+"""
+
+[[imp.questions]]
+question = "Ben is using a tool that is specifically designed to send unexpected data to a web application that he is testing. The application is running in a test environment, and configured to log events and changes. What type of tool is Ben using?"
+answers = ["A fuzzer"]
+alternatives = [
+    "A SQL injection proxy",
+    "A static code review tool",
+    "A web proxy"
+]
+explanation = """
+Fuzzers send unexpected and out of range data to
+applications to see how they will respond. In this case, Ben is
+using a fuzzer. Web proxies are often used to do application
+testing because they allow data to be changed between the
+browser and the application. SQL injection may be done via a
+web proxy, but a dedicated SQL injection proxy is not a type of
+tool by itself. Finally, a static code review tool is used to review
+source code and may be as simple as a Notepad application or as
+complex as a fully integrated development environment (IDE).
+"""
+
+[[imp.questions]]
+question = "Eric is responsible for his organization's mobile device security. They use a modern mobile device management (MDM) tool to manage a BYOD mobile device environment. Eric needs to ensure that the applications and data that his organization provides to users of those mobile devices remain as secure as possible. Which of the following technologies will provide him with the best security?"
+answers = ["Containerization"]
+alternatives = [
+    "Storage segmentation",
+    "Full-device encryption",
+    "Remote wipe"
+]
+explanation = """
+Containerization will allow Eric's company's tools and data
+to be run inside of an application-based container, isolating the
+data and programs from the self-controlled bring your own
+device (BYOD) devices. Storage segmentation can be helpful, but
+the operating system itself as well as the applications would
+remain a concern. Eric should recommend full-device
+encryption (FDE) as a security best practice, but encrypting the
+container and the data it contains can provide a reasonable
+security layer even if the device itself is not fully encrypted.
+Remote wipe is helpful if devices are lost or stolen, but the end
+user may not be okay with having the entire device wiped, and
+there are ways to work around remote wipes, including blocking
+cellular and Wi-Fi signals.
+"""
+[[imp.questions]]
+question = "Murali is looking for an authentication protocol for his network. He is very concerned about highly skilled attackers. As part of mitigating that concern, he wants an authentication protocol that never actually transmits a user's password, in any form. Which authentication protocol would be a good fit for Murali's needs?"
+answers = ["Kerberos"]
+alternatives = [
+    "CHAP",
+    "RBAC",
+    "Type II"
+]
+explanation = """
+Kerberos does not send the users password across the
+network. When the user's name is sent to the authentication
+service, the service retrieves the hash of the user's password
+from the database, and then uses that as a key to encrypt data to
+be sent back to the user. The user's machine takes the password
+that the user entered, hashes it, and then uses that as a key to
+decrypt what was sent back by the server. Challenge Handshake
+Authentication Protocol (CHAP) sends the user's password in an
+encrypted form. RBAC is an access control model, not an
+authentication protocol. Type II authentication is something you
+have, such as a key or card.
+"""
+
+[[imp.questions]]
+question = "As part of the certificate issuance process from the CA that her company works with, Marie is required to prove that she is a valid representative of her company. The CA goes through additional steps to ensure that she is who she says she is and that her company is legitimate, and not all CAs can issue this type of certificate. What type of certificate has she been issued"
+answers = ["An EV certificate"]
+alternatives = [
+    "A domain-validated certificate",
+    "An organization validation certificate",
+    "An OCSP certificate"
+]
+explanation = """
+EV, or extended validation, certificates prove that the X.509
+certificate has been issued to the correct legal entity. In addition,
+only specific certificate authorities (Cas) can issue EV
+certificates. Domain-validated certificates require proof that you
+have control of the domain, such as setting the DNS TXT record
+or responding to an email sent to a contact in the domain's
+Whois record. An organizational validation certificate requires
+either domain validation and additional proof that the
+organization is a legal entity. OCSP certificates were made up for
+this question.
+"""
+
+[[imp.questions]]
+question = "Mark wants to provide a wireless connection with the highest possible amount of bandwidth. Which of the following should he select?"
+answers = ["802.11ac Wi-Fi"]
+alternatives = [
+    "LTE cellular",
+    "Bluetooth",
+    "NFC"
+]
+explanation = """
+Wi-Fi 5 networks can provide theoretical throughput up to
+3.5 Gbps megabits per second, although newer standards like
+Wi-Fi 6 continue to push this higher. The next fastest wireless
+standard listed is LTE cellular with theoretical throughputs
+around 50 megabits per second. When bandwidth is important,
+Wi-Fi will tend to win, although 5G cellular networks under
+ideal conditions may rival Wi-Fi.
+"""
+
+[[imp.questions]]
+question = "What is the primary advantage of cloud-native security solutions when compared to third-party solutions deployed to the same cloud environment?"
+answers = ["Tighter integration"]
+alternatives = [
+    "Lower cost",
+    "Better security",
+    "All of the above"
+]
+explanation = """
+The cost of applications and the quality of the security
+implementation can vary based on the vendor and product, but
+cloud-native security solutions will generally have better and
+deeper integration into the cloud platform than third-party
+solutions will. Vendor diversity in designs may still drive other
+choices, but those are conscious design decisions.
+"""
+
+[[imp.questions]]
+question = "Ed needs to securely connect to a DMZ from an administrative network using Secure Shell (SSH). What type of system is frequently deployed to allow this to be done securely across security boundaries for network segments with different security levels?"
+answers = ["A jump box"]
+alternatives = [
+    "An IPS",
+    "A NAT gateway",
+    "A router"
+]
+explanation = """
+Jump boxes are a common solution for providing access to a
+network with a different security profile. In this case, Ed can
+deploy a jump box in the demilitarized zone (DMZ) to allow
+users within his administrative zone to perform tasks without
+directly connecting to the world-exposed DMZ. This helps keep
+administrative systems secure and allows him to focus on the
+security of the jump box, while also making it easier to monitor
+and maintain. An intrusion prevention system (IPS) is used to
+monitor and block unwanted traffic, but isn't used for remote
+access. A NAT gateway performs network address translation
+and is placed between networks but is not typically used to
+provide secure connections between networks. Instead, it serves
+to reduce the number of public IP addresses used and to provide
+some limited security for systems behind it. Routers are used to
+connect to networks but are not used to provide secure access as
+described in the question.
+"""
+
+[[imp.questions]]
+question = "You work for a social media website. You wish to integrate your users' accounts with other web resources. To do so, you need to allow authentication to be used across different domains, without exposing your users' passwords to these other services. Which of the following would be most helpful in accomplishing this goal?"
+answers = ["OAuth"]
+alternatives = [
+    "Kerberos",
+    "SAML",
+    "OpenID"
+]
+explanation = """
+OAuth (Open Authorization) is an open standard for token-based authentication and authorization on the Internet and
+allows an end user's account information to be used by third-party services, without exposing the user's password. Kerberos is
+a network authentication protocol and not used for cross-domain/service authentication. Security Assertion Markup
+Language (SAML) is an XML-based, open-standard data format for exchanging authentication and authorization data between
+parties. OpenID is an authentication service often provided by a third party, and it can be used to sign into any website that
+accepts OpenID. It would be possible for this to work, but only with websites that support OpenID, so it is not as good a
+solution as OAuth.
+"""
+
+[[imp.questions]]
+question = "Christina wants to ensure that session persistence is maintained by her load balancer. What is she attempting to do?"
+answers = ["Ensure that all of a client's requests go to the same server for the duration of a given session or transaction."]
+alternatives = [
+    "Assign the same internal IP address to clients whenever they connect through the load balancer.",
+    "Ensure that all transactions go to the current server in a round-robin during the time it is the primary server.",
+    "Assign the same external IP address to all servers whenever they are the primary server assigned by the load balancer."
+]
+explanation = """
+Session persistence makes sure that all of a client's traffic for
+a transaction or session goes to the same server or service. The
+remaining options do not properly describe how session
+persistence works.
+"""
+
+[[imp.questions]]
+question = "Tara is concerned about staff in her organization sending email with sensitive information like customer Social Security numbers (SSNs) included in it. What type of solution can she implement to help prevent inadvertent exposures of this type of sensitive data?"
+answers = ["DLP"]
+alternatives = [
+    "FDE",
+    "S/MIME",
+    "POP3S"
+]
+explanation = """
+Data loss prevention (DLP) tools allow sensitive data to be
+tagged and monitored so that if a user attempts to send it, they
+will be notified, administrators will be informed, and if
+necessary, the data can be protected using encryption or other
+protection methods before it is sent. Full-disk encryption (FDE)
+would protect data at rest, and S/MIME and POP3S would
+protect mail being retrieved from a server but would not prevent
+the SSNs from being sent.
+"""
+
+[[imp.questions]]
+question = "Jennifer is considering using an infrastructure as a service cloud provider to host her organization's web application,  database, and web servers. Which of the following is not a reason that she would choose to deploy to a cloud service?"
+answers = ["Direct control of underlying hardware"]
+alternatives = [
+    "Support for high availability",
+    "Reliability of underlying storage",
+    "Replication to multiple geographic zones"
+]
+explanation = """
+While infrastructure as a service (IaaS) vendors often
+provide strong support for high availability, including
+replication to multiple geographic zones or regions, as well as
+highly reliable and secure storage, they do not allow direct
+access to the underlying hardware in most instances. If Jennifer
+requires direct access to hardware, she will need to deploy to a
+datacenter where she can retain access to the physical servers.
+"""
+
+[[imp.questions]]
+question = "Chris has provided the BitLocker encryption keys for computers in his department to his organization's security office so that they can decrypt computers in the event of a breach of investigation. What is this concept called?"
+answers = ["Key escrow"]
+alternatives = [
+    "A BitLocker Locker",
+    "Key submission",
+    "AES jail"
+]
+explanation = """
+Key escrow provides encryption keys to a third party so that
+they can be released to an appropriate party if certain conditions
+are met. Although this means that the keys are out of the control
+of the owning or responsible party, in many cases the need to
+have a recoverable or accessible way to get to the keys overrides
+the requirement to keep the keys in a single individual or
+organization's hands. The remaining options were made up, but
+you may encounter the term "key recovery," which is a process
+where law enforcement or other parties may recover keys when
+needed using a process that provides them with an access key or
+decryption key that may not be the same key as the key used by
+the original encryption user.
+"""
+
+[[imp.questions]]
+question = "Marek has configured systems in his network to perform boot attestation. What has he configured the systems to do?"
+answers = ["To notify a remote system or management tool that the boot process was secure using measurements from the boot process"]
+alternatives = [
+    "To run only trusted software based on previously stored hashes using a chained boot process",
+    "To notify a BOOTP server when the system has booted up",
+    "To hash the BIOS of the system to ensure that the boot process has occurred securely"
+]
+explanation = """
+Boot attestation requires systems to track and measure the
+boot process and to then attest to a system that the process was
+secure. Secure boot, which is a related concept, allows only
+trusted software to be run using previously hashed values to
+ensure the process is secure. BOOTP and BIOS are not involved
+in this process, instead, Unified Extensible Firmware Interface
+(UEFI) firmware supports both secure boot and boot attestation.
+"""
+
+[[imp.questions]]
+question = "You have been asked to find an authentication service that is handled by a third party. The service should allow users to access multiple websites, as long as they support the third-party authentication service. What would be your best choice?"
+answers = ["OpenID"]
+alternatives = [
+    "Kerberos",
+    "NTLM",
+    "Shibboleth"
+]
+explanation = """
+The correct answer is that OpenID is an authentication
+service often done by a third party, and it can be used to sign
+into any website that accepts OpenID. Kerberos is a network
+authentication protocol for use within a domain. New
+Technology LAN Manager (NTLM) is an older Windows
+authentication protocol. Shibboleth is a single sign-on system,
+but it works with federated systems.
+"""
+
+[[imp.questions]]
+question = "Which of the following steps is a common way to harden the Windows registry?"
+answers = ["Disable remote registry access if not required."]
+alternatives = [
+    "Ensure the registry is fully patched.",
+    "Set the registry to read-only mode.",
+    "Encrypt all user-mode registry keys."
+]
+explanation = """
+Disabling remote registry access for systems that do not
+require it can prevent remote registry modification and reads.
+This is a recommended best practice whenever possible, but
+some systems may require remote registry access for
+management or other reasons. The Windows registry is not
+independently patched, the registry needs to be readable and
+writable to have a functional Windows system, and there is no
+mode that encrypts user keys.
+"""
+
+[[imp.questions]]
+question = "Lois is designing the physical layout for her wireless access point (WAP) placement in her organization. Which of the following items is not a common concern when designing a WAP layout?"
+answers = ["Maximizing coverage overlap"]
+alternatives = [
+    "Determining construction material of the walls around the access points",
+    "Assessing power levels from other access points",
+    "Performing a site survey"
+]
+explanation = """
+Maximizing coverage overlap would cause greater
+contention between access points. Instead, installations should
+minimize overlap without leaving dead spots in important areas.
+Performing a site survey, controlling power levels and adjusting
+them to minimize contention, and designing around the
+construction materials of a building are all important parts of
+designing the physical layout and placement of WAPs.
+Fortunately, modern enterprise wireless networks have
+advanced intelligent features that help do many of these things
+somewhat automatically.
+"""
+
+[[imp.questions]]
+question = "Gabby has been laid off from the organization that she has worked at for almost a decade. Mark needs to make sure that Gabby's account is securely handled after her last day of work. What can he do to her account as an interim step to best ensure that files are still accessible and that the account could be returned to use if Gabby returns after the layoff?"
+answers = ["Disable the account and reenable it if it is needed."]
+alternatives = [
+    "Delete the account and re-create it when it is needed.",
+    "Leave the account active in case Gabby returns.",
+    "Change the password to one Gabby does not know."
+]
+explanation = """
+Disabling the account is the best option to meet Mark's
+needs. Disabling an account will leave it in a different state than
+an active account or one with a changed password, which should
+be noted by support staff if Gabby called and asked to change
+her password. That means that there is less risk of a disgruntled
+employee or an attacker successfully gaining access to the
+account. At the same time, disabling is less destructive than
+deleting the account, making it faster to restore and preserving
+her files and other materials. Most organizations will choose to
+have a time limit for how long an account can be in a disabled
+state without review or moving to another account state to help
+ensure that disabled accounts do not build up over time.
+"""
+
+[[imp.questions]]
+question = "Mason is responsible for security at a company that has traveling salespeople. The company has been using ABAC for access control to the network. Which of the following is an issue that is specific to ABAC and might cause it to incorrectly reject logins?"
+answers = ["Geographic location"]
+alternatives = [
+    "Wrong password",
+    "Remote access is not allowed by ABAC.",
+    "Firewalls usually block ABAC."
+]
+explanation = """
+Attribute-based access control (ABAC) looks at a group of
+attributes, in addition to the login username and password, to
+make decisions about whether or not to grant access. One of the
+attributes examined is the location of the person. Since the users
+in this company travel frequently, they will often be at new
+locations, and that might cause ABAC to reject their logins.
+Wrong passwords can certainly prevent login, but are not
+specific to ABAC. ABAC does not prevent remote access, and a
+firewall can be configured to allow, or prohibit, any traffic you
+wish.
+"""
+
+[[imp.questions]]
+question = "Darrell is concerned that users on his network have too many passwords to remember and might write down their  passwords, thus creating a significant security risk. Which of the following would be most helpful in mitigating this issue?"
+answers = ["SSO"]
+alternatives = [
+    "Multifactor authentication",
+    "SAML",
+    "LDAP"
+]
+explanation = """
+Single Sign-On (SSO) is designed specifically to address this
+risk and would be the most helpful. Users have only a single
+logon to remember; thus, they have no need to write down the
+password. OAuth (Open Authorization) is an open standard for
+token-based authentication and authorization on the Internet. It
+does not eliminate the use or need for multiple passwords.
+Multifactor authentication helps prevent risks due to lost
+passwords, but does not remove the need for multiple passwords
+by itself. Security Assertion Markup Language (SAML) and
+Lightweight Directory Access Protocol (LDAP) do not stop users
+from needing to remember multiple passwords.
+"""
+
+[[imp.questions]]
+question = "Frank is a security administrator for a large company. Occasionally, a user needs to access a specific resource that they don't have permission to access. Which access control methodology would be most helpful in this situation?"
+answers = ["Rule-based access control"]
+alternatives = [
+    "Mandatory access control (MAC)",
+    "Discretionary access control (DAC)",
+    "Role-based access control"
+]
+explanation = """
+Rule-based access control applies a set of rules to an access
+request. Based on the application of the rules, the user may be
+given access to a specific resource that they were not explicitly
+granted permission to. MAC, DAC, and role-based access control
+wouldn't give a user access unless that user has already been
+explicitly given that access.
+"""
+
+[[imp.questions]]
+question = "Ed is designing the security architecture for his organization's move into an infrastructure as a service cloud environment. In his on-site datacenter, he has deployed a firewall in front of the datacenter network to protect it, and he has built rules that allow necessary services in, as well as outbound traffic for updates and similar needs. He knows that his cloud environment will be different. Which of the following is not a typical concern for cloud firewall designs?"
+answers = ["Hardware access for updates"]
+alternatives = [
+    "Segmentation requirements for virtual private clouds (VPCs)",
+    "The cost of operating firewall services in the cloud",
+    "OSI layers and visibility of traffic to cloud firewalls"
+]
+explanation = """
+Segmentation needs between multiple cloud virtual
+datacenters, the cost of operating the firewall service, and the
+visibility into traffic provided by the cloud service provider are
+all design elements Ed will need to consider. He won't, however,
+need to worry about hardware access for updates. Instead, he is
+likely to either use a virtual cloud appliance or built-in firewall
+functionality provided by the cloud infrastructure service
+provider.
+"""
+
+[[imp.questions]]
+question = "Amelia is looking for a network authentication method that can use digital certificates and does not require end users to remember passwords. Which of the following would best fit her requirements?"
+answers = ["Tokens"]
+alternatives = [
+    "OAuth",
+    "OpenID",
+    "RBAC"
+]
+explanation = """
+Tokens are physical devices that often contain cryptographic
+data for authentication. They can store digital certificates for use
+with authentication. OAuth (Open Authorization) is an open
+standard for token-based authentication and authorization on
+the Internet. The user still must remember a password. OpenID
+is a third-party authentication service, and just as with OAuth,
+the user also still must remember a password. Role-based access
+control and rule-based access control (which both use the
+acronym RBAC) are access control models.
+"""
+
+[[imp.questions]]
+question = "Damian has designed and built a website that is accessible only inside of a corporate network. What term is used to describe this type of internal resource?"
+answers = ["An intranet"]
+alternatives = [
+    "An extranet",
+    "A DMZ",
+    "A TTL"
+]
+explanation = """
+Internal services like this are part of an intranet, a network,
+or website only accessible to individuals and systems inside of a
+company. Extranets are private networks that allow access to
+partners or customers, but not to the general public. A
+demilitarized zone (DMZ) is a network segment exposed to the
+Internet or another untrusted network. A TTL is a network term
+that means time to live, and it determines how many hops a
+packet can make before it is no longer able to be sent to another
+hop.
+"""
+
+[[imp.questions]]
+question = "The firewall that Walter has deployed looks at every packet sent by systems that travel through it, ensuring that each packet matches the rules that it operates and filters traffic by. What type of firewall is being described?"
+answers = ["Stateless"]
+alternatives = [
+    "Next generation",
+    "Application layer",
+    "Stateful"
+]
+explanation = """
+This question describes a stateless firewall, which looks at
+every packet to make decisions about what will be allowed
+through it. Stateful firewalls pay attention the conversations and
+allow packets in a conversation between devices to pass through
+once it has verified the initial exchange. Next-generation
+firewalls (NGFWs) build in a wide variety of security services.
+Application-layer firewalls understand applications that run
+through them and provide deeper packet analysis capabilities to
+block unwanted application layer traffic.
+"""
+
+[[imp.questions]]
+question = "Nancy wants to protect and manage her RSA keys while using a mobile device. What type of solution could she purchase to ensure that the keys are secure so that she can perform public key authentication?"
+answers = ["A MicroSD HSM"]
+alternatives = [
+    "An application-based PKI",
+    "An OPAL-encrypted drive",
+    "An offline CA"
+]
+explanation = """
+Hardware security modules are available as smartcards,
+microSD cards, and USB thumb drives in addition to their
+frequent deployment as appliances in enterprise use. Nancy
+could purchase a certified and tested MicroSD card–based HSM
+that would protect her keys in a secure way. An application-based public key infrastructure (PKI) would not provide the
+same level of security on most mobile devices without specially
+designed hardware, which is not mentioned in this problem.
+OPAL is a hardware-based encryption standard and does not
+provide key management, and an offline certificate authority
+(CA) would not help in this circumstance.
+"""
+
+[[imp.questions]]
+question = "Oliver needs to explain the access control scheme used by both the Windows and Linux filesystems. What access control scheme do they implement by default?"
+answers = ["Discretionary access control"]
+alternatives = [
+    "Role-based access control",
+    "Mandatory access control",
+    "Rule-based access control"
+]
+explanation = """
+Both the Windows and Linux filesystems work based on a
+discretionary access control scheme where file and directory
+owners can determine who can access, change, or otherwise
+work with files under their control. Role-based access controls
+systems determine rights based on roles that are assigned to
+users. Rule-based access control systems use a series of rules to
+determine which actions can occur, and mandatory access
+control systems enforce control at the operating system level.
+"""
+
+[[imp.questions]]
+question = "Stefan just became the new security officer for a university. He is concerned that student workers who work late on campus could try to log in with faculty credentials. Which of the following would be most effective in preventing this?"
+answers = ["Time-of-day restrictions"]
+alternatives = [
+    "Usage auditing",
+    "Password length",
+    "Credential management"
+]
+explanation = """
+Restricting each faculty account so that it is only usable
+when that particular faculty member is typically on campus will
+prevent someone from logging in with that account after hours,
+even if they have the password. Usage auditing may detect
+misuse of accounts but will not prevent it. Longer passwords are
+effective security, but a longer password can still be stolen.
+Credential management is always a good idea, but it won't
+address this specific issue.
+"""
+
+[[imp.questions]]
+question = "Next-generation firewalls include many cutting-edge features. Which of the following is not a common next-generation firewall capability?"
+answers = ["SQL injection"]
+alternatives = [
+    "Geolocation",
+    "IPS and/or IDS",
+    "Sandboxing"
+]
+explanation = """
+Although next-generation firewalls provide may defensive
+capabilities, SQL injection is an attack instead of a defense. In
+addition to geolocation, intrusion detection system (IDS) and
+intrusion prevention system (IPS), and sandboxing capabilities,
+many next-generation firewalls include web application
+firewalls, load balancing, IP reputation and URL filtering, and
+antimalware and antivirus features.
+"""
+
+[[imp.questions]]
+question = "Greg knows that when a switch doesn't know where a node is, it will send out a broadcast to attempt to find it. If other switches inside its broadcast domain do not know about the node, they will also broadcast that query, and this can create a massive amount of traffic that can quickly amplify out of control. He wants to prevent this scenario without causing the network to be unable to function. What port-level security feature can he enable to prevent this?"
+answers = ["Enable storm control."]
+alternatives = [
+    "Use ARP blocking.",
+    "Block all broadcast packets.",
+    "None of the above"
+]
+explanation = """
+Enabling storm control on a switch will limit the amount of
+total bandwidth that broadcast packets can use, preventing
+broadcast storms from taking down the network. Blocking
+Address Resolution Protocol (ARP) would prevent systems from
+finding each other, and blocking all broadcast packets would
+also block many important network features.
+"""
+
+[[imp.questions]]
+question = "Isaac is designing his cloud datacenter's public-facing network and wants to properly implement segmentation to protect his application servers while allowing his web servers to be accessed by customers. What design concept should he apply to implement this type of secure environment?"
+answers = ["A DMZ"]
+alternatives = [
+    "A reverse proxy server",
+    "A forward proxy server",
+    "A VPC"
+]
+explanation = """
+Demilitarized zones (DMZs) remain a useful concept when
+designing cloud environments, although the technical
+implementation may vary, since cloud providers may have
+secure web services, load-balancing capabilities or other features
+that make DMZs look different. Proxy servers are useful for
+controlling, filtering, and relaying traffic, but they do not
+provide the full segmentation that Isaac is looking for. A VPC is
+a virtual datacenter and will typically contain his infrastructure
+but does not specifically address these needs.
+"""
+
+[[imp.questions]]
+question = "Jennifer is concerned that some people in her company have more privileges than they should. This has occurred due to people moving from one position to another and having cumulative rights that exceed the requirements of their current jobs. Which of the following would be most effective in mitigating this issue?"
+answers = ["Permission auditing"]
+alternatives = [
+    "Job rotation",
+    "Preventing job rotation",
+    "Separation of duties"
+]
+explanation = """
+A permissions audit will find what permissions each user has
+and compare that to their job requirements. Permission audits
+should be conducted periodically. Job rotation, though
+beneficial for other security reasons, will actually exacerbate this
+problem. It is impractical to forbid anyone from ever changing
+job roles, and separation of duties would have no impact on this
+issue.
+"""
+
+[[imp.questions]]
+question = "Susan has been tasked with hardening the systems in her environment and wants to ensure that data cannot be recovered from systems if they are stolen or their disk drives are stolen and accessed. What is her best option to ensure data security in these situations?"
+answers = ["Deploy full-disk encryption."]
+alternatives = [
+    "Deploy folder-level encryption.",
+    "Deploy file-level encryption.",
+    "Degauss all the drives."
+]
+explanation = """
+Susan's best option is to deploy full-disk encryption (FDE),
+which will ensure that the entire drive is encrypted, rather than
+just specific folders or files. Degaussing magnetic drives will
+wipe them, rather than protecting data.
+"""
+
+[[imp.questions]]
+question = "Chloe has noticed that users on her company's network frequently have simple passwords made up of common words. Thus, they have weak passwords. How could Chloe best mitigate this issue?"
+answers = ["Require password complexity."]
+alternatives = [
+    "Increase minimum password length.",
+    "Have users change passwords more frequently.",
+    "Implement Single Sign-On (SSO)."
+]
+explanation = """
+Password complexity requires that passwords have a
+mixture of uppercase letters, lowercase letters, numbers, and
+special characters. This would be the best approach to correct
+the problem described in the question. Longer passwords are a
+good security measure but will not correct the issue presented
+here. Changing passwords won't make those passwords any
+stronger, and Single Sign-On (SSO) will have no effect on the
+strength of passwords.
+"""
+
+[[imp.questions]]
+question = "Which Wi-Fi protocol implements simultaneous authentication of equals (SAE) to improve on previous security models?"
+answers = ["WPA3"]
+alternatives = [ 
+    "WEP",
+    "WPA",
+    "WPA2"
+]
+explanation = """
+WPA3's Personal mode replaces the preshared key mode
+found in WPA2 with simultaneous authentication of equals. This
+makes weak passphrase or password attacks harder to conduct
+and allows for greater security when devices are conducting
+their initial key exchange. WEP, WPA, and WPA2 do not
+implement SAE.
+"""
+
+[[imp.questions]]
+question = "Megan wants to set up an account that can be issued to visitors. She configures a kiosk application that will allow users in her organization to sponsor the visitor, set the amount of time that the user will be on-site, and then allow them to log into the account, set a password, and use Wi-Fi and other services. What type of account has Megan created?"
+answers = ["A guest account"]
+alternatives = [
+    "A user account",
+    "A shared account",
+    "A service account"
+]
+explanation = """
+Megan has created a guest account. Guest accounts typically
+have very limited privileges and may be set up with limited login
+hours, an expiration date, or other controls to help keep them
+more secure. User accounts are the most common type of
+account and are issued to individuals to allow them to log into
+and use systems and services. Shared accounts are used by more
+than one person, making it difficult to determine who used the
+account. A service account is typically associated with a program
+or service running on a system that requires rights to files or
+other resources.
+"""
+
+[[imp.questions]]
+question = "Henry wants to deploy a web service to his cloud environment for his customers to use. He wants to be able to see what is happening and stop abuse without shutting down the service if customers cause issues. What two things should he implement to allow this?"
+answers = ["API keys and logging via an API gateway"]
+alternatives = [
+    "An API gateway and logging",
+    "An API-centric IPS and an API proxy",
+    "All of the above"
+]
+explanation = """
+API keys allow individual customers to authenticate to the
+API service, which means that if there is a problem Henry can
+disable the problematic API keys rather than all users. Enabling
+logging using a service like Amazon's API Gateway allows
+scalability, logging, and monitoring, as well as tools like web
+application firewalls. An API proxy and API-centric intrusion
+prevention system (IPS) were made up for this question.
+"""
+
+[[imp.questions]]
+question = "Patrick has been asked to identify a UTM appliance for his organization. Which of the following capabilities is not a common feature for a UTM device?"
+answers = ["MDM"]
+alternatives = [
+    "IDS and or IPS",
+    "Antivirus",
+    "DLP"
+]
+explanation = """
+UTM, or unified threat management, devices commonly
+serve as firewalls, intrusion detection system (IDS)/intrusion
+prevention system (IPS), antivirus, web proxies, web application
+and deep packet inspection, secure email gateways, data loss
+prevention (DLP), security information and event management
+(SIEM), and even virtual private networking (VPN) devices.
+They aren't mobile device management (MDM) or universal
+endpoint management devices, however, since their primary
+focus is on network security, not systems or device management.
+"""
+
+[[imp.questions]]
+question = "A companywide policy is being created to define various security levels. Which of the following systems of access control would use documented security levels like Confidential or Secret for information?"
+answers = ["MAC"]
+alternatives = [
+    "RBAC",
+    "DAC",
+    "BAC"
+]
+explanation = """
+Mandatory access control (MAC) is based on documented
+security levels associated with the information being accessed.
+Role-based access control (RBAC) is based on the role the user is
+placed in. Discretionary access control (DAC) lets the data
+owner set access control. BAC is not an access control model.
+"""
+
+[[imp.questions]]
+question = "Gurvinder is reviewing log files for authentication events and notices that one of his users has logged in from a system at his company's home office in Chicago. Less than an hour later, the same user is recorded as logging in from an IP address that geo-IP tools say comes from Australia. What type of issue should he flag this as?"
+answers = ["An impossible travel time, risky login issue"]
+alternatives = [
+    "A misconfigured IP address",
+    "A geo-IP lookup issue",
+    "None of the above"
+]
+explanation = """
+This type of potential security issue is typically recorded as
+an impossible travel time/risky login issue. Gurvinder would not
+expect the user to have traveled between two locations in an
+hour—in fact, it is impossible to do so. That means he needs to
+contact the user to find out if they may have done something like
+use a VPN, or if their account may be compromised. It is
+possible this could be an issue with the geo-IP system that
+Gurvinder's company uses, but he needs to treat it like a security
+risk until he determines otherwise, and a compromise is more
+likely in most cases. A misconfigured IP address would not cause
+this issue.
+"""
+
+[[imp.questions]]
+question = "Users in your network are able to assign permissions to their own shared resources. Which of the following access control models is used in your network?"
+answers = ["DAC"]
+alternatives = [
+    "RBAC",
+    "MAC",
+    "ABAC"
+]
+explanation = """
+Discretionary access control (DAC) allows data owners to
+assign permissions. Role-based access control (RBAC) assigns
+access based on the role the user is in. Mandatory access control
+(MAC) is stricter and enforces control at the OS level. Attribute-cased access control (ABAC) considers various attributes such as location, time, and computer in addition to username and password.
+"""
+
+[[imp.questions]]
+question = "Cynthia is preparing a new server for deployment and her process includes turning off unnecessary services, setting security settings to match her organization's baseline configurations, and installing patches and updates. What is this process known as?"
+answers = ["OS hardening"]
+alternatives = [
+    "Security uplift",
+    "Configuration management",
+    "Endpoint lockdown"
+]
+explanation = """
+OS hardening is the process of securing an operating system
+by patching, updating, and configuring the operating system to
+be secure. Configuration management is the ongoing process of
+managing configurations for systems, rather than this initial
+security step. Both security uplift and endpoint lockdown were
+made up for this question.
+"""
+
+[[imp.questions]]
+question = "John is performing a port scan of a network as part of a security audit. He notices that the domain controller is using secure LDAP. Which of the following ports would lead him to that conclusion?"
+answers = ["636"]
+alternatives = [
+    "53",
+    "389",
+    "443"
+]
+explanation = """
+Secure Lightweight Directory Access Protocol (LDAPS) uses
+port 636 by default. DNS uses port 53, LDAP uses 389, and
+secure HTTP uses port 443.
+"""
+
+[[imp.questions]]
+question = "Chris wants to securely generate and store cryptographic keys for his organization's servers, while also providing the ability to offload TLS encryption processing. What type of solution should he recommend?"
+answers = ["A HSM"]
+alternatives = [
+    "A GPU in cryptographic acceleration mode",
+    "A TPM",
+    "A CPU in cryptographic acceleration mode"
+]
+explanation = """
+The best answer for the needs Chris has identified is a
+hardware security module, or HSM. HSMs can act as a
+cryptographic key manager, including creating, storing, and
+securely handling encryption keys and certificates. They can also
+act as cryptographic accelerators, helping offload encryption
+functions like Transport Layer Security (TLS) encryption. A
+TPM (Trusted Platform Module) is a device used to store keys
+for a system but does not offload cryptoprocessing, and it is used
+for keys on a specific system rather than broader uses. CPUs and
+GPUs may have cryptographic acceleration functions, but they
+do not securely store or manage certificates and other
+encryption artifacts.
+"""
+
+[[imp.questions]]
+question = "Tracy wants to protect desktop and laptop systems in her organization from network attacks. She wants to deploy a tool that can actively stop attacks based on signatures, heuristics, and anomalies. What type of tool should she deploy?"
+answers = ["HIPS"]
+alternatives = [
+    "A firewall",
+    "Antimalware",
+    "HIDS"
+]
+explanation = """
+A host-based intrusion prevention system (HIPS) can
+monitor network traffic to identify attacks, suspicious behavior,
+and known bad patterns using signatures. A firewall stops traffic
+based on rules; antimalware tools are specifically designed to
+stop malware, not attacks and suspicious network behavior; and
+a host-based intrusion detection system (HIDS) can only detect,
+not stop, these behaviors.
+"""
+
+[[imp.questions]]
+question = "Which of the following access control methods grants permissions based on the user's position in the organization?"
+answers = ["RBAC"]
+alternatives = [
+    "MAC",
+    "DAC",
+    "ABAC"
+]
+explanation = """
+Role-based access control (RBAC) grants permissions based
+on the user's position within the organization. Mandatory access
+control (MAC) uses security classifications to grant permissions.
+Discretionary access control (DAC) allows data owners to set
+permissions. Attribute-based access control (ABAC) considers
+various attributes such as location, time, and computer, in
+addition to username and password.
+"""
+
+[[imp.questions]]
+question = "What does UEFI measured boot do?"
+answers = ["Records information about each component that is loaded, stores it in the TPM, and can report it to a server"]
+alternatives = [
+    "Records how long it takes for a system to boot up",
+    "Compares the hash of every component that is loaded against a known hash stored in the TPM",
+    "Checks for updated versions of the UEFI, and compares it to the current version; if it is measured as being too far out of date, it updates the UEFI"
+]
+explanation = """
+Measured boot provides a form of boot attestation that
+records information about each component loaded during the
+boot process. This information can then be reported to a server
+for validation. Trusted boot validates each component against a
+known signature. Measured boot does not care about the time to
+boot up, nor does it update the system's Unified Extensible
+Firmware Interface (UEFI).
+"""
+
+[[imp.questions]]
+question = "Kerberos uses which of the following to issue tickets?"
+answers = ["Key distribution center"]
+alternatives = [
+    "Authentication service",
+    "Certificate authority",
+    "Ticket-granting service"
+]
+explanation = """
+The key distribution center (KDC) issues tickets. The tickets
+are generated by the ticket-granting service, which is usually
+part of the KDC. The authentication service simply authenticates
+the user, X.509 certificates and certificate authorities are not
+part of Kerberos, and the ticket-granting service does generate
+the ticket but the KDC issues it.
+"""
+
+[[imp.questions]]
+question = "Maria wants to ensure that her wireless controller and access points are as secure as possible from attack via her network. What control should she put in place to protect them from brute-force password attacks and similar attempts to take over her wireless network's hardware infrastructure?"
+answers = ["Put the access points and controllers on a separate management VLAN."]
+alternatives = [
+    "Regularly patch the devices.",
+    "Disable administrative access.",
+    "All of the above"
+]
+explanation = """
+Although patching devices is important, the most effective
+way to protect devices from being attacked via administrative
+account brute forcing is to place the devices on a separate
+management virtual LAN (VLAN) and then control access to
+that VLAN. This will prevent most attackers from being able to
+connect to the device's administrative interfaces. Disabling
+administrative access may not be possible, and even if it was, it
+would create significant problems when the devices needed to
+have changes made on them.
+"""
+
+[[imp.questions]]
+question = "Marcus wants to check on the status of carrier unlocking for all mobile phones owned by and deployed by his company. What method is the most effective way to do this?"
+answers = ["Contact the cellular provider."]
+alternatives = [
+    "Use an MDM tool.",
+    "Use a UEM tool.",
+    "None of the above; carrier unlock must be verified manually on the phone."
+]
+explanation = """
+While mobile device management (MDM) and unified
+endpoint management (UEM) tools provide many capabilities,
+carrier unlock status normally needs to be checked with the
+carrier if you want to validate corporate-owned phones without
+manually checking each device.
+"""
+
+[[imp.questions]]
+question = "Michael wants to implement a zero-trust network. Which of the following steps is not a common step in establishing a zero trust network?"
+answers = ["Simplify the network."]
+alternatives = [
+    "Use strong identity and access management.",
+    "Configure firewalls for least privilege and application awareness.",
+    "Log security events and analyze them."
+]
+explanation = """
+Zero-trust environments typically have a more complex
+network due to increased segmentation to isolate systems and
+devices that have different security contexts. Zero-trust
+networks also require strong identity and access management,
+and they use application-aware firewalls extensively to preserve
+least privilege. Of course, logging and analysis of security events
+is necessary to ensure that issues are identified and responded
+to.
+"""
+
+[[imp.questions]]
+question = "Samantha is looking for an authentication method that incorporates the X.509 standard and will allow authentication to be digitally signed. Which of the following authentication methods would best meet these requirements?"
+answers = ["Certificate-based authentication"]
+alternatives = [
+    "OAuth",
+    "Kerberos",
+    "Smartcards"
+]
+explanation = """
+Digital certificates use the X.509 standard (or the PGP
+standard) and allow the user to digitally sign authentication
+requests. OAuth allows an end user's account information to be
+used by third-party services, without exposing the user's
+password. It does not use digital certificates or support digital
+signing. Kerberos does not use digital certificates, nor does it
+support digitally signing. Smartcards can contain digital
+certificates but don't necessarily have to have them.
+"""
+
+[[imp.questions]]
+question = "Your company relies heavily on cloud and SaaS service providers such as salesforce.com, Office365, and Google. Which of the following would you have security concerns about?"
+answers = ["SAML"]
+alternatives = [
+    "LDAP",
+    "TACACS+",
+    "Transitive trust"
+]
+explanation = """
+SAML (Security Assertion Markup Language) is an
+Extensible Markup Language (XML) framework for creating and
+exchanging security information between partners online. The
+integrity of users is the weakness in the SAML identity chain. To
+mitigate this risk, SAML systems need to use timed sessions,
+HTTPS, and SSL/TLS. LDAP (Lightweight Directory Access
+Protocol) is a protocol that enables a user to locate individuals
+and other resources such as files and devices in a network.
+Terminal Access Controller Access Control System Plus
+(TACACS+) is a protocol that is used to control access into
+networks. TACACS+ provides authentication and authorization
+in addition to an accounting of access requests against a central
+database. Transitive trust is a two-way relationship that is
+automatically created between a parent and a child domain in a
+Microsoft Active Directory (AD) forest. It shares resources with
+its parent domain by default and enables an authenticated user
+to access resources in both the child and parent domains.
+"""
+
+[[imp.questions]]
+question = "What is the primary difference between MDM and UEM?"
+answers = ["UEM supports a broader range of devices."]
+alternatives = [
+    "MDM does not include patch management.",
+    "UEM does not include support for mobile devices.",
+    "MDM patches domain machines, not enterprise machines."
+]
+explanation = """
+UEM, or unified endpoint management, manages desktop,
+laptops, mobile devices, printers, and other types of devices.
+Mobile device management (MDM) tools focus on mobile
+devices.
+"""
+
+[[imp.questions]]
+question = "Kathleen wants to implement a zero-trust network design and knows that she should segment the network. She remains worried about east/west traffic inside the network segments. What is the first security tool she should implement to ensure hosts remain secure from network threats?"
+answers = ["Host-based firewalls"]
+alternatives = [
+    "Antivirus",
+    "Host-based IPS",
+    "FDE"
+]
+explanation = """
+Host-based firewalls are the first step in most designs when
+protecting against network-borne threats. They can prevent
+unwanted traffic from entering or leaving the host, leaving less
+traffic for a host-based intrusion prevention system (HIPS) or
+other tools to analyze. Full-disk encryption (FDE) will not stop
+network-borne threats, and antivirus focuses on prevention of
+malware, not network threats like denial of service or
+exploitation of vulnerable services.
+"""
+
+[[imp.questions]]
+question = "Gary is designing his cloud infrastructure and needs to provide a firewall-like capability for the virtual systems he is running. Which of the following cloud capabilities acts like a virtual firewall?"
+answers = ["Security groups"]
+alternatives = [
+    "Dynamic resource allocation",
+    "VPC endpoints",
+    "Instance awareness"
+]
+explanation = """
+Security groups are a virtual firewall for instances, allowing
+rules to be applied to traffic between instances. Dynamic
+resource allocation is a concept that allows resources to be
+applied as they are needed, including scaling up and down
+infrastructure and systems on the fly. Virtual private cloud
+(VPC) endpoints are a way to connect to services inside of a
+cloud provider without an Internet gateway. Finally, instance
+awareness is a concept that means that tools know about the
+differences between instances, rather than treating each
+instance in a scaling group as the same. This can be important
+during incident response processes and security monitoring for
+scaled groups, where resources may all appear identical without
+instance awareness.
+"""
+[[imp.questions]]
+question = "Derek has enabled automatic updates for the Windows systems that are used in the small business he works for. What hardening process will still need to be tackled for those systems if he wants a complete patch management system?"
+answers = ["Third-party software and firmware patching"]
+alternatives = [
+    "Automated installation of Windows patches",
+    "Windows Update regression testing",
+    "Registry hardening"
+]
+
+explanation = """
+Although built-in update tools will handle the operating
+system, additional software installed on systems needs to be
+patched separately. Third-party software and firmware,
+including the Unified Extensible Firmware Interface (UEFI) or
+BIOS of the systems that are deployed in Derek's organization,
+will need regular updates. Many organizations adopt patch
+management platforms or system management platforms with
+patching capabilities to ensure that this occurs on a broader
+basis than just OS patches.
+"""
+[[imp.questions]]
+question = "Theresa implements a network-based IDS. What can she do to traffic that passes through the IDS?"
+answers = ["Review the traffic based on rules and detect and alert about unwanted or undesirable traffic."]
+alternatives = [
+    "Review the traffic based on rules and detect and stop traffic based on those rules.",
+    "Detect sensitive data being sent to the outside world and encrypt it as it passes through the IDS.",
+    "All of the above"
+]
+explanation = """
+IDSs, or intrusion detection systems, can only detect
+unwanted and malicious traffic based on the detection rules and
+signatures that they have. They cannot stop traffic or modify it.
+An IPS, or intrusion prevention system, that is placed inline with
+network traffic can take action on that traffic. Thus, IDSs are
+often used when it is not acceptable to block network traffic, or
+when a tap or other network device is used to clone traffic for
+inspection.
+"""
+[[imp.questions]]
+question = "Murali is building his organization's container security best practices document and wants to ensure that he covers the most common items for container security. Which of the following is not a specific concern for containers?"
+answers = ["Insider threats"]
+alternatives = [
+    "The security of the container host",
+    "Securing the management stack for the container",
+    "Monitoring network traffic to and from the containers for threats and attacks"
+]
+explanation = """
+Although insider threats are a concern, they're not any
+different for containers than any other system. Ensuring
+container host security, securing the management stack, and
+making sure that network traffic to and from containers is
+secure are all common container security concerns.
+"""
+
+[[imp.questions]]
+question = "Gary's organization uses a NAT gateway at its network edge. What security benefit does a NAT gateway provide?"
+answers = ["It allows systems to connect to another network without being directly exposed to it."]
+alternatives = [
+    "It statefully blocks traffic based on port and protocol as a type of firewall.",
+    "It can detect malicious traffic and stop it from passing through.",
+    "It allows non-IP-based addresses to be used behind a legitimate IP address."
+]
+explanation = """
+Network address translation (NAT) gateways allow internal
+IP addresses to be hidden from the outside, preventing direct
+connections to systems behind them. This effectively firewalls
+inbound traffic unless the gateway is set to pass traffic to an
+internal host when a specific IP, port, and protocol is used. They
+are not a firewall in the traditional sense, however, and do not
+specifically statefully block traffic by port and protocol, nor do
+they detect malicious traffic. Finally, NAT gateways are not used
+to send non-IP traffic out to IP networks.
+"""
+[[imp.questions]]
+question = """Fred sets up his authentication and authorization system to apply the following rules to authenticated users:
+Users who are not logging in from inside the trusted network must use multifactor authentication.
+Users whose devices have not passed a NAC check must use multifactor authentication.
+Users who have logged in from geographic locations that are more than 100 miles apart within 15 minutes will be denied.
+
+What type of access control is Fred using?
+"""
+answers = ["Conditional access"]
+alternatives = [
+    "Geofencing",
+    "Time-based logins",
+    "Role-based access"
+]
+explanation = """
+Conditional access assesses specific conditions to make a
+determination about whether to allow an account to access a
+resource. The system may choose to allow access, to block
+access, or to apply additional controls based on the conditions
+that are present and the information that is available about the
+login.
+"""
+
+[[imp.questions]]
+question = "Henry is an employee at Acme Company. The company requires him to change his password every three months. He has trouble remembering new passwords, so he keeps switching between just two passwords. Which policy would be most effective in preventing this?"
+answers = ["Password history"]
+alternatives = [
+    "Password complexity",
+    "Password length",
+    "Multifactor authentication"
+]
+explanation = """
+If the system maintains a password history, that would
+prevent any user from reusing an old password. Password
+complexity and length are common security settings but would
+not prevent the behavior described. Multifactor authentication
+helps prevent brute-force attacks and reduces the potential
+impact of stolen passwords but would not help with this
+scenario.
+"""
+
+[[imp.questions]]
+question = """Tracy wants to limit when users can log in to a standalone Windows workstation. What can Tracy do to make sure that an account called " visitor " can only log in between 8 a.m. and 5 p.m. every weekday?"""
+answers = ["Running the command net user visitor /time:M-F,8am-5pm"]
+alternatives = [
+    "Running the command netreg user visitor -daily -working-hours",
+    "Running the command login limit:daily time:",
+    "8-5",
+    "This cannot be done from the Windows command line."
+
+]
+explanation = """
+The net user command allows this control to be put in place.
+Although you may not be familiar with the many net user
+commands, you can take out unrealistic commands or
+commands with flaws in them. For example, here you could
+likely guess that -working-hours isn't a defined term. In the same
+way, login isn't a Windows command, but net commands are
+commonly used to control Windows systems.
+"""
+
+[[imp.questions]]
+question = "Sheila is concerned that some users on her network may be accessing files that they should not—specifically, files that are not required for their job tasks. Which of the following would be most effective in determining if this is happening?"
+answers = ["Usage auditing and review"]
+alternatives = [
+    "Permissions auditing and review",
+    "Account maintenance",
+    "Policy review"
+]
+explanation = """
+Auditing and reviewing how users actually utilize their
+account permissions would be the best way to determine if there
+is any inappropriate use. A classic example would be a bank loan
+officer. By the nature of their job, they have access to loan
+documents. But they should not be accessing loan documents for
+loans they are not servicing. The issue in this case is not
+permissions, because the users require permission to access the
+data. The issue is how the users are using their permissions.
+Usage auditing and permissions auditing are both part of
+account maintenance, but auditing and review is a better
+answer. Finally, this is not a policy issue.
+"""
+
+[[imp.questions]]
+question = "In which of the following scenarios would using a shared account pose the least security risk?"
+answers = ["For guest Wi-Fi access"]
+alternatives = [
+    "For a group of tech support personnel",
+    "For students logging in at a university",
+    "For accounts with few privileges"
+
+]
+explanation = """
+A scenario such as guest Wi-Fi access does not provide the
+logins with any access to corporate resources. The people
+logging in merely get to access the Internet. This poses very
+limited security risk to the corporate network and thus is often
+done with a common or shared account. Tech support personnel
+generally have significant access to corporate network resources.
+Although this is a relatively low access scenario, it is still
+important to know which specific student is logging on and
+accessing what resources. Any level of access to corporate
+resources should have its own individual login account.
+"""
+
+[[imp.questions]]
+question = "Mike's manager has asked him to verify that the certificate chain for their production website is valid. What has she asked Mike to validate?"
+answers = ["That users who visit the website can verify that the site and the CAs in the chain are all trustworthy "]
+alternatives = [
+    "That the certificate has not been revoked",
+    "That the encryption used to create the certificate is strong and has not been cracked",
+    "That the certificate was issued properly and that prior certificates issued for the same system have also been issued properly"
+]
+explanation = """
+Certificate chains list certificates and certificate authority
+(CA) certificates, allowing those who receive the certificate to
+validate that the certificates can be trusted. An invalid, or
+broken, chain means that the user or system that is checking the
+certificate chaining should not trust the system and certificate.
+"""
+
+[[imp.questions]]
+question = "Maria is responsible for security at a small company. She is concerned about unauthorized devices being connected to the network. She is looking for a device authentication process. Which of the following would be the best choice for her?"
+answers = ["802.1X"]
+alternatives = [
+    "CHAP",
+    "Kerberos",
+    "802.11i"
+]
+explanation = """
+802.1X is the IEEE standard for port-based network access
+control. This protocol is frequently used to authenticate devices.
+Challenge Handshake Authentication Protocol (CHAP) is an
+authentication protocol but not the best choice for device
+authentication. Kerberos is an authentication protocol but not
+the best choice for device authentication. 802.11i is the Wi-Fi
+security standard and is fully implemented in WPA2 and WPA3.
+It is not a device authentication procedure.
+"""
+
+[[imp.questions]]
+question = "Which wireless standard uses CCMP to provide encryption for network traffic?"
+answers = ["WPA2"]
+alternatives = [
+    "WEP",
+    "Infrared",
+    "Bluetooth"
+]
+explanation = """
+WPA2 uses the AES-based CCMP, or Counter Mode Block
+Chaining Message Authentication (CBC-MAC) Protocol to
+encapsulate traffic, providing confidentiality. WPA3 also uses
+CCMP as the minimum acceptable encryption in WPA3-
+Personal mode. WEP, infrared, and Bluetooth do not use CCMP.
+"""
+
+[[imp.questions]]
+question = "Charles is a CISO for an insurance company. He recently read about an attack wherein an attacker was able to enumerate all the network devices in an organization. All this was done by sending queries using a single protocol. Which protocol should Charles secure to mitigate this attack?"
+answers = ["SNMP"]
+alternatives = [
+    "POP3",
+    "DHCP",
+    "IMAP"
+]
+explanation = """
+Simple Network Management Protocol (SNMP) would give
+an attacker a great deal of information about your network.
+SNMP should not be exposed to unprotected networks, SNMPv3
+should be implemented, and SNMP security best practices
+should be followed. Both POP3 and IMAP are email access
+protocols, and Dynamic Host Configuration Protocol (DHCP) is
+used to hand out dynamic IP addresses.
+"""
+
+[[imp.questions]]
+question = "Magnus is concerned about someone using a password cracker on computers in his company. He is concerned that crackers will attempt common passwords in order to log in to a system. Which of the following would be best for mitigating this threat?"
+answers = ["Account lockout policies"]
+alternatives = [
+    "Password age restrictions",
+    "Password minimum length requirements",
+    "Account usage auditing"
+]
+explanation = """
+Accounts should lock out after a small number of login
+attempts. Three is a common number of attempts before the
+account is locked out. This prevents someone from just
+attempting random guesses. Password aging will force users to
+change their passwords but won't affect password guessing.
+Longer passwords would be harder to guess, but this option is
+not as effective as account lockout policies. Account usage
+auditing won't have any effect on this issue.
+"""
+
+[[imp.questions]]
+question = "Lucas is looking for an XML-based open standard for exchanging authentication information. Which of the following would best meet his needs?"
+answers = ["SAML"]
+alternatives = [
+    "OAuth",
+    "RADIUS",
+    "NTLM"
+]
+
+explanation = """
+Security Assertion Markup Language (SAML) is an XML-based, open standard format for exchanging authentication and
+authorization data between parties. OAuth allows an end user's
+account information to be used by third-party services, without
+exposing the user's password. RADIUS is a remote access
+protocol. New Technology LAN Manager (NTLM) is not XML-based.
+"""
+
+[[imp.questions]]
+question = "Joshua is looking for an authentication protocol that would be effective at stopping session hijacking. Which of the following would be his best choice?"
+answers = ["CHAP"]
+alternatives = [
+    "PAP",
+    "TACACS+",
+    "RADIUS"
+]
+explanation = """
+Challenge Handshake Authentication Protocol (CHAP) was
+designed specifically for this purpose. It periodically
+reauthenticates, thus preventing session hijacking. Neither
+Password Authentication Protocol (PAP) nor TACACS+ prevents
+session hijacking, and RADIUS is a protocol for remote access,
+not authentication.
+"""
+[[imp.questions]]
+question = "Greg's company has a remote location that uses an IP-based streaming security camera system. How could Greg ensure that the remote location's networked devices can be managed as if they are local devices and that the traffic to that remote location is secure?"
+answers = ["An always-on IPSec VPN"]
+alternatives = [
+    "An as-needed TLS VPN",
+    "An always-on TLS VPN",
+    "An as-needed IPSec VPN"
+]
+explanation = """
+IPSec virtual private networks (VPNs) can make a remote
+location appear as though it is connected to your local network.
+Since Greg needs to rely on a streaming security camera, an
+always-on IPSec VPN is the best solution listed. TLS (SSL) VPNs
+are primarily used for specific applications, typically focusing on
+web applications.
+"""
+
+[[imp.questions]]
+question = "What does the OPAL standard specify?"
+answers = ["Self-encrypting drives"]
+alternatives = [
+    "Online personal access licenses",
+    "The origin of personal accounts and libraries",
+    "Drive sanitization modes for degaussers"
+]
+
+explanation = """
+The Opal storage specification defines how to protect
+confidentiality for stored user data and how storage devices
+from storage device manufacturers can work together. OPAL
+does not specify details or processes for licenses, accounts, and
+libraries, or degaussers.
+"""
+
+[[imp.questions]]
+question = "What does Unified Extensible Firmware Interface (UEFI) Secure Boot do?"
+answers = ["It validates a signature for each binary loaded during boot."]
+alternatives = [
+    "It protects against worms during the boot process.",
+    "It validates the system BIOS version.",
+    "All of the above"
+]
+explanation = """
+UEFI Secure Boot checks every binary that is loaded during
+boot to make sure that its hash is valid, by checking against
+either a locally trusted certificate or a checksum on an allow list.
+It does not protect against worms that might attack those
+binaries, nor does it directly check the system BIOS version.
+"""
+
+[[imp.questions]]
+question = "Derek is trying to select an authentication method for his company. He needs one that will work with a broad range of services like those provided by Microsoft and Google so that users can bring their own identities. Which of the following would be his best choice?"
+answers = ["OpenID Connect"]
+alternatives = [
+    "Shibboleth",
+    "RADIUS",
+    "OAuth"
+]
+explanation = """
+OpenID Connect works with the OAuth 2.0 protocol and
+supports multiple clients, including web-based and mobile
+clients. OpenID Connect also supports REST. Shibboleth is a
+middleware solution for authentication and identity
+management that uses SAML (Security Assertion Markup
+Language) and works over the Internet. RADIUS is a remote
+access protocol. OAuth allows an end user's account information
+to be used by third-party services, without exposing the user's
+password.
+"""
+
+[[imp.questions]]
+question = "Jason is considering deploying a network intrusion prevention system (IPS) and wants to be able to detect advanced persistent threats. What type of IPS detection method is most likely to detect the behaviors of an APT after it has gathered baseline information about normal operations?"
+answers = ["Anomaly-based IPS detections"]
+alternatives = [
+    "Signature-based IPS detections",
+    "Heuristic-based IPS detections",
+    "Malicious tool hash IPS detections"
+]
+explanation = """
+Anomaly-based detection systems build a behavioral
+baseline for networks and then assess differences from those
+baselines. They may use heuristic capabilities on top of those,
+but the question specifically asks about baselined operations
+pointing to an anomaly-based system. Heuristic-based
+detections look for behaviors that are typically malicious, and
+signature-based or hash-based detections look for known
+malicious tools or files.
+"""
+
+[[imp.questions]]
+question = "What component is most often used as the foundation for a hardware root of trust for a modern PC?"
+answers = ["A TPM"]
+alternatives = [
+    "The CPU",
+    "A HSM",
+    "The hard drive or SSD"
+]
+explanation = """
+A Trusted Platform Module, or TPM, is used as the
+foundation for a hardware root of trust for modern PCs. The
+TPM may provide a cryptographic key; a PUF, or physically
+unclonable function; or a serial number that is unique to the
+device. The CPU and hard drive are not used for this function,
+and HSMs, or hardware security modules, are used for public
+key infrastructure (PKI) and cryptographic purposes but not as a
+hardware root of trust for PCs.
+"""
+
+[[imp.questions]]
+question = "Dennis wants to deploy a firewall that can provide URL filtering. What type of firewall should he deploy?"
+answers = ["A next-generation firewall"]
+alternatives = [
+    "A packet filter",
+    "A stateful packet inspection firewall",
+    "None of the above"
+]
+explanation = """
+Next-generation firewalls typically build in advanced
+capabilities like URL filtering, blacklisting, and other
+application-layer capabilities beyond simple packet filtering or
+stateful packet inspection.
+"""
+
+[[imp.questions]]
+question = "Waleed's organization uses a combination of internally developed and commercial applications that they deploy to mobile devices used by staff throughout the company. What type of tool can he use to handle a combination of bring-your-own-device phones and corporate tablets that need to have these applications loaded onto them and removed from them when their users are no longer part of the organization?"
+answers = ["MAM"]
+alternatives = [
+    "MOM",
+    "MLM",
+    "MIM"
+ ]
+explanation = """
+Mobile application management (MAM) tools are
+specifically designed for this purpose, and they allow
+applications to be delivered to, removed from, and managed on
+mobile devices. MOM is the Microsoft Operations Manager, a
+systems management tool that Microsoft has replaced with
+Operations Manager in current use. MLM often means
+multilevel marketing, or pyramid schemes—not a security term.
+MIM is not a security term.
+"""
+
+[[imp.questions]]
+question = "Charlene is preparing a report on the most common application security issues for cloud applications. Which of the following is not a major concern for cloud applications?"
+answers = ["Local machine access leading to compromise"]
+alternatives = [
+    "Misconfiguration of the application",
+    "Insecure APIs",
+    "Account compromise"
+]
+explanation = """
+Cloud applications have many of the same concerns as on-premises applications, but compromise of the system running
+the application due to local access is a far less likely scenario.
+Cloud application vendors are more likely to operate in secure
+datacenters with limited or no access to the servers except for
+authorized personnel, greatly reducing the likelihood of this type
+of security issue.
+"""
+
+[[imp.questions]]
+question = "The CA that Samantha is responsible for is kept physically isolated and is never connected to a network. When certificates are issued, they are generated then manually transferred via removable media. What type of CA is this, and why would Samantha's organization run a CA in this mode?"
+answers = ["An offline CA; it prevents potential exposure of the CA's root certificate."]
+alternatives = [
+    "An online CA; it is faster to generate and provide certificates.",
+    "An offline CA; it is faster to generate and provide certificates.",
+    "An online CA; it prevents potential exposure of the CA's root certificate."
+]
+explanation = """
+The most critical part of a certificate authority (CA) is its
+root certificate, and ensuring that the root certificate is never
+exposed is critical to the ongoing operating of that CA. Thus,
+root CAs are often maintained as offline CAs, making it far
+harder for an attacker to compromise the system and gain access
+to the root certificate. In practice, compromised CAs may lose
+the trust of organizations around the world and be unable to
+continue to do business.
+"""
+
+[[imp.questions]]
+question = "Susan has configured a virtual private network (VPN) so that traffic destined for systems on her corporate network is routed over the VPN but traffic sent to other destinations is sent out via the VPN user's local network. What is this configuration called?"
+answers = ["Split-tunnel"]
+alternatives = [
+    "Half-pipe",
+    "Full-tunnel",
+    "Split horizon"
+]
+explanation = """
+Split-tunnel VPNs send only traffic destined for the remote
+network over the VPN, with all other traffic split away to use the
+VPN system or a user's primary network connection. This
+reduces overall traffic sent through the VPN but means that
+traffic cannot be monitored and secured via the VPN. Half-pipe
+is not a security term, and split horizon is most often used to
+describe DNS where an internal and external DNS view may be
+different.
+"""
+
+[[imp.questions]]
+question = "Adam has experienced problems with users plugging in cables between switches on his network, which results in multiple paths to the same destinations being available to systems on the network. When this occurs, the network experiences broadcast storms, causing network outages. What network configuration setting should he enable on his switches to prevent this?"
+answers = ["Loop protection"]
+alternatives = [
+    "Storm watch",
+    "Sticky ports",
+    "Port inspection"
+]
+explanation = """
+Loop protection looks for exactly this type of issue. Loop
+protection sends packets that include a PDU, or protocol data
+unit. These are detected by other network devices and allow the
+network devices to shut down ports from which they receive
+those packets. The remaining options were made up for this
+question.
+"""
+
+[[imp.questions]]
+question = "Charles is concerned that users of Android devices in his company are delaying OTA updates. Why would Charles be concerned about this, and what should he do about it?"
+answers = ["OTA updates patch firmware and updates phone configurations, and an MDM tool would provide reports on firmware versions and phone settings"]
+alternatives = [
+    "OTA updates patch applications, and a NAC agent would report on all phones in the organization.",
+    "OTA updates update device encryption keys and are necessary for security, and a PKI would track encryption certificates and keys.",
+    "OTA updates are sent by phones to report on online activity and tracking, and an MDM tool receives OTA updates to monitor phones"
+]
+explanation = """
+Over-the-air (OTA) updates are used by cellular carriers as
+well as phone manufacturers to provide firmware updates and
+updated phone configuration data. Mobile device management
+(MDM) tools can be used to monitor for the current firmware
+version and phone settings and will allow Charles to determine if
+the phones that his staff use are updated to ensure security. A
+network access control (NAC) agent might capture some of this
+data but only for network-connected phones, which will not
+cover off-site phones, those with Wi-Fi turned off, or remote
+devices. OTA is not specifically a way to update encryption keys,
+although firmware or settings might include them. OTA is not
+sent by the phones themselves.
+"""
+
+[[imp.questions]]
+question = "Ben is preparing to implement a firewall for his network and is considering whether to implement an open source firewall or a proprietary commercial firewall. Which of the following is not an advantage of an open source firewall?"
+answers = ["Maintenance and support"]
+alternatives = [
+    "Lower cost",
+    "Community code validation",
+    "Speed of acquisition"
+]
+explanation = """
+Open source firewalls typically do not have the same level of
+vendor support and maintenance that commercial firewalls do.
+That means you don't have a vendor to turn to if something goes
+wrong, and you will be reliant on a support community for
+patches and updates. Open source firewalls are typically less
+expensive, their open source nature means that the code can be
+validated by anybody who cares to examine it, and it can be
+acquired as quickly as it can be downloaded.
+"""
+
+[[imp.questions]]
+question = "Barbara wants to implement WPA3 Personal. Which of the following features is a major security improvement in WPA3 over WPA2?"
+answers = ["Brute-force attack prevention"]
+alternatives = [
+    "DDoS monitoring and prevention",
+    "Per-channel security",
+    "Improvements from 64-bit to 128-bit encryption"
+]
+explanation = """
+WPA3 personal replaced PSK, or preshared keys, with SAE,
+or simultaneous authentication of equals. SAE helps to prevent
+brute-force attacks against keys by making attackers interact
+with the network before each authentication attempt. This slows
+down brute-force attacks. WPA3 also includes a 192-bit
+encryption mode. It does not replace 64-bit encryption with 128-
+bit encryption, add per-channel security, or add distributed
+denial-of-service (DDoS) monitoring and prevention.
+"""
+
+[[imp.questions]]
+question = "Isaac wants to implement mandatory access controls on an Android-based device. What can he do to accomplish this?"
+answers = ["Use SEAndroid."]
+alternatives = [
+    "Run Android in single-user mode.",
+    "Change the Android registry to MAC mode.",
+    "Install MACDroid."
+]
+explanation = """
+Security Enhanced Linux (SELinux) allows mandatory
+access control for Linux-based systems, and SEAndroid is an
+Android implementation of SELinux. That means that Isaac can
+use SEAndroid to accomplish his goals. Android does use a
+registry, but there is no MAC mode. MACDroid was made up for
+this question, and single-user mode does not make Android a
+MAC-based system.
+"""
+
+[[imp.questions]]
+question = "Greg has implemented a system that allows users to access accounts like administrator and root without knowing the actual passwords for the accounts. When users attempt to use elevated accounts, their request is compared to policies that determine if the request should be allowed. The system generates a new password each time a trusted user requests access, and then logs the access request. What type of system has Greg implemented?"
+answers = ["A PAM system"]
+alternatives = [
+    "A MAC system",
+    "A FDE system",
+    "A TLS system"
+]
+explanation = """
+The system described is a privileged access management
+(PAM) system. PAM systems are used to manage and control
+privileged accounts securely. MAC is an access control scheme
+that enforces access at the OS level. FDE is full-disk encryption,
+and TLS is Transport Layer Security.
+"""
+
+[[imp.questions]]
+question = "Alaina has issued Android tablets to staff in her production facility, but cameras are banned due to sensitive data in the building. What type of tool can she use to control camera use on all of her organization's corporate devices that she issues?"
+answers = ["MDM"]
+alternatives = [
+    "DLP",
+    "OPAL",
+    "MMC"
+]
+explanation = """
+Using a mobile device management (MDM) tool that allows
+control of the devices would allow Alaina to lock out the
+cameras, preventing staff members from using the Android
+tablets to take pictures. She would still need to ensure that her
+staff did not bring their own camera equipped devices into the
+facility. DLP is data loss prevention, OPAL is an encryption
+standard for drives, and MMC has a number of meanings,
+including multimedia cards and Microsoft Management Console
+snap-ins for Windows systems, none of which would provide the
+control she needs.
+"""
+
+[[imp.questions]]
+question = "Olivia wants to enforce a wide variety of settings for devices used in her organization. Which of the following methods should she select if she needs to manage hundreds of devices while setting rules for use of SMS and MMS, audio and video recording, GPS tagging, and wireless connection methods like tethering and hotspot modes?"
+answers = ["Use a UEM tool and application to manage the devices."]
+alternatives = [
+    "Use baseline settings automatically set for every phone before it is deployed using an imaging tool.",
+    "Require users to configure their phones using a lockdown guide.",
+    "Use a CASB tool to manage the devices."
+]
+explanation = """
+A universal endpoint management (UEM) tool can manage
+desktops, laptops, mobile devices, printers, and other devices.
+UEM tools often use applications deployed to mobile devices to
+configure and manage them, and Olivia's best option from this
+list is a UEM tool. A CASB is a cloud access security broker and
+is not used to manage mobile devices, and the other options
+require massive amounts of manual work and are unlikely to
+succeed—or users will simply change settings when it is
+convenient to them.
+"""
+
+[[imp.questions]]
+question = "John wants to deploy a solution that will provide content filtering for web applications, CASB functionality, DLP, and threat protection. What type of solution can he deploy to provide these features?"
+answers =  ["An NG SWG"]
+alternatives = [
+    "A reverse proxy",
+    "A VPC gateway",
+    "A next-gen firewall"
+]
+explanation = """
+Next-generation (NG) secure web gateways (SWG) add
+additional features beyond those found in cloud access security
+brokers and next generation firewalls. While features can vary,
+they may include web filtering, TLS decryption to allow traffic
+analysis and advanced threat protection, cloud access security
+broker (CASB) features, data loss prevention (DLP), and other
+advanced capabilities. This type of solution is a relatively new
+one, and the market is changing quickly.
+"""
+
+[[imp.questions]]
+question = "Brian wants to limit access to a federated service that uses Single Sign-On based on user attributes and group membership, as well as which federation member the user is logging in from. Which of the following options is best suited to his needs?"
+answers =  ["Access policies"]
+alternatives = [
+    "Geolocation",
+    "Account auditing",
+    "Time-based logins"
+]
+explanation = """
+Access policies are built using information and attributes
+about access requests. If the policy requirements are met, the
+actions like allowing or denying access, or requiring additional
+authentication steps can be performed. Geolocation and time-based logins focus on a single information component, and
+account auditing is used to review permissions for accounts, not
+to perform this type of validation or policy-based control.
+"""
+
+[[imp.questions]]
+question = "Sharif uses the chmod command in Linux to set the permissions to a file using the command chmod 700 example.txt . What permission has he set on the file?"
+answers = ["The user has full access to the file."]
+alternatives = [
+    "All users have write access to the file.",
+    "All users have execute access to the file.",
+    "The user has execute access to the file."
+]
+explanation = """
+Numeric representations of file permissions are commonly
+used instead of using rwx notation with chmod . A 7 sets full
+permissions, and the first number sets the user's rights,
+meaning that here the user will be granted full access to the file.
+"""
+
+[[imp.questions]]
+question = "Patrick regularly connects to untrusted networks when he travels and is concerned that an on-path attack could be executed against him as he browses websites. He would like to validate certificates against known certificates for those websites. What technique can he use to do this?"
+answers =  ["Use certificate pinning."]
+alternatives = [
+    "Check the CRL.",
+    "Compare his private key to their public key.",
+    "Compare their private key to their public key."
+]
+explanation = """
+Certificate pinning associates a known certificate with a host
+and then compares that known certificate with the certificate
+that is presented. This can help prevent man-in-the-middle
+attacks but can fail if the certificate is updated and the pinned
+certificate isn't. A CRL, or certificate revocation list, would show
+whether the certificate has been revoked, but it would not show
+if it was changed. Patrick will not have access to the remote
+server's private key unless he happens to be the administrator.
+"""
+
+[[imp.questions]]
+question = "What is the most common format for certificates issued by certificate authorities"
+answers = ["PEM"]
+alternatives = [
+    "DER",
+    "PFX",
+    "P7B"
+]
+explanation = """
+Privacy Enhanced Mail (PEM) is the most common format
+issued by certificate authorities. Distinguished Encoding Rules
+(DER) format is a binary form of the ASCII text PEM format.
+PKCS#7 or P7B format is Base64 ASCII, and PKCS#12, or PFX,
+format is binary format used to store server certificates,
+intermediate certificates, and private keys in a single file.
+"""
+
+[[imp.questions]]
+question = "Michelle's organization uses self-signed certificates throughout its internal infrastructure. After a compromise, Michelle needs to revoke one of the self-signed certificates. How can she do that"
+answers = ["Remove the certificate from the list of whitelisted certificates from each machine that trusts it."]
+alternatives = [
+    "Contact the certificate authority and request that they revoke the certificate.",
+    "Add the certificate to the CRL.",
+    "Reissue the certificate, causing the old version to be invalidated."
+]
+explanation = """
+Michelle's only option is to remove the certificate from the
+list of trusted certificates on every machine that trusted it. This
+can be time-consuming and error prone, and it's one reason self-signed certificates are avoided in production at many
+organizations.
+"""
+
+[[imp.questions]]
+question = "Which of the following is not a common way to validate control over a domain for a domain-validated X.509 certificate"
+answers = ["Changing the IP addresses associated with the domain"]
+alternatives = [
+    "Changing the DNS TXT record",
+    "Responding to an email sent to a contact in the domain's WHOIS information",
+    "Publishing a nonce provided by the certificate authority as part of the domain information"
+]
+explanation = """
+Changing the IP addresses associated with a domain to an
+arbitrary value could cause routing or other problems. That
+means that changing the IP address would not be a chosen
+method of validating a domain. The remaining options are
+legitimate and normal means of validation for certificates.
+"""
+
+[[imp.questions]]
+question = "Fiona knows that SNMPv3 provides additional security features that previous versions of SNMP did not. Which of the following is not a security feature provided by SNMPv3"
+answers = ["SQL injection prevention"]
+alternatives = [
+    "Message integrity",
+    "Message authentication",
+    "Message confidentiality"
+]
+explanation = """
+SNMPv3 adds the ability to authenticate users and groups
+and then encrypt messages, providing message integrity and
+confidentiality. It does not have SQL injection prevention built
+in, but it also isn't a protocol where SQL injection will typically
+be a concern.
+"""

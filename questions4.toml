@@ -1,0 +1,2419 @@
+# questions.toml
+
+[oir]
+label = "OperationsAndIncidentResponse"
+
+
+[[oir.questions]]
+question = ""
+answers = [""]
+alternatives = [
+    "",
+    "",
+    ""
+]
+explanation = """
+
+"""
+[[oir.questions]]
+question = "Mila wants to generate a unique digital fingerprint for a file, and needs to choose between a checksum and a hash. Which option should she choose and why should she choose it"
+answers = ["A hash, because it is unique to the file"]
+alternatives = [
+	"A checksum, because it verifies the contents of the file",
+	"A hash, because it can be reversed to validate the file",
+	"A checksum, because it is less prone to collisions than a hash"
+]
+explanation = """
+Mila should select a hash because a hash is designed to be
+unique to each possible input. That means that multiple files
+could have the same checksum value, whereas a hashing
+algorithm will be unique for each file that it is run against.
+"""
+
+[[oir.questions]]
+question = "Which of the following would prevent a user from installing a program on a company-owned mobile device"
+answers = ["An allow list"]
+alternatives = [
+	"A deny list",
+	"ACL",
+	"HIDS"
+]
+explanation = """
+Allow lists are lists of approved software. Software can only
+be installed if it is on an allow list. Deny lists block specific
+applications, but they cannot account for every possible
+malicious application. Access control lists (ACLs) determine
+who can access a resource. A host intrusion detection system
+(HIDS) does not prevent software from being installed.
+"""
+
+[[oir.questions]]
+question = "Liam is responsible for monitoring security events in his company. He wants to see how diverse events may connect using his security information and event management (SIEM). He is interested in identifying different indicators of compromise that may point to the same breach. Which of the following would be most helpful for him to implement"
+answers = ["A correlation dashboard"]
+alternatives = [
+	"NIDS",
+	"PKI",
+	"A trend dashboard"
+]
+explanation = """
+Correlation dashboards are used to aggregate events and to
+seek out connections. In some cases, this is done with advanced
+analytic algorithms, including artificial intelligence (AI) and
+machine learning (ML). A network intrusion detection system
+(NIDS) would be helpful but will not (by itself) necessarily
+correlate events. A public key infrastructure (PKI) handles
+certificates, not correlation and visibility of security events.
+Trend dashboards would show how things are going and which
+way statistics and information are moving.
+"""
+
+[[oir.questions]]
+question = "Emily wants to capture HTTPS packets using tcpdump . If the service is running on its default port and her Ethernet adapter is eth0 , which tcpdump command should she use"
+answers = ["tcpdump -i eth0 tcp port 443"]
+alternatives = [
+	"tcpdump eth0 -proto https",
+	"tcpdump -i eth0 -proto https",
+	"tcpdump tcp https eth0"
+]
+explanation = """
+Using tcpdump with flags like -i to set the interface, tcp to set
+the protocol, and port to set the port will capture exactly the
+traffic Emily needs to capture. Port 443 is the default HTTPS
+port. There is no -proto flag for tcpdump .
+"""
+
+[[oir.questions]]
+question = "Mila gives her team a scenario, and then asks them questions about how they would respond, what issues they expect they might encounter, and how they would handle those issues. What type of exercise has she conducted"
+answers = ["A tabletop exercise"]
+alternatives = [
+	"A walk-through",
+	"A simulation",
+	"A drill"
+]
+explanation = """
+Tabletop exercises are used to talk through a process. Unlike
+walk-throughs, which focus on step-by-step review of an
+incident, Mila will focus more on how her team responds and on
+learning from those answers. A tabletop exercise can involve
+gaming out a situation. A simulation actually emulates an event
+or incident, either on a small or a large scale. Drills are not
+defined as part of the Security+ exam outline.
+"""
+
+[[oir.questions]]
+question = "Murali is preparing to acquire data from various devices and systems that are targets in a forensic investigation. Which of the following devices is the least volatile according to the order of volatility"
+answers = ["Backups"]
+alternatives = [
+	"CPU cache",
+	"Local disk",
+	"RAM"
+]
+explanation = """
+Backups are considered to be the least volatile type of
+storage since they change at a much slower pace and, in fact,
+may be intentionally retained for long periods of time without
+changing. In this list, CPU cache will change the most
+frequently, then RAM, then local disk contents.
+"""
+
+[[oir.questions]]
+question = "Henry has been asked for vulnerability scan results by an incident responder. He is curious to know why the responder needs scan results. What answer would you provide to him to explain why scan results are needed and are useful"
+answers = ["Vulnerable services will provide clues about what the attackers may have targeted."]
+alternatives = [
+	"The scans will show the programs the attackers used.",
+	"The scans will show the versions of software installed before the attack.",
+	"The scans will show where firewalls and other network devices were in place to help with incident analysis."
+]
+explanation = """
+Incident responders know that scan results can show
+vulnerable systems and services, providing clues about how
+attackers may have obtained access to systems. The scans will
+not show the programs the attackers used but may show services
+that they have enabled or changed. The scans will show the
+versions of software installed before the attack, but that
+information is only useful if the attackers either upgraded or
+changed the software or the software was vulnerable, making
+this a less accurate and useful answer. Finally, the scans may
+show where network security devices are, but that information
+should be available to the incident response team without trying
+to figure it out from scans.
+"""
+
+
+[[oir.questions]]
+question = "Nick is reviewing commands run on a Windows 10 system and discovers that the route command was run with the -p flag. What occurred"
+answers = ["A route was added that will persist between boots."]
+alternatives = [
+	"Routes were discovered using a ping command.",
+	"The route's path will be displayed.",
+	"A route was added that will use the path listed in the command."
+]
+explanation = """
+The -p flag adds a persistent route when combined with the
+ADD command. Persistent routes will remain in the routing table
+between boots. By default, they are cleared at each boot. An
+attacker may choose to use this to help with an on-path (man-in-the-middle) attack.
+"""
+
+[[oir.questions]]
+question = "Lucca wants to acquire open source intelligence information using an automated tool that can leverage search engines and tools like Shodan. Which of the following tools should he select"
+answers = ["theHarvester"]
+alternatives = [
+	"curl",
+	"hping",
+	"netcat"
+]
+explanation = """
+Of the options provided, only theHarvester is an open source
+intelligence tool. Curl is a tool used to transfer data, hping is a
+tool that is frequently used to build custom packets and to
+perform packet analyzer functions, and netcat is a utility that
+allows you to read and write to network connections, making it a
+broadly used tool for pen testers and attackers who need to
+transfer data using a small, capable utility.
+"""
+
+[[oir.questions]]
+question = "Brent wants to use a tool to help him analyze malware and attacks and wants to cover a broad range of tactics and tools that are used by adversaries. Which of the following is broadly implemented in technical tools and covers techniques and tactics without requiring a specific order of operations"
+answers = ["The MITRE ATT&CK framework"]
+alternatives = [
+	"The Diamond Model of Intrusion Analysis",
+	"The Cyber Kill Chain",
+	"The CVSS standard"
+]
+explanation = """
+The MITRE ATT&CK framework focuses on techniques and
+tactics and does not focus on a specific order of operations like
+the Cyber Kill Chain does. It also covers a broader range of
+techniques and adversaries than the Diamond Model does and is
+broadly implemented in many existing tools. The CVSS standard
+is a vulnerability scoring system and is not a useful framework
+for analyzing malware and attacks.
+"""
+
+[[oir.questions]]
+question = "Ted needs to preserve a server for forensic purposes. Which of the following should he not do"
+answers = ["All of the above"]
+alternatives = [
+	"Turn the system off to ensure that data does not change.",
+	"Remove the drive while the system is running to ensure that data does not change.",
+	"Leave the machine connected to the network so that users can continue to use it."
+]
+explanation = """
+To properly preserve the system, Ted needs to ensure that it
+does not change. Turning the system off will cause anything in
+memory to be lost, which may be needed for the investigation.
+Removing the drive while a system is running can cause data to
+be lost. Instead, live imaging the machine and its memory may
+be required. Allowing users to continue to use a machine will
+result in changes, which can also damage Ted's ability to
+perform a forensic investigation.
+"""
+
+[[oir.questions]]
+question = "What mitigation technique is used to limit the ability of an attack to continue while keeping systems and services online"
+answers = ["Containment"]
+alternatives = [
+	"Segmentation",
+	"Isolation",
+	"Nuking"
+]
+explanation = """
+13. D. Containment efforts are used to limit the spread or impact of
+an incident. Containment may focus on keeping systems or
+services online to ensure that organizations can continue to
+function until other options for business continuity can be
+implemented. Segmentation moves systems or services into
+different security zones, and isolation removes them from all
+contact or puts them in small groups that are removed from the
+rest of the organization and systems that are not impacted.
+"""
+
+[[oir.questions]]
+question = "Jessica wants to review the network traffic that her Windows system has sent to determine if a file containing sensitive data was uploaded from the system. What Windows log file can she use to find this information"
+answers = ["None of the above"]
+alternatives = [
+	"The application log",
+	"The network log",
+	"The security log"
+]
+explanation = """
+Windows does not log network traffic at a level of
+granularity that will show if a file has been uploaded. Basic
+traffic statistics can be captured, but without additional sensors
+and information gathering capabilities, Jessica will not be able
+to determine if files are sent from a Windows system.
+"""
+
+[[oir.questions]]
+question = "What term is used to describe the documentation trail for control, analysis, transfer, and final disposition of evidence for digital forensic work"
+answers = ["Chain of custody"]
+alternatives = [
+	"Evidence log",
+	"Paper trail",
+	"Digital footprint"
+]
+explanation = """
+The chain of custody in forensic activities tracks who has a
+device, data, or other forensic artifact at any time, when
+transfers occur, who performed analysis, and where the item,
+system, or device goes when the forensic process is done.
+Evidence logs may be maintained by law enforcement to track
+evidence that is gathered. Paper trail and digital footprint are
+not technical terms used for digital forensics.
+"""
+
+[[oir.questions]]
+question = "Henry wants to determine what services are on a network that he is assessing. Which of the following tools will provide him with a list of services, ports, and their status"
+answers = ["nmap"]
+alternatives = [
+	"route",
+	"hping",
+	"netstat"
+]
+explanation = """
+Of the listed tools, only nmap is a port scanner, and thus it is
+the tool that will provide the required information. route is a
+command-line tool to view and add network traffic routes. hping
+is a packet generator and analyzer, and netstat is a command-line tool that shows network connections, interface statistics,
+and other useful information about a system’s network usage.
+"""
+
+[[oir.questions]]
+question = "Nathan needs to know how many times an event occurred and wants to check a log file for that event. Which of the following grep commands will tell him how many times the event happened if each occurrence is logged independently in the logfile.txt log file, and uses a unique event ID: event101 "
+answers = ["grep -c 'event101' logfile.txt"]
+alternatives = [
+	"grep logfile.txt -n 'event101'",
+	"grep logfile.txt -c 'event101'",
+	"grep -c event101 -i logfile.txt"
+]
+explanation = """
+The -c flag for grep counts the number of occurrences for a
+given string in a file. The -n flag shows the matched lines and
+line numbers. Even if you’re not sure about which flag is which,
+the syntax should help on a question like this. When using grep ,
+the pattern comes before the filename, allowing you to rule out
+two of the options right away.
+"""
+
+[[oir.questions]]
+question = "Jacob wants to ensure that all of the areas that are impacted by an incident are addressed by his incident response team. What term is used to describe the relationship and communications process that teams use to ensure that all of those involved are treated appropriately"
+answers = ["Stakeholder management"]
+alternatives = [
+	"COOP",
+	"PAM",
+	"Communications planning"
+]
+explanation = """
+Stakeholder management involves working with
+stakeholders, or those who have an interest in the event or
+impacted systems or services. COOP, or Continuity of
+Operations Planning, is a U.S. federal government effort to
+ensure that federal agencies have continuity plans. PAM is
+privileged account management. Stakeholder management
+involves more than just communications, although
+communications is an important part of it.
+"""
+
+[[oir.questions]]
+question = "While Susan is conducting a forensic review of logs from two servers hosted in the same datacenter, she notices that log items on the first server occurred exactly an hour before matching events on the second server. What is the most likely cause of such exact occurrences"
+answers = ["A time offset is causing the events to appear to occur at different times."]
+alternatives = [
+	"The attack took an hour to complete, providing the attacker with access to the second machine an hour later.",
+	"The log entries are incorrect, causing the events to appear at the wrong time.",
+	"The attacker used a script causing events to happen exactly an hour apart."
+]
+explanation = """
+The most common reason for a one-hour time offset
+between two systems in the same location is a faulty time zone
+setting creating a time offset between the systems.
+"""
+
+[[oir.questions]]
+question = "What is the primary usage of Domain Name System (DNS) data in incident investigations and operational security monitoring"
+answers = ["DNS log information can be used to identify malware going to known malicious sites."]
+alternatives = [
+	"DNS data is used to capture network scans.",
+	"DNS data can be used to identify domain transfer attacks.",
+	"DNS log information can be used to identify unauthorized logins."
+]
+explanation = """
+DNS data is frequently logged to help identify compromised
+systems or systems that have visited known phishing sites. DNS
+logs can be used along with IP reputation and known bad
+hostname lists to identify issues like these. DNS data is not
+commonly used to identify network scans and cannot capture
+them. Domain transfers are not attacks, although they are
+information gathering and will show in the logs. DNS does not
+capture information about logins.
+"""
+
+[[oir.questions]]
+question = """Dani generates an OpenSSL certificate using the following command. What has she set with the flag -rsa:2048 
+openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048
+-keyout privateKey.key -out mycert.crt
+"""
+answers = ["The key length in bits"]
+alternatives = [
+	"The year that the certificate will expire",
+	"The key length in bytes",
+	"The year that the root certificate will expire"
+]
+explanation = """
+21. D. Even if you’re not deeply familiar with the openssl
+command-line utility, you should know that certificates use
+ciphers that accept a bit length as a flag and that bit lengths like
+1024, 2048, and 4096 are common. These key lengths are not
+commonly communicated in bytes, and certificates are unlikely
+to last for multiple decades, although a certificate authority (CA)
+root certificate can last for a long time.
+"""
+
+[[oir.questions]]
+question = "Theresa wants to view the last 10 lines of a log file and to see it change as modifications are made. What command should she run on the Linux system she is logged in to"
+answers = ["tail -f logfile.log"]
+alternatives = [
+	"head -f -end 10 logfile.log",
+	"foot -watch -l 10 logfile.log",
+	"follow -tail 10 logfile.log"
+]
+explanation = """
+By default, the tail command shows the last 10 lines of a
+file, and using the -f flag follows changes in the file. head shows
+the top of a file, and foot and follow were made up for this
+question.
+"""
+
+[[oir.questions]]
+question = "Henry wants to acquire the firmware from a running system. What is the most likely technique that he will need to use to acquire the firmware"
+answers = ["Acquire the firmware from memory using memory forensics tools."]
+alternatives = [
+	"Connect using a serial cable.",
+	"Acquire the firmware from disk using disk forensic tools.",
+	"None of the above"
+]
+explanation = """
+Although firmware acquisition is a less commonly used
+technique, firmware is typically stored in a chip on a system
+board rather than on disk. Henry is most likely to succeed if he
+retrieves the running firmware from memory. A serial
+connection may work but would typically require rebooting the
+system.
+"""
+
+[[oir.questions]]
+question = "Eric wants to determine how much bandwidth was used during a compromise and where the traffic was directed to. What technology can he implement before the event to help him see this detail and allow him to have an effective bandwidth monitoring solution"
+answers = ["NetFlow"]
+alternatives = [
+	"A firewall",
+	"packetflow",
+	"A DLP"
+]
+explanation = """
+Network flows using NetFlow or sFlow would provide the 
+information that Eric wants, with details of how much traffic
+was used, when, and where traffic was directed. A firewall or
+data loss prevention (DLP) would not show the bandwidth
+detail, although a firewall may show the connection information
+for events. Packetflow was made up for this question and is not a
+technology used for this purpose.
+"""
+
+[[oir.questions]]
+question = "Naomi has acquired an image of a drive as part of a forensic process. She wants to ensure that the drive image matches the original. What should she create and record to validate this"
+answers = ["A hash of the drives to show that their hashes match"]
+alternatives = [
+	"A third image to compare to the original and new image",
+	"A directory listing to show that the directories match",
+	"A photographic image of the two drives to show that they match"
+]
+explanation = """
+Hashing using MD5 or SHA1 is commonly used to validate
+that a forensic image matches the original drive. Many forensic
+duplicators automatically generate a hash of both drives when
+they complete the imaging process to ensure that there is a
+documentation chain for the forensic artifacts. A third image
+may be useful but does not validate this. Directory listings do
+not prove that drives match, and photos, though useful to
+document the drives and serial numbers, do not validate the
+contents of the drives.
+"""
+
+[[oir.questions]]
+question = "Ryan has been asked to run Nessus on his network. What type of tool has he been asked to run"
+answers = ["A vulnerability scanner"]
+alternatives = [
+	"A fuzzer",
+	"A WAF",
+	"A protocol analyzer"
+]
+explanation = """
+Nessus is a popular vulnerability scanning tool. It is not a
+fuzzer, web application firewall (WAF), or protocol analyzer.
+"""
+
+[[oir.questions]]
+question = "Jason wants to ensure that the digital evidence he is collecting during his forensic investigation is admissible. Which of the following is a common requirement for admissibility of evidence"
+answers = ["It must be relevant."]
+alternatives = [
+	"It must be hearsay.",
+	"It must be timely.",
+	"It must be public."
+]
+explanation = """
+Of the options listed, the only requirement for admissibility
+is that the evidence must be relevant. Evidence must also be
+authenticated, meaning that it needs to be genuine.
+"""
+
+
+[[oir.questions]]
+question = "Which of the following key elements is not typically included in the design of a communication plan"
+answers = ["Cost to the organization"]
+alternatives = [
+	"Incident severity",
+	"Customer impact",
+	"Employee impact"
+]
+explanation = """
+The cost to the organization is not typically a part of
+communications planning. Since incidents can have a broad
+range of costs, and since exposing those costs can cause worry or
+a loss of customer confidence in the worst case, the costs of the
+incident are relatively rarely exposed as part of the incident
+response process. Communications with customers and
+employees is critical, and having different communication plans
+for different event severities helps ensure that appropriate
+communications occur.
+"""
+
+[[oir.questions]]
+question = """Rick runs the following command:
+cat file1.txt file2.txt
+What will occur"""
+answers = ["he contents of file1.txt will be displayed, and then the contents of file2 will be displayed."]
+alternatives = [
+	"The contents of file1.txt will be appended to file2.txt .",
+	"The contents of file2.txt will be appended to file1.txt .",
+	"The contents of both files will be combined line by line."
+]
+explanation = """
+The cat command without an angle bracket to redirect it will
+simply display the contents of the files listed. Thus, this
+command will display file1.txt , and then file2.txt . If Rick
+had inserted > between the two files, it would have appended
+file1.txt to file2.txt .
+"""
+
+[[oir.questions]]
+question = "Michelle wants to check for authentication failures on a CentOS Linux=based system. Where should she look for these event logs"
+answers = ["/var/log/secure"]
+alternatives = [
+	"/var/log/auth.log",
+	"/var/log/fail",
+	"/var/log/events",
+]
+explanation = """
+CentOS and Red Hat both store authentication log
+information in /var/log/secure instead of /var/log/auth.log
+used by Debian and Ubuntu systems. Knowing the differences
+between the major distributions can help speed up your forensic
+and incident investigations, and consistency is one of the
+reasons that organizations often select a single Linux
+distribution for their infrastructure whenever it is possible to do so.
+"""
+
+[[oir.questions]]
+question = "A web page's title is considered what type of information about the page"
+answers = ["Metadata"]
+alternatives = [
+	"Summary",
+	"Header data",
+	"Hidden data"
+]
+explanation = """
+Web page titles, as well as headers like meta tags, are
+examples of metadata about a page and are frequently used to
+gather information about web pages and websites. Headers are
+used as part of a page’s design and typically describe the bar at
+the top of the page used for site navigation. Summary and
+hidden data are not technical terms used to describe web page
+components.
+"""
+
+[[oir.questions]]
+question = "Nelson has discovered malware on one of the systems he is responsible for and wants to test it in a safe environment. Which of the following tools is best suited to that testing"
+answers = ["Cuckoo"]
+alternatives = [
+	"strings",
+	"scanless",
+	"Sn1per"
+]
+explanation = """
+Cuckoo , or Cuckoo Sandbox, is a malware analysis sandbox
+that will safely run malware and then analyze and report on its
+behavior. strings is a command-line tool that retrieves strings
+from binary data. scanless is a tool described as a port scraper,
+which retrieves port information without running a port scan by
+using websites and services to run the scan for you. Sn1per is a
+pen test framework.
+"""
+
+[[oir.questions]]
+question = "Lucca wants to view metadata for a file so that he can determine the author of the file. What tool should he use from the following list"
+answers = ["exiftool"]
+alternatives = [
+	"Autopsy",
+	"strings",
+	"grep"
+]
+explanation = """
+Although Autopsy, strings , and grep can all be used to
+retrieve information from files, exiftool is the only purpose-built file metadata retrieval tool listed.
+"""
+
+[[oir.questions]]
+question = "Isaac wants to acquire an image of a system that includes the operating system. What tool can he use on a Windows system that can also capture live memory"
+answers = ["FTK Imager"]
+alternatives = [
+	"dd",
+	"Autopsy",
+	"WinDump"
+]
+explanation = """
+FTK Imager is a free tool that can image both systems and
+memory, allowing Isaac to capture the information he wants.
+Although dd is useful for capturing disks, other tools are
+typically used for memory dumps, and though dd can be used on
+a Windows system, FTK Imager is a more likely choice. Autopsy
+is a forensic analysis tool and does not provide its own imaging
+tools. WinDump is a Windows version of tcpdump , a protocol
+analyzer.
+"""
+
+[[oir.questions]]
+question =  "Jason is conducting a forensic investigation and has retrieved artifacts in addition to drives and files. What should he do to document the artifacts he has acquired"
+answers = ["Take a picture of them, label them, and add them to the chain of custody documentation."]
+alternatives = [
+	"Image them using dd and ensure that a valid MD5sum is generated.",
+	"Contact law enforcement to properly handle the artifacts.",
+	"Engage legal counsel to advise him how to handle artifacts in an investigation."
+]
+explanation = """
+When artifacts are acquired as part of an investigation, they
+should be logged and documented as part of the evidence related
+to the investigation. Artifacts could include a piece of paper with
+passwords on it, tools or technology related to an exploit or
+attack, smartcards, or any other element of an investigation.
+"""
+
+[[oir.questions]]
+question = "Gary wants to check for the mail servers for example.com. What tool and command can he use to determine this"
+answers = ["nslookup -query =mx example.com"]
+alternatives = [
+	"ping -email example.com",
+	"smtp -mx example.com",
+	"email -lookup -mx example.com"
+]
+explanation = """
+The MX records for a domain list its email servers. Gary can
+use nslookup to query Domain Name System (DNS) for the MX
+servers using the command nslookup -query =mx example.com to
+look up example.com’s email server. ping does not support MX
+server lookups, and both smtp and email are not command-line
+tools.
+"""
+
+
+[[oir.questions]]
+question = "Which of the following is best suited to analyzing live SIP traffic"
+answers = ["Wireshark"]
+alternatives = [
+	"Log files",
+	"Nessus",
+	"SIPper"
+]
+explanation = """
+Wireshark can be used to capture and analyze live Session
+Initiation Protocol (SIP) traffic on a network. Analysts should
+keep the fact that SIP traffic may be encrypted on their network
+and that they may need to take additional steps to fully view the
+content of SIP packets. Log files can provide information about
+SIP sessions and events and are useful for analysis after the fact,
+but they won't provide the same detail about live SIP traffic.
+Nessus is a vulnerability scanner, and SIPper was made up for
+this question.
+"""
+
+[[oir.questions]]
+question = "Andrea wants to identify services on a remote machine and wants the services to be labeled with service names and other common details. Which of the following tools will not provide that information"
+answers = ["netcat"]
+alternatives = [
+	"Sn1per",
+	"Nessus",
+	"nmap"
+]
+explanation = """
+Although all of the tools listed can perform a port scan and
+identify open ports, netcat is the only one that does not also
+integrate automated service identification.
+"""
+
+[[oir.questions]]
+question = "Joseph is writing a forensic report and wants to be sure he includes appropriate detail. Which of the following would not typically be included while discussing analysis of a system"
+answers = ["A picture of the person from whom the system was taken"]
+alternatives = [
+	"Validation of the system clock's time settings",
+	"The operating system in use",
+	"The methods used to create the image"
+]
+explanation = """
+Forensic reports should include appropriate technical detail.
+Analysis of a system does not include a picture of the person
+from whom the system was acquired.
+"""
+
+[[oir.questions]]
+question = "Greg believes an attacker has been using a brute-force password attack against a Linux system he is responsible for. What command could he use to determine if this is the case"
+answers = ["""grep "Failed password" /var/log/auth.log"""]
+alternatives = [
+	"tail /etc/bruteforce.log",
+	"head /etc/bruteforce.log",
+	"""grep "Failed login" /etc/log/auth.log"""
+]
+explanation = """
+This question tests your knowledge of both the common
+Linux logs and basic format information for the auth.log file.
+Greg could use grep to search for "Failed password" in the
+auth.log file found in /var/log on many Linux systems. There is
+not a common log file named bruteforce.log ; tail and head are
+not useful for searching through the file, only for showing a set
+number of lines; and /etc/ is not the normal location for the
+auth.log file.
+"""
+
+[[oir.questions]]
+question = "Elaine wants to determine what websites a user has recently visited using the contents of a forensically acquired hard drive. Which of the following locations would not be useful for her investigation"
+answers = ["The browser's bookmarks"]
+alternatives = [
+	"The browser cache",
+	"The browser history",
+	"Session data"
+]
+explanation = """
+The browser cache, history, and session information will all
+contain information from recently visited sites. Bookmarks may
+indicate sites that a user has visited at some point, but a
+bookmark can be added without visiting a site at all.
+"""
+
+[[oir.questions]]
+question = "Jason wants to acquire network forensic data. What tool should he use to gather this information"
+answers = ["Wireshark"]
+alternatives = [
+    "nmap",
+    "Nessus",
+    "SNMP"
+]
+explanation = """
+Wireshark is a packet analyzer that can be used to capture
+and analyze network traffic for forensic purposes. Unlike disk
+forensics, network forensics require forethought and intentional
+capture of data before it is needed since traffic is ephemeral.
+Organizations that want to have a view of network traffic
+without capturing all traffic might use NetFlow or sFlow to
+provide some information about network traffic patterns and
+usage. Nessus is a vulnerability scanner, nmap is a port scanner,
+and Simple Network Management Protocol (SNMP) is a
+protocol used to transfer and gather information about network
+devices and status.
+"""
+
+[[oir.questions]]
+question = "Ananth has been told that attackers sometimes use ping to map networks. What information returned by ping could be most effectively used to determine network topology"
+answers = ["TTL"]
+alternatives = [
+	"Packets sent",
+	"Packets received",
+	"Transit time"
+]
+explanation = """
+Mapping networks using ping relies on pinging each host,
+and then uses time-to-live (TTL) information to determine how
+many hops exist between known hosts and devices inside a
+network. When TTLs decrease, another router or switch
+typically exists between you and the device. Packets sent and
+received can be used to determine if there are issues with the
+path or link, and transit time can provide information about
+relative network distance or the path used, but traceroute
+provides far more useful detail in that case.
+"""
+
+[[oir.questions]]
+question = "Susan has discovered evidence of a compromise that occurred approximately five months ago. She wants to conduct an incident investigation but is concerned about whether the data will exist. What policy guides how long logs and other data are kept in most organizations"
+answers = ["The organization's retention policy"]
+alternatives = [
+	"The organization's data classification policy",
+	"The organization's backup policy",
+	"The organization's legal hold policy"
+]
+explanation = """
+Organizations define retention policies for different data
+types and systems. Many organizations use 30-, 45-, 90-, 180-,
+or 365-day retention policies, with some information required to
+be kept longer due to law or compliance reasons. Susan's
+organization may keep logs for as little as 30 days depending on
+storage limitations and business needs. Data classification
+policies typically impact how data is secured and handled.
+Backup policies determine how long backups are retained and
+rotated and may have an impact on data if the logs are backed
+up, but backing up logs are a less common practice due to the
+space they take up versus the value of having logs backed up.
+Legal hold practices are common, but policies are less typically
+defined for legal holds since requirements are set by law.
+"""
+
+[[oir.questions]]
+question = """Selah executes the following command on a system. What has she accomplished
+dd if=/dev/zero of=/dev/sda bs=4096 """
+answers = ["Writing zeroes to all of /dev/sda"]
+alternatives = [
+	"Copying the disk /dev/zero to the disk /dev/sda",
+	"Formatting /dev/sda",
+	"Cloning /dev/sda1"
+]
+explanation = """
+Zero-wiping a drive can be accomplished using dd , and
+when this command is completed Selah will have written zeroes
+to the entire drive /dev/sda .
+"""
+
+[[oir.questions]]
+question = "Jim is preparing a presentation about his organization's incident response process and wants to explain why communications with involved groups and individuals across the organization are important. Which of the following is the primary reason that organizations communicate with and involve staff from affected areas throughout the organization in incident response efforts"
+answers = ["Stakeholder management"]
+alternatives = [
+    "Legal compliance",
+    "Retention policies",
+    "A COOP"
+]
+explanation = """
+Involving impacted areas, or those that have a role in the
+process, is part of stakeholder management and ensures that
+those who need to be involved or aware of the incident response
+process are engaged throughout the process. Laws rarely have
+specific requirements for internal involvement, instead focusing
+on customers or those whose data is involved in an incident.
+Retention policies determine what data is kept and for how long.
+COOP is Continuity of Operations Planning, a federal effort to
+ensure disaster recovery and business continuity plans are in
+place for federal agencies.
+"""
+
+[[oir.questions]]
+question = "Elle is conducting an exercise for her organization and wants to run an exercise that is as close to an actual event as possible. What type of event should she run to help her organization get this type of real-world practice"
+answers = ["A simulation"]
+alternatives = [
+	"A tabletop exercise",
+	"A walk-through",
+	"A wargame"
+]
+explanation = """
+A simulation is the closest you can get to a real-world event
+without having one. A tabletop exercise has personnel
+discussing scenarios, whereas a walk-through goes through
+checklists and procedures. A wargame is not a common exercise
+type.
+"""
+
+[[oir.questions]]
+question = "Erin wants to determine what devices are on a network but cannot use a port scanner or vulnerability scanner. Which of the following techniques will provide the most data about the systems that are active on the network"
+answers = ["Review the CAM tables for all the switches in the network."]
+alternatives = [
+	"Run Wireshark in promiscuous mode.",
+	"Query DNS for all A records in the domain.",
+	"Run netstat on a local workstation."
+]
+explanation = """
+The Content-Addressable Memory (CAM) tables on switches
+contain a list of all the devices they have talked to and will give
+Erin the best chance of identifying the devices on the network.
+Wireshark and netstat will only have a view of the devices that
+the system she is working from communicate with or that
+broadcast on the network segment she is on. Domain Name
+System (DNS) will list only systems that have a DNS entry. In
+most organizations, relatively few systems will have entries in
+DNS.
+"""
+
+[[oir.questions]]
+question = "What SIEM component collects data and sends it to the SIEM for analysis"
+answers = ["A sensor"]
+alternatives = [
+	"An alert level",
+	"A trend analyzer",
+	"A sensitivity threshold"
+]
+explanation = """
+Sensors are deployed, either as agents, hardware, or virtual
+machines to gather information to relay it back to a security
+information and event management (SIEM) device. Alert levels,
+trend analysis features, and sensitivity thresholds are all used to
+analyze and report on data, not to gather data.
+"""
+
+[[oir.questions]]
+question = "Alaina sets her antimalware solution to move infected files to a safe storage location without removing them from the system. What type of setting has she enabled"
+answers = ["Quarantine"]
+alternatives = [
+	"Purge",
+	"Deep-freeze",
+	"Retention"
+]
+explanation = """
+A quarantine process or setting will preserve malicious or
+dangerous files and programs without allowing them to run.
+This allows defenders to retrieve them for further analysis as
+well as to return them to use if they are determined not to be
+malicious, or if the malicious components can be removed from
+needed files. Purging, deep-freezing, and retention are not terms
+used to describe this behavior or setting.
+"""
+
+[[oir.questions]]
+question = "A senior vice president in the organization that Chuck works in recently lost a phone that contained sensitive business plans and information about suppliers, designs, and other important materials. After interviewing the vice president, Chuck finds out that the phone did not have a passcode set and was not encrypted, and that it could not be remotely wiped. What type of control should Chuck recommend for his company to help prevent future issues like this"
+answers = ["Deploy an MDM system."]
+alternatives = [
+"Use containment techniques on the impacted phones.",
+"Deploy a DLP system.",
+"Isolate the impacted phones."
+]
+explanation = """
+Chuck should recommend a mobile device management
+(MDM) system to ensure that organizational devices can be
+managed and protected in the future. Data loss prevention
+(DLP) will not stop a lost phone from being a potential leak of
+data, isolating the phones is not a realistic scenario for devices
+that will actually be used, nor is containment because the phone
+is out of the organization's control once lost.
+"""
+
+[[oir.questions]]
+question = "The school that Gabby works for wants to prevent students from browsing websites that are not related to school work. What type of solution is best suited to help prevent this"
+answers = ["A content filter"]
+alternatives = [
+"A DLP",
+"A firewall",
+"An IDS"
+]
+explanation = """
+A content filter is specifically designed to allow
+organizations to select both specific sites and categories of
+content that should be blocked. Gabby could review content
+categories and configure the filter to prevent students from
+browsing to the unwanted sites. A data loss prevention (DLP)
+solution is designed to prevent data loss, a firewall can block IP
+addresses or hostnames but would require additional
+functionality to filter content, and an intrusion detection system
+(IDS) can detect unwanted traffic but cannot stop it.
+"""
+
+[[oir.questions]]
+question = "Frank knows that forensic information he is interested in is stored on a system's hard drive. If he wants to follow the order of volatility, which of the following items should be forensically captured after the hard drive"
+answers = ["Backups"]
+alternatives = [
+	"Caches and registers",
+	"Virtual memory",
+	"RAM"
+]
+explanation = """
+Information stored on a disk drive is one of the least volatile
+items in the order of volatility, but backups are even less volatile.
+That means Frank should capture backups after he images the
+disk drive and that he should capture CPU cache and registers as
+well as system RAM first if he needs them.
+"""
+
+[[oir.questions]]
+question = """Greg runs the following command. What occurs?
+chmod -R 755 /home/greg/files
+"""
+answers = ["All of the files in /home/greg/files are set to allow Greg to read, write, and execute them, and the group and the world can only read them."]
+alternatives = [
+	"All of the files in /home/greg/ are set to allow the group to read, write, and execute them, and Greg and the world can only read them.",
+	"The read, write, and execute permissions will be removed from all files in the /home/greg/files directory.",
+	"A new directory will be created with read, write, and execute permissions for the world and read-only permissions for Greg and the group he is in."
+]
+explanation = """
+The -R flag applies the permission recursively to all files in
+the named directory. Here, the permissions are 7 , which sets the
+owner to read, write, and execute, and 55 , which sets group and
+then world permissions to read only. 755 is a very commonly
+used permission on Linux systems.
+"""
+
+[[oir.questions]]
+question = "Charles wants to ensure that the forensic work that he is doing cannot be repudiated. How can he validate his attestations and documentation to ensure nonrepudiation"
+answers = ["Digitally sign the records."]
+alternatives = [
+	"Encrypt all forensic output.",
+	"Create a MD5 checksum of all images.",
+	"All of the above"
+]
+explanation = """
+The most important action Charles can take while working
+with his forensic artifacts to provide nonrepudiation is to
+digitally sign the artifacts and information that he is creating in
+his evidence records. Encrypting the output will ensure its
+confidentiality but will not provide nonrepudiation by itself.
+MD5 checksums for images are commonly gathered but must
+then be signed so that they can be validated to ensure they have
+not been modified.
+"""
+
+[[oir.questions]]
+question = "Diana wants to capture the contents of physical memory using a command-line tool on a Linux system. Which of the following tools can accomplish this task"
+answers = ["memdump"]
+alternatives = [
+	"ramdump",
+	"system -dump",
+	"memcpy"
+]
+explanation = """
+The memdump tool is a command-line memory dump utility
+that can dump physical memory. Somewhat confusingly,
+memdump is also a flag in the very useful Volatility framework,
+where it can be used to dump memory as well. The remaining
+options were made up and are not Linux tools, although you can
+create a ramdump on Android devices
+"""
+
+[[oir.questions]]
+question = "Megan needs to conduct a forensic investigation of a virtual machine (VM) hosted in a VMware environment as part of an incident response effort. What is the best way for her to collect the VM?"
+answers = ["As a snapshot using the VMware built-in tools"]
+alternatives = [
+	"By using dd to an external drive",
+	"By using dd to an internal drive",
+	"By using a forensic imaging device after removing the server's drives"
+]
+explanation = """
+The best way to capture a virtual machine from a running
+hypervisor is usually to use the built-in tools to obtain a
+snapshot of the system. Imaging tools are not typically capable
+of capturing machine state, and dd is not designed to capture
+VMs. Removing a server’s drives can be challenging due to RAID
+and other specific server configuration items, and doing so
+might impact all other running VMs and services on the system.
+"""
+
+
+[[oir.questions]]
+question = "What forensic concept is key to establishing provenance for a forensic artifact"
+answers = ["Chain of custody"]
+alternatives = [
+	"Right to audit",
+	"Preservation",
+	"Timelines"
+]
+explanation = """
+A well-documented chain of custody can help establish
+provenance for data, proving where it came from, who handled
+it, and how it was obtained. Right to audit, timelines, and
+preservation of images do not establish provenance, although
+preservation is part of the chain of custody process.
+"""
+
+[[oir.questions]]
+question = "What role do digital forensics most often play in counterintelligence efforts"
+answers = ["They are used to analyze tools and techniques used by intelligence agencies."]
+alternatives = [
+	"They are used to determine what information was stolen by spies.",
+	"They are required for training purposes for intelligence agents.",
+	"They do not play a role in counterintelligence."
+]
+explanation = """
+Digital forensics techniques are commonly used to analyze
+attack patterns, tools, and techniques used by advanced
+persistent threat (APT) actors for counterintelligence purposes.
+They may sometimes be used to determine what information
+was stolen, but this is not the most common use for digital
+forensic techniques, nor is their use as a training mechanism.
+"""
+
+[[oir.questions]]
+question = "Which of the following groups is not typically part of an incident response team"
+answers = ["Law enforcement"]
+alternatives = [
+	"Security analysts",
+	"Management",
+	"Communications staff"
+]
+explanation = """
+Law enforcement is not typically part of organizational
+incident response teams, but incident response teams often
+maintain a relationship with local law enforcement officers.
+Security analysts, management, and communication staff as well
+as technical experts are all commonly part of a core incident
+response team.
+"""
+
+[[oir.questions]]
+question = "Maria wants to add entries into the Linux system log so that they will be sent to her security information and event management (SIEM) device when specific scripted events occur. What Linux tool can she use to do this"
+answers = ["logger"]
+alternatives = [
+	"cat",
+	"slogd",
+	"tail"
+]
+explanation = """
+logger is a Linux utility that will add information to the
+Linux syslog. It can accept file input, write to the system journal
+entry, send to remote syslog servers, and perform a variety of
+other functions. The other commands do not directly interface
+with the system log.
+"""
+
+[[oir.questions]]
+question = "Amanda's organization does not currently have an incident response plan. Which of the following reasons is not one she should present to management in support of creating one"
+answers = ["It will prevent incidents from occurring."]
+alternatives = [
+	"It will help responders react appropriately under stress.",
+	"It will prepare the organization for incidents.",
+	"It may be required for legal or compliance reasons."
+]
+explanation = """
+Incident response plans don't stop incidents from occurring,
+but they do help responders react appropriately, prepare the
+organization for incidents, and may be required for legal or
+compliance reasons.
+"""
+
+[[oir.questions]]
+question = "Which of the following scenarios is least likely to result in data recovery being possible"
+answers = ["A disk is degaussed."]
+alternatives = [
+	"A file is deleted from a disk.",
+	"A file is overwritten by a smaller file.",
+	"A hard drive is quick-formatted."
+]
+explanation = """
+Degaussing a drive uses strong magnetic fields to wipe it and
+is the least likely to result in recoverable data. Deleted files can
+often be recovered because only the file index information will
+be removed until that space is needed and is overwritten. Quick
+formats work in a similar way and will leave remnant data, and
+files that are overwritten by smaller files will also leave
+fragments of data that can be recovered and analyzed.
+"""
+
+[[oir.questions]]
+question = "Henry records a video of the removal of a drive from a system as he is preparing for a forensic investigation. What is the most likely reason for Henry to record the video"
+answers = ["To document the chain of custody and provenance of the drive"]
+alternatives = [
+	"To meet the order of volatility",
+	"To establish guilt beyond a reasonable doubt",
+	"To ensure data preservation"
+]
+explanation = """
+Henry's most likely use for the video is to document the
+forensic process, part of the chain of custody and provenance of
+the forensic data he acquires. The order of volatility helps
+determine what devices or drives he would image first. There is
+no crime being committed, so establishing guilt is not relevant
+to this scenario, and the video will not ensure data is preserved
+on a drive during a forensic process.
+"""
+
+[[oir.questions]]
+question = "Adam wants to use a tool to edit the contents of a drive. Which of the following tools is best suited to that purpose"
+answers = ["WinHex"]
+alternatives = [
+	"Autopsy",
+	"dd",
+	"FTK Imager"
+]
+explanation = """
+WinHex is the only disk editor in this list. Autopsy is a
+forensic analysis suite; dd and FTK Imager are both imaging
+tools. WinHex also provides the ability to read RAID and
+dynamic disks, perform data recovery, edit physical memory,
+clone disks, wipe files and drives, and a variety of other
+functions.
+"""
+
+[[oir.questions]]
+question = "Jill wants to build a checklist that includes all the steps to respond to a specific incident. What type of artifact should she create to do so in her security orchestration, automation, and response (SOAR) environment"
+answers = ["A playbook"]
+alternatives = [
+	"A BC plan",
+	"A DR plan",
+	"A runbook"
+]
+explanation = """
+Playbooks list the required steps that are needed to address
+an incident. A runbook focuses on the steps to perform an action
+or process as part of an incident response process. Thus, a
+playbook may reference runbooks. Business continuity (BC)
+plans and disaster recovery (DR) plans are not used for incident
+response, but they are used to ensure that a business stays
+online or can recover from a disaster.
+"""
+
+[[oir.questions]]
+question = "Alaina wants to use a password cracker against hashed passwords. Which of the following items is most important for her to know before she does this"
+answers = ["The hashing method used for the passwords"]
+alternatives = [
+	"The length of the passwords",
+	"The last date the passwords were changed",
+	"The encryption method used for the passwords"
+]
+explanation = """
+Passwords are typically stored using a hash, and best
+practices would have them stored using a password security-specific hash. Alaina can speed up her efforts if she knows what
+hashing algorithm and options were used on the passwords. The
+age and length of the passwords are not necessary, and
+passwords should not be stored in encrypted form—but the
+question also specifically notes they're hashed passwords.
+"""
+
+[[oir.questions]]
+question = "Vincent wants to ensure that his staff does not install a popular game on the workstations they are issued. What type of control could he deploy as part of his endpoint security solution that would most effectively stop this"
+answers = ["An application block list"]
+alternatives = [
+	"An application approved list",
+	"A DLP",
+	"A content filter"
+]
+explanation = """
+An application block list would fit Vincent's needs the best
+from the list provided. An approved list would prevent other
+tools from being installed, which may impede functionality
+while making the maintenance of the list challenging. A data loss
+prevention (DLP) solution attempts to prevent data from being
+sent or exposed but does not prevent installations or downloads
+of games. A content filter might help, but workarounds are easy,
+including sending games via email or via a thumb drive.
+"""
+
+[[oir.questions]]
+question = "Charlene wants to set up a tool that can allow her to see all the systems a given IP address connects to and how much data is sent to that IP by port and protocol. Which of the following tools is not suited to meet that need"
+answers = ["IPSec"]
+alternatives = [
+	"IPFIX",
+	"sFlow",
+	"NetFlow"
+]
+explanation = """
+IPSec is not a tool used to capture network flows. sFlow,
+NetFlow, and IPFIX are all used to capture network flow
+information, which will provide the information Charlene needs.
+"""
+
+[[oir.questions]]
+question = "A system that Sam is responsible for crashed, and Sam suspects malware may have caused an issue that led to the crash. Which of the following files is most likely to contain information if the malware was a file-less, memory-resident malware package"
+answers = ["A dump file"]
+alternatives = [
+	"The swapfile",
+	"The Windows system log",
+	"The Windows security log"
+]
+explanation = """
+A system crash, or system dump, file contains the contents of
+memory at the time of the crash. The infamous Windows blue
+screen of death results in a memory dump to a file, allowing
+analysis of memory contents. The swapfile (pagefile) is used to
+store information that would not fit in memory but is unlikely to
+contain a currently running malware package, since files are
+swapped out when they are not in use. The Windows security log
+does not contain this type of information, nor does the system
+log.
+"""
+
+[[oir.questions]]
+question = "Which of the following commands can be used to show the route to a remote system on a Windows 10 workstation"
+answers = ["tracert"]
+alternatives = [
+    "traceroute",
+    "arp",
+    "netstat"
+]
+explanation = """
+The Windows tracert command will show the route to a
+remote system as well as delays along the route. traceroute is
+the equivalent command in Linux. The arp command allows you
+to view and modify the Address Resolution Protocol (ARP)
+cache in Windows, and netstat has varying functions in
+different operating systems but generally shows statistics and
+information about network usage and status.
+"""
+
+[[oir.questions]]
+question = "Tools like PRTG and Cacti that monitor SNMP information are used to provide what type of information for an incident investigation"
+answers = ["Bandwidth monitoring"]
+alternatives = [
+	"Authentication logs",
+	"System log information",
+	"Email metadata"
+]
+explanation = """
+PRTG and Cacti are both network monitoring tools that can
+provide bandwidth monitoring information. Bandwidth
+monitors can help identify exfiltration, heavy and abnormal
+bandwidth usage, and other information that can be helpful for
+both incident identification and incident investigations. If you
+encounter a question like this on the exam, even if you’re not
+familiar with either tool, you can use your knowledge of what
+Simple Network Management Protocol (SNMP) is used for to
+identify which of the categories is most likely correct.
+"""
+
+[[oir.questions]]
+question = "Which of the following is not a key consideration when considering on-premises versus cloud forensic investigations"
+answers = ["Provenance"]
+alternatives = [
+	"Data breach notification laws",
+	"Right-to-audit clauses",
+	"Regulatory requirements"
+]
+explanation = """
+The Security+ exam outline focuses on right to audit clauses,
+regulatory and jurisdictional issues, and data breach notification
+laws as key elements to consider when planning on-site versus
+cloud forensic differences. Provenance is important regardless of
+where the forensic activity occurs.
+"""
+
+[[oir.questions]]
+question = "The company Charles works for has recently had a stolen company cell phone result in a data breach. Charles wants to prevent future incidents of a similar nature. Which of the following mitigation techniques would be the most effective"
+answers = ["Enable FDE via MDM."]
+alternatives = [
+    "A firewall change",
+    "A DLP rule",
+    "A new URL filter rule"
+]
+explanation = """
+A variety of configuration changes could be pushed to
+mobile devices to help: setting passcodes, enabling full-disk
+encryption (FDE) on mobile devices via organizationally
+deployed mobile device management (MDM), or even
+preventing some sensitive files from being downloaded or kept
+on those devices could all help. Firewall rules, data loss
+prevention (DLP) rules, and URL filters will not prevent a stolen
+device from being accessed and the data being exposed.
+"""
+
+[[oir.questions]]
+question = """ Henry runs the following command:
+dig @8.8.8.8 example.com
+What will it do """
+answers = ["Search 8.8.8.8 's DNS information for example.com ."]
+alternatives = [
+    "Search example.com 's DNS server for the host 8.8.8.8 .",
+    "Look up the hostname for 8.8.8.8 .",
+    "Perform open source intelligence gathering about 8.8.8.8 and example.com ."
+]
+explanation = """
+The @ command for dig selects the Domain Name System
+(DNS) server it should query. In this case, it will query one of
+Google’s DNS servers at 8.8.8.8 for the DNS information for
+example.com.
+"""
+
+[[oir.questions]]
+question = "Greg is collecting a forensic image of a drive using FTK Imager, and he wants to ensure that he has a valid copy. What should he do next"
+answers = ["Compare an MD5 or SHA-1 hash of the drive to the image."]
+alternatives = [
+    "Run the Linux cmp command to compare the two files.",
+    "Calculate an AES-256 hash of the two drives.",
+    "Compare the MD5 of each file on the drive to the MD5 of each file in the image."
+]
+explanation = """
+Greg should use the built-in hashing functions to compare
+either an MD5 or SHA-1 hash of the source drive to a hash using
+the same function run on the image. If they match, he has a valid
+and intact image. None of the other answers will provide
+validation that the full drive was properly imaged.
+"""
+
+[[oir.questions]]
+question = "Adam needs to search for a string in a large text file. Which of the following tools should he use to most efficiently find every occurrence of the text he is searching for"
+answers = ["grep"]
+alternatives = [
+    "cat",
+    "head",
+    "tail",
+]
+explanation = """
+The Linux grep command is a search tool that Adam can use
+to search through files or directories to find strings. cat is short
+for concatenate, and the command can be used to create files, to
+view their contents, or to combine files. head and tail are used
+to view the beginning or end of a file, respectively.
+"""
+
+[[oir.questions]]
+question = "Angela wants to use segmentation as part of her mitigation techniques. Which of the following best describes a segmentation approach to network security"
+answers = ["Partitioning the network into segments based on user and system roles and security requirements"] 
+alternatives = [
+    "Removing potentially infected or compromised systems from the network",
+    "Using firewalls and other tools to limit the spread of an active infection",
+    "Adding security systems or devices to prevent data loss and exposure'"
+]
+explanation = """
+Segmentation splits networks or systems into smaller units
+that align with specific needs. Segmentation can be functional,
+security based, or for other purposes. Removing potentially
+infected systems would be an example of isolation, using
+firewalls and other tools to stop the spread of an infection is
+containment, and adding security systems to prevent data loss is
+an example of implementing a security tool or feature.
+"""
+
+[[oir.questions]]
+question = "Charlene has been asked to write a business continuity (BC) plan for her organization. Which of the following will a business continuity plan best handle"
+answers = ["How to keep the organization running during a system outage"]
+alternatives = [
+    "How to respond during a person-made disaster",
+	"How to respond during a natural disaster",
+	"All of the above"
+]
+explanation = """
+Unlike a disaster recovery plan that is written to help an
+organization recovery from a person-made or natural disaster, a
+business continuity plan focuses on how to keep the business
+running when it is disrupted. Thus, Charlene's BC plan would
+detail how to keep the organization running when a system
+outage occurs.
+"""
+
+
+[[oir.questions]]
+question = "Brad wants to create a self-signed x.509 certificate. Which of the following tools can be used to perform this task"
+answers =  ["OpenSSL"]
+alternatives = [
+    "hping",
+    "Apache",
+    "scp"
+]
+explanation = """
+OpenSSL can be used to generate a certificate using a
+command like this:
+openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048
+-keyout
+privateKey.key -out certificate.crt.
+None of the other tools listed can be used to generate a
+certificate.
+"""
+
+[[oir.questions]]
+question = "Cameron wants to test for commonly used passwords in his organization. Which of the following commands would be most useful if he knows that his organization's name, mascot, and similar terms are often used as passwords"
+answers = ["""john --wordlist "mywords.txt" --passwordfile.txt"""]
+alternatives = [
+    """ssh -test -"mascotname, orgname" """,
+    "john -show passwordfile.txt",
+    """crack -passwords -wordlist "mascotname, orgname" """
+]
+explanation = """
+The only password cracker listed is John the Ripper. John
+accepts custom wordlists, meaning that Cameron can create and
+use his own wordlist, as shown in option A.
+
+"""
+
+[[oir.questions]]
+question = "Which of the following capabilities is not built into Autopsy"
+answers = ["Disk imaging"]
+alternatives = [
+    "Timeline generation",
+    "Automatic image filtering",
+    "Communication visualization"
+]
+explanation = """
+Autopsy does not have a built-in capability to create disk
+images. Instead, it relies on third-party tools for acquisition and
+then imports disk images and other media. Autopsy has built-in
+timeline generation, image filtering and identification, and
+communication visualization, among many other capabilities.
+"""
+
+[[oir.questions]]
+question = "Alaina's company is considering signing a contract with a cloud service provider, and wants to determine how secure their services are. Which of the following is a method she is likely to be able to use to assess it "
+answers = ["Review an existing SOC audit."]
+alternatives = [
+    "Ask for permission to vulnerability scan the vendor's production service.",
+    "Conduct an audit of the organization.",
+    "Hire a third party to audit the organization."
+]
+explanation = """
+Many cloud service providers do not allow customer-driven
+audits, either by the customer or a third party. They also
+commonly prohibit vulnerability scans of their production
+environment to avoid service outages. Instead, many provide
+third-party audit results in the form of a service organization
+controls (SOC) report or similar audit artifact.
+"""
+
+[[oir.questions]]
+question = "Erin is working through the Cyber Kill Chain and has completed the exploitation phase as part of a penetration test. What step would come next"
+answers = ["Privilege escalation"]
+alternatives = [
+    "Lateral movement",
+    "Obfuscation",
+    "Exfiltration"
+]
+explanation = """
+The Cyber Kill Chain moves to privilege escalation after
+exploitation. The entire kill chain is: 1) Reconnaissance, 2)
+Intrusion, 3) Exploitation, 4) Privilege Escalation, 5) Lateral
+Movement, 6) Obfuscation/Anti-forensics, 7) Denial of Service,
+and 8) Exfiltration.
+"""
+
+[[oir.questions]]
+question = "Dana wants to use an exploitation framework to perform a realistic penetration test of her organization. Which of the following tools would fit that requirement"
+answers = ["Metasploit"]
+alternatives = [
+    "Cuckoo",
+    "theHarvester",
+    "Nessus"
+]
+explanation = """
+Of the tools that are listed, only Metasploit is an exploitation
+framework. Cuckoo is a malware testing sandbox, theHarvester
+is an open source intelligence gathering tool, and Nessus is a
+vulnerability scanner. Tools like Metasploit, BeEF, and Pacu are
+all examples of exploitation frameworks.
+"""
+
+[[oir.questions]]
+question = "Cynthia has been asked to build a playbook for the SOAR system that her organization uses. What will she build"
+answers = ["A set of rules with actions that will be performed when an event occurs using data collected or provided to the SOAR system"]
+alternatives = [
+    "An automated incident response process that will be run to support the incident response (IR) team",
+    "A trend analysis-driven script that will provide instructions to the IR team",
+    "A set of actions that the team will perform to use the SOAR to respond to an incident"
+]
+explanation = """
+A playbook for a security orchestration, automation, and
+response (SOAR) environment is a set of rules that determine
+what actions will be performed when an event occurs that is
+identified by the SOAR using data it collects or receives. 
+"""
+
+[[oir.questions]]
+question = "Gurvinder's corporate datacenter is located in an area that FEMA has identified as being part of a 100-year flood plain. He knows that there is a chance in any given year that his datacenter could be completely flooded and underwater, and he wants to ensure that his organization knows what to do if that happens. What type of plan should he write"
+answers = ["A disaster recovery plan"]
+alternatives = [
+    "A Continuity of Operations Plan",
+    "A business continuity plan",
+    "A flood insurance plan"
+]
+explanation = """
+A disaster recovery plan addresses what to do during a
+person-made or natural disaster. A flood that completely fills a
+datacenter would require significant efforts to recover from, and
+Gurvinder will need a solid disaster recovery plan—and perhaps
+a new datacenter location as soon as possible! A COOP, or
+Continuity of Operations Pan, is needed for U.S. government
+agencies but is not required for businesses. A business
+continuity plan would cover how to keep business running, but
+it does not cover all the requirements in a natural disaster of this
+scale, and a flood insurance plan is not a term used in the
+Security+ exam.
+"""
+
+[[oir.questions]]
+question ="Frank wants to identify where network latency is occurring between his computer and a remote server. Which of the following tools is best suited to identifying both the route used and which systems are responding in a timely manner"
+answers = ["pathping"]
+alternatives = [
+    "ping",
+    "tracert",
+    "netcat"
+]
+explanation = """
+pathping combines both ping and tracert / traceroute style
+functionality to help identify both the path used and where
+latency is an issue. It is built into Windows and can be used for
+exactly the troubleshooting that Frank needs to accomplish. He
+could use both ping and tracert / traceroute to perform the
+task, but he would need to spend more time using each tool in
+turn to identify the same information that pathping will put into
+a single interface. netcat , while useful for many tasks, isn't as
+well suited to this one.
+"""
+
+[[oir.questions]]
+question = "Derek wants to see what DNS information can be queried for his organization as well as what hostnames and subdomains may exist. Which of the following tools can provide both DNS query information and Google search information about hosts and domains through a single tool"
+answers = ["dnsenum"]
+alternatives = [
+    "dig",
+    "host",
+    "dnscat"
+]
+explanation = """
+The dnsenum tool can perform many Domain Name System
+(DNS)-related functions, including querying A records,
+nameservers, and MX records, as well as performing zone
+transfers, Google searches for hosts and subdomains, and net
+range reverse lookups. dig and host are useful for DNS queries
+but do not provide this range of capabilities, and dnscat was
+made up for this question.
+"""
+
+[[oir.questions]]
+question = "Jill has been asked to perform data recovery due to her forensic skills. What should she tell the person asking to perform data recovery to give her the best chance of restoring lost files that were accidentally deleted"
+answers =  ["Do not save any files or make any changes to the system."]
+alternatives = [
+    "Immediately reboot using the reset switch to create a lost file memory dump.",
+    """Turn off "secure delete" so that the files can be more easily recovered.""",
+    "All of the above"
+]
+explanation = """
+Jill wants the least possible changes to occur on the system,
+so she should instruct the user to not save any files or make any
+changes. Rebooting the system will not create a memory dump,
+and may cause new files to be written or changed if patches were
+waiting to install or other changes are set to occur during a
+reboot. Turning off secure delete or making other changes will
+not impact the files that were deleted prior to that setting
+change.
+"""
+
+[[oir.questions]]
+question = "What phase follows lateral movement in the Cyber Kill Chain"
+answers =  ["Anti-forensics"]
+alternatives = [
+    "Exfiltration",
+    "Exploitation",
+    "Privilege escalation"
+]
+explanation = """
+Anti-forensics activities follow lateral movement in the
+Cyber Kill Chain model. It helps to remember that after an
+attacker has completed their attack, they will attempt to hide
+traces of their efforts, and then may proceed to denial-of-service
+or exfiltration activities in the model.
+"""
+
+[[oir.questions]]
+question = "Veronica has completed the recovery phase of her organization's incident response plan. What phase should she move into next"
+answers = ["Lessons learned"]
+alternatives = [
+    "Preparation",
+    "Recovery",
+    "Documentation"
+]
+explanation = """
+The IR process used for the Security+ exam outline is
+Preparation, Identification, Containment, Eradication,
+Recovery, and Lessons Learned. Veronica should move into the
+lessons learned phase.
+"""
+
+[[oir.questions]]
+question = "Michelle has been asked to sanitize a number of drives to ensure that sensitive data is not exposed when systems are removed from service. Which of the following is not a valid means of sanitizing hard drives"
+answers = ["Quick-formatting the drives"]
+alternatives = [
+    "Physical destruction",
+    "Degaussing",
+    "Zero-wiping the drives"
+]
+explanation = """
+Quick formatting merely deletes file indexes rather than
+removing and overwriting files, making it inappropriate for
+sanitization. Physical destruction will ensure that the data is not
+readable, as will degaussing and zero wiping.
+"""
+
+
+[[oir.questions]]
+question ="Bart is investigating an incident, and needs to identify the creator of a Microsoft Office document. Where would he find that type of information"
+answers = ["In the file metadata"]
+alternatives = [
+    "In the filename",
+    "In the Microsoft Office log files",
+    "In the Windows application log"
+]
+explanation = """
+Microsoft Office places information like the name of the
+creator of the file, editors, creation and change dates, and other
+useful information in the file metadata that is stored in each
+Office document. Bart can simply open the Office document to
+review this information or can use a forensic or file metadata
+tool to review it. Filenames may contain the creator's name, but
+this would only be if the creator included it. Microsoft Office
+does not create or maintain a log, and the application log for
+Windows does not contain this information.
+"""
+
+[[oir.questions]]
+question = "Nathaniel wants to allow Chrome through the Windows Defender firewall. What type of firewall rule change will he need to permit this"
+answers = ["Add Chrome to the Windows Defender Firewall allowed applications."]
+alternatives = [
+    "Allow TCP 80 and 443 traffic from the system to the Internet.",
+    "Allow TCP 80 and 443 traffic from the Internet to the system.",
+    "All of the above"
+]
+explanation = """
+Windows Defender Firewall operates on a per-application
+model and can filter traffic based on whether the system is on a
+trusted private network or a public network. Nathaniel should
+allow Chrome by name in the firewall, which will allow it to send
+traffic without needing to specify ports or protocols.
+"""
+
+
+[[oir.questions]]
+question = "Nathan wants to perform whois queries on all the hosts in a class C network. Which of the following tools can do that and also be used to discover noncontiguous IP blocks in an automated fashion"
+answers = ["dnsenum"]
+alternatives = [
+    "netcat",
+    "dig",
+    "nslookup"
+]
+explanation = """
+The dnsenum Perl script builds in quite a few Domain Name
+System (DNS) enumeration capabilities, including host,
+nameserver, and MX record gathering; zone transfer; Google
+scraping for domains; subdomain brute forcing from files; as
+well as Whois automation and reverse lookups for networks up to
+class C in size. Although you could manually use dig or nslookup
+or even netcat to perform many of these functions, dnsenum is
+the only automated tool on the list.
+"""
+[[oir.questions]]
+question = "What key forensic tool relies on correctly set system clocks to work properly"
+answers = ["Timelining"]
+alternatives = [
+    "Disk hashing",
+    "Forensic disk acquisition",
+    "File metadata analysis"
+]
+explanation = """
+Building a timeline, particularly from multiple systems,
+relies on accurately set system clocks or adding a manually
+configured offset. Disk hashing and acquisition does not need an
+accurate system clock, and file metadata can be reviewed even
+without an accurate clock, although accurate clock information
+or knowing the offset can be useful for analysis.
+"""
+
+[[oir.questions]]
+question = "Valerie is writing her organization's forensic playbooks and knows that the state that she operates in has a data breach notification law. Which of the following key items is most likely to be influenced by that law"
+answers =  ["The maximum amount of time until she has to notify customers of sensitive data breaches"]
+alternatives = [
+    "Whether Valerie calls the police for forensic investigation help",
+    "The certification types and levels that her staff have to maintain",
+    "The maximum number of residents that she can notify about a breach"
+]
+explanation = """
+Data breach notification laws often build in a maximum
+length of time that can pass before notification is required. They
+also often include a threshold for notification, with a maximum
+number of exposed individuals before the state or other
+authorities must be notified. They do not include a maximum
+number of individuals who can be notified, nor do they typically
+have specific requirements about police involvement in forensic
+investigations or certification types or levels.
+"""
+
+[[oir.questions]]
+question ="As part of a breach response, Naomi discovers that Social Security numbers (SSNs) were sent in a spreadsheet via email by an attacker who gained control of a workstation at her company's headquarters. Naomi wants to ensure that more SSNs are not sent from her environment. What type of mitigation technique is most likely to prevent this while allowing operations to continue in as normal a manner as possible"
+answers =  ["A DLP rule blocking SSNs in email"]
+alternatives = [
+    "Antimalware installed at the email gateway",
+    "A firewall that blocks all outbound email",
+    "An IDS rule blocking SSNs in email"
+]
+explanation = """
+A data loss prevention (DLP) tool that can scan and review
+emails for SSN style data is the most effective tool listed here.
+Naomi may want to set the tool to block all emails with potential
+SSNs, and then review those emails manually to ensure that no
+further emails leave while allowing legitimate emails to pass
+through. An intrusion detection system (IDS) might look
+tempting as an answer, but an IDS can only detect, not stop, the
+traffic, which would allow the SSNs to exit the organization.
+Antimalware and firewalls will not stop this type of event.
+"""
+
+[[oir.questions]]
+question = "Troy wants to review metadata about an email he has received to determine what system or server the email was sent from. Where can he find this information"
+answers =  ["In the email message's headers"]
+alternatives = [
+    "In the email message's footer",
+    "In the to: field",
+    "In the from: field"
+]
+explanation = """
+Email headers contain a significant amount of metadata,
+including where the email was sent from. The from: field lists a
+sender but does not indicate where the email was actually sent
+from. The to: field lists who the email was sent to, and footers
+are not used to store this information for email.
+"""
+
+[[oir.questions]]
+question = "Henry is working with local police on a forensic case and discovers that he needs data from a service provider in another state. What issue is likely to limit their ability to acquire data from the service provider"
+answers = ["Jurisdiction"]
+alternatives = [
+    "Venue",
+    "Legislation",
+    "Breach laws"
+]
+explanation = """
+Jurisdictional boundaries exist between states and localities,
+as well as countries, making it challenging for local law
+enforcement to execute warrants and acquire data from
+organizations outside of their jurisdiction in many cases. Venue
+is used to describe where a legal case is conducted. Legislation
+may or may not have an impact, and breach laws are unlikely to
+impact this but would guide Henry about when notifications of a
+breach would need to occur.
+"""
+
+[[oir.questions]]
+question = "Olivia wants to test the strength of passwords on systems in her network. Which of the following tools is best suited to that task"
+answers = ["John the Ripper"]
+alternatives = [
+    "Rainbow tables",
+    "Crack.it",
+    "TheHunter"
+]
+explanation = """
+Olivia should use John the Ripper. Although both John the
+Ripper and rainbow table tools like Ophcrack can be used to
+crack passwords, John the Ripper will provide a better view of
+how hard the password was to crack, whereas rainbow table
+tools will simply determine if the password hash can be cracked.
+Crack.it and TheHunter were made up for this question.
+"""
+
+[[oir.questions]]
+question = "What U.S. federal agency is in charge of COOP"
+answers = ["FEMA"]
+alternatives = [
+    "The USDA",
+    "The NSA",
+    "The FBI"
+]
+explanation = """
+The Federal Emergency Management Agency (FEMA), part
+of the Department of Homeland Security, is in charge of
+Continuity of Operations Planning (COOP), which is a
+requirement for federal agencies. The U.S. Department of
+Agriculture (USDA), the National Security Agency (NSA), and
+the Federal Bureau of Investigations (FBI) are not in charge of
+Continuity of Operations Planning.
+"""
+
+[[oir.questions]]
+question = "Elaine wants to write a series of scripts to gather security configuration information from Windows 10 workstations. What tool should she use to perform this task"
+answers = ["PowerShell"]
+alternatives = [
+    "Bash",
+    "Python",
+    "SSH"
+]
+explanation = """
+Windows configuration data can be queried using
+PowerShell, allowing Elaine to write scripts that will gather
+security configuration data. Bash is a shell used for Linux
+systems. Although Windows systems can now run Bash in the
+Linux subsystem, it isn't installed by default. Secure Shell (SSH)
+is used for remote shell access, and Python could be used but
+would need to be installed specifically for this purpose and isn't
+available by default.
+"""
+
+[[oir.questions]]
+question = "As part of his incident response, Ramon wants to determine what was said on a Voice over IP (VoIP) call. Which of the following data sources will provide him with the audio from the call"
+answers =  ["A Wireshark capture of traffic from the phone"]
+alternatives = [
+    "Call manager logs",
+    "SIP logs",
+    "None of the above"
+]
+explanation = """
+The best option listed is a Wireshark capture of traffic from
+the phone. In some cases, this traffic may be encrypted, and
+Ramon may need to take additional steps to decrypt the data.
+Call manager logs and Session Initiation Protocol (SIP) logs do
+not include the full audio of a conversation.
+"""
+
+[[oir.questions]]
+question = "Isabelle wants to gather information about what systems a host is connecting to, how much traffic is sent, and similar details. Which of the following options would not allow her to perform that task"
+answers = ["NXLog"]
+alternatives = [
+    "IPFIX",
+    "NetFlow",
+    "sFlow"
+]
+explanation = """
+NXLog is a log collection and centralization tool. IPFIX,
+NetFlow, and sFlow all gather data about network traffic,
+including source, destination, port, protocol, and amount of data
+sent to be collected.
+"""
+
+[[oir.questions]]
+question = "As part of an incident response process, Pete puts a compromised system onto a virtual LAN (VLAN) that he creates that only houses that system and does not allow it access to the Internet. What mitigation technique has he used"
+answers = ["Isolation"]
+alternatives = [
+    "Containment",
+    "Segmentation",
+    "Eradication"
+]
+explanation = """
+Pete has isolated the system by placing it on a separate
+logical network segment without access. Some malware can
+detect if systems lose their network connection, and Pete may
+want to perform forensics via the network or monitor attempts
+to send outbound traffic, meaning that simply unplugging the
+system may not meet his needs. Containment would involve
+limiting the spread or impact of an attack, segmentation places
+systems in groups based on rules or security groupings, and
+eradication is a part of the incident response (IR) process where
+components of an incident or attack are removed.
+"""
+
+[[oir.questions]]
+question = "Lucca needs to conduct a forensic examination of a live virtual machine (VM). What forensic artifact should he acquire"
+answers = ["A snapshot of the VM using the underlying virtualization environment"]
+alternatives = [
+    "An image of live memory using FTK Imager from the VM",
+    "A dd image of the virtual machine disk image",
+    "All of the above"
+]
+explanation = """
+Virtual machine forensics typically rely on a snapshot
+gathered using the underlying virtualization environment's
+snapshot capabilities. This will capture both memory state and
+the disk for the system and can be run on an independent
+system or analyzed using forensic tools.
+"""
+
+[[oir.questions]]
+question = "James has a PCAP file that he saved while conducting an incident response exercise. He wants to determine if his intrusion prevention system (IPS) could detect the attack after configuring new detection rules. What tool will help him use the PCAP file for his testing"
+answers = ["tcpreplay"]
+alternatives = [
+    "hping",
+    "tcpdump",
+    "Cuckoo"
+]
+explanation = """
+The tcpreplay tool is specifically designed to allow PCAP
+capture files to be replayed to a network, allowing exactly this
+type of testing. hping can be used to craft packets, but it's not
+designed to replay capture files. tcpdump is used to capture
+packets, but again, it not a replay tool, and Cuckoo is a
+sandboxing tool for testing and identifying malware packages.
+"""
+
+[[oir.questions]]
+question = "What type of file is created when Windows experiences a blue screen of death"
+answers = ["A dump file"]
+alternatives = [
+    "A security log",
+    "A blue log",
+    "A tcpdump"
+]
+explanation = """
+Windows creates a dump file, which contains all the contents
+of active memory to allow analysis of the crash.
+"""
+
+[[oir.questions]]
+question = "Ed wants to ensure that a compromise on his network does not spread to parts of the network with different security levels. What mitigation technique should he use prior to the attack to help with this"
+answers = ["Segmentation"]
+alternatives = [
+    "Isolation",
+    "Fragmentation",
+    "Tiering"
+]
+explanation = """
+Segmenting a network based on security or risk levels helps
+ensure that attacks and compromises are constrained to the
+same type of systems or devices with similar levels of security
+requirements. Isolation would remove a device or system from
+contact with the network or other systems. Fragmentation and
+tiering are not terms used for the Security+ exam.
+"""
+
+[[oir.questions]]
+question = "Derek has acquired over 20 hard drives as part of a forensic investigation. What key process is important to ensure that each drive is tracked and managed properly over time"
+answers = ["Tagging the drives"]
+alternatives = [
+    "Taking pictures of each drive",
+    "Labeling each drive with its order of volatility",
+    "Interviewing each person whose drive is imaged"
+]
+explanation = """
+Tagging each drive helps with inventory and ensures that the
+drive is tracked properly and that the chain of custody can be
+maintained. Taking a picture may be useful to identify the drive,
+but tagging and inventory control are more important. Drives
+are not labeled with an order of volatility because the order of
+volatility is associated with the type of forensic target, not with a
+specific drive. Interviews may be useful but are not always
+conducted with every person whose machine is imaged.
+"""
+
+[[oir.questions]]
+question = "What term describes the ownership, custody, and acquisition of digital forensic artifacts and images"
+answers = ["Provenance"]
+alternatives = [
+    "E-discovery",
+    "Jurisdiction",
+    "Volatility"
+]
+explanation = """
+The provenance of a forensic artifact includes the chain of
+custody, including ownership and acquisition of the artifact,
+device, or image. E-discovery is the process of doing discovery in
+electronic formats for litigation, investigations, and records
+requests. Jurisdiction is the region or area where laws or law
+enforcement has authority. Volatility is how likely a device or
+component is to change.
+"""
+
+[[oir.questions]]
+question = "Elle wants to acquire the live memory (RAM) from a machine that is currently turned on. Which of the following tools is best suited to acquiring the contents of the system's memory"
+answers = ["The Volatility framework"]
+alternatives = [
+    "Autopsy",
+    "dd",
+    "netcat"
+]
+explanation = """
+The Volatility framework is a purpose-built tool for the
+acquisition of random access memory (RAM) from a live system.
+Autopsy is a forensic tool for drive analysis and forensic
+investigations, dd is used to image drives, and netcat is a tool
+used to transfer data or to make connections to systems across a
+network.
+"""
+
+[[oir.questions]]
+question = "Randy believes that a misconfigured firewall is blocking traffic sent from some systems in his network to his web server. He knows that the traffic should be coming in as HTTPS to his web server, and he wants to check to make sure the traffic is received. What tool can he use to test his theory"
+answers = ["Wireshark"]
+alternatives = [
+    "tracert",
+    "Sn1per",
+    "traceroute"
+]
+explanation = """
+Wireshark is a network protocol analyzer and capture tool
+that can be used for troubleshooting in circumstances like this.
+In fact, security practitioners are often asked to verify that traffic
+is being received properly as part of firewall rule
+troubleshooting. Randy may want to capture traffic at both ends
+of the communication to make sure that the clients are sending
+traffic properly and then to match that to the same traffic being
+received—or going missing—at the other end. tracert and
+traceroute are useful for validating the route that traffic takes
+but would not show if HTTPS packets were being blocked, and
+Sn1per is a pen test framework that allows automated pen
+testing.
+"""
+
+[[oir.questions]]
+question = "Ryan wants to implement a flexible and reliable remote logging environment for his Linux systems. Which of the following tools is least suited to that requirement"
+answers = ["syslog"]
+alternatives = [
+    "rsyslog",
+    "NXLog",
+    "syslog-ng"
+]
+explanation = """
+The oldest and least capable tool listed is syslog, the original
+system logging tool for Linux and Unix systems. The other three
+options have advanced features, which mean that they are more
+broadly implemented when flexibility and reliability are needed.
+"""
+
+[[oir.questions]]
+question = "Susan has been reading about a newly discovered exploit, and wants to test her IPS rules to see if the sample code will work. In order to use the exploit, she needs to send a specifically crafted UDP packet to a DHCP server. What tool can she use to craft and send this test exploit to see if it is detected"
+answers =  ["hping"]
+alternatives = [
+    "scanless",
+    "curl",
+    "pathping"
+]
+explanation = """
+The only tool on this list that can be used to craft packets is
+hping . Susan could use the sample code or exploit by building
+the necessary packet with hping and then sending it to a
+Dynamic Host Configuration Protocol (DHCP) server in her
+network while monitoring with her intrusion prevention system
+(IPS). She may want to capture all of her traffic with Wireshark
+or tcpdump to observe what happens on both ends too!
+"""
+
+[[oir.questions]]
+question = "Valerie wants to check to see if a SQL injection attack occurred against her web application on a Linux system. Which log file should she check for this type of information"
+answers = ["The web server log"]
+alternatives = [
+    "The security log",
+    "The DNS log",
+    "The auth log"
+]
+explanation = """
+SQL injection attempts are sent as HTTP or HTTPS requests
+to a web server, meaning that Valerie will be able to see the
+attacks in the web server log. Domain Name System (DNS) logs,
+if available, will not show these. Auth logs show logins, not web
+or SQL Server queries or requests. Unlike Windows, there is no
+security log file for Linux, although there is a secure log for some
+systems.
+"""
+
+[[oir.questions]]
+question = "Olivia's company has experienced a breach and believes that the attackers were able to access the company's web servers. There is evidence that the private keys for the certificates for the server were exposed and that the passphrases for the certificates were kept in the same directory. What action should Olivia take to handle this issue"
+answers = ["Revoke the certificates."]
+alternatives = [
+    "Change the certificate password.",
+    "Change the private key for the certificate.",
+    "Change the public key for the certificate."
+]
+explanation = """
+If the private key and the passphrase for a certificate are
+exposed, the certificate should be revoked. A new certificate will
+need to be issued, but the certificate cannot be trusted and
+revocation is the first step to handle the issue properly.
+Changing the password will not help, and changing the private
+or public key will require a new certificate.
+"""
+
+[[oir.questions]]
+question = "Jean's company is preparing for litigation with another company that they believe has caused harm to Jean's organization. What type of legal action should Jean's lawyer take to ensure that the company preserves files and information related to the legal case"
+answers = ["A legal hold notice"]
+alternatives = [
+    "A chain of custody demand letter",
+    "An e-discovery notice",
+    "An order of volatility"
+]
+explanation = """
+A legal hold notice will inform the company that they must
+preserve and protect information related to the case. None of the
+other items are terms used in this process.
+"""
+
+[[oir.questions]]
+question = "Cynthia wants to display all of the active connections on a Windows system. What command can she run to do so"
+answers = ["netstat -a"]
+alternatives = [
+    "route",
+    "netstat -c",
+    "hping"
+]
+explanation = """
+netstat can show all active connections, and using the -a
+flag will do so. netstat does not provide a -c command flag. The
+route command is used to modify and display the system's
+routing table. hping is a packet analyzer and packet building tool
+often used to craft specific packets as part of penetration tests
+and attacks.
+"""
+
+[[oir.questions]]
+question = "What type of mitigation places a malicious file or application in a safe location for future review or study"
+answers = ["Quarantine"]
+alternatives = [
+    "Containment",
+    "Isolation",
+    "Deletion"
+]
+explanation = """
+A quarantine setting will place a malicious or suspect file in a
+safe location and will keep it there until a set timeframe has
+passed or until an administrator takes action to deal with it. This
+can allow you to further analyze the file or to restore it if it was
+an incorrect identification or if the file is needed for another
+purpose. Containment is used to limit the extent of an incident
+or attack, isolation keeps a system or device from connecting to
+or accessing others, and deleting a file wouldn't keep it around.
+"""
+
+[[oir.questions]]
+question = "Marco is conducting a forensic investigation and is preparing to pull eight different storage devices from computers that he will analyze. What should he use to track the drives as he works with them"
+answers = ["Tags with system, serial number, and other information"]
+alternatives = [
+    "MD5 checksums of the drives",
+    "Timestamps gathered from the drives",
+    "None of the above; the drives can be identified by the data they contain"
+]
+explanation = """
+Tracking multiple drives requires careful inventory, evidence
+handling logging, and tagging of the drives to ensure that they
+are the right drive and that they are tracked throughout the
+forensic investigation. Marco should carefully tag each of the
+drives and ensure that those tags are used throughout the
+investigation.
+"""
+
+[[oir.questions]]
+question = """ Isaac executes the following command using netcat :
+nc -v 10.11.10.1 1-1024
+What has he done """
+answers =  ["Performed a port scan"]
+alternatives = [
+    "Opened a web page",
+    "Connected to a remote shell",
+    "Opened a local shell listener"
+]
+explanation = """
+The -v flag for netcat sets it to verbose mode. That means
+that Isaac has attempted to connect to every port from 1 to 1024
+on 10.11.10.1 using netcat . Since there are no other flags or
+options, it will simply try to connect, and then provide a verbose
+result about what happened, resulting in a simple but effective
+port scan.
+"""
+
+[[oir.questions]]
+question = "Tony works for a large company with multiple sites. He has identified an incident in progress at one site that is connected to the organization's multisite intranet. Which of the following options is best suited to preserving the organization's function and protecting it from issues at that location"
+answers = ["Containment"]
+alternatives = [
+    "Isolation",
+    "Segmentation",
+    "None of the above"
+]
+explanation = """
+Tony's best option is likely containment. He may want to
+remove that location from the corporate network or to prevent
+most traffic from being permitted until he can take a deeper look
+into what is going on. If he isolated the entire site, he might
+disrupt critical business operations, and segmentation would
+have been more appropriate before the event occurred.
+"""
+
+[[oir.questions]]
+question = "Which of the following environments is least likely to allow a right-to-audit clause in a contract"
+answers = ["A cloud server provider"]
+alternatives = [
+    "A datacenter co-location facility in your state",
+    "A rented facility for a corporate headquarters",
+    "A datacenter co-location facility in the same country but not the same state"
+]
+explanation = """
+Right-to-audit clauses are commonly accepted as part of
+service and leasing contracts regardless of location for
+datacenter co-location and facility rental contracts. Cloud
+service providers, however, are less likely to sign a right-to-audit
+contract. Instead, they may provide third-party audit data to
+customers or even to potential customers.
+"""
+[[oir.questions]]
+question = "Alaina's organization has been suffering from successful phishing attacks, and Alaina notices a new email that has arrived with a link to a phishing site. What response option from the following will be most likely to stop the phishing attack from succeeding against her users"
+answers = ["A URL filter"]
+alternatives = [
+    "A WAF",
+    "A patch",
+    "An allow list"
+]
+explanation = """
+The best option for Alaina would be to use a URL filter to
+block users from visiting the link in the phishing email. A WAF,
+or web application firewall, is designed to prevent attacks
+against a web application. Patching can help stop exploits of
+vulnerable services or systems, but this is a phishing attack, and
+an allow list lists allowed items, not blocked items, and limiting
+which websites an entire company can visit is almost impossible
+in most circumstances.
+"""
+
+[[oir.questions]]
+question = "Ben writes down the checklist of steps that his organization will perform in the event of a cryptographic malware  infection. What type of response document has he created"
+answers = ["A playbook"]
+alternatives = [
+    "A DR plan",
+    "A BC plan",
+    "A runbook"
+]
+explanation = """
+Playbooks list the actions that an organization will take as
+part of a response process. A runbook lists the steps required to
+perform an action like notification, removing malware, or
+similar tasks. Playbooks tend to be used to document processes,
+whereas runbooks tend to be used for specific actions. A disaster
+recovery (DR) plan is used to recover from disasters, and a
+business continuity (BC) plan is used to ensure that the
+organization continues to function.
+"""
+
+[[oir.questions]]
+question = "Which of the following is not information that can be gathered from a system by running the arp command"
+answers = ["The MAC addresses of recently resolved external hosts"]
+alternatives = [
+    "The IP address of the local system",
+    "Whether the IP address is dynamic or static",
+    "The MAC addresses of recently resolved local hosts"
+]
+explanation ="""
+Since MAC addresses are only visible within a broadcast
+domain (local network), the MAC addresses of external hosts
+cannot be retrieved using the arp command. The MAC addresses
+for local systems, the IP addresses of the local host, and whether
+they are dynamic or static can all be determined using the arp
+command.
+"""
+
+[[oir.questions]]
+question = "What log will journalctl provide Selah access to"
+answers = ["The systemd journal"]
+alternatives = [
+    "The event log",
+    "The auth log",
+    "The authentication journal"
+]
+explanation ="""
+The journalctl tool is used to query the systemd journal. On
+systemd-enabled Linux distributions, the journal contains
+kernel and boot messages as well as syslog messages and
+messages from services.
+"""
+
+[[oir.questions]]
+question = "What phase of the incident response process often involves adding firewall rules and patching systems to address the incident"
+answers =  ["Recovery"]
+alternatives = [
+    "Preparation",
+    "Eradication",
+    "Containment"
+]
+explanation = """
+The recovery phase often involves adding firewall rules and
+patching systems in addition to rebuilding systems. Although
+preparation may involve configuring firewall rules or regular
+patching, it does not do so in response to an incident.
+Containment might involve both but is less likely to, since the
+focus will be on broader fixes, and eradication works to remove
+the threat.
+"""
+
+[[oir.questions]]
+question = "Gary wants to use a tool that will allow him to download files via HTTP and HTTPS, SFTP, and TFTP from within the same  script. Which command-line tool should he pick from the following list"
+answers =  ["curl"]
+alternatives = [
+    "hping",
+    "theHarvester",
+    "nmap"
+]
+explanation ="""
+The curl command-line tool supports downloads and
+uploads from a wide variety of services, and it would be the ideal
+solution for this scenario. hping is used for crafting packets, nmap
+is a port scanner, and theHarvester is an open source
+intelligence gathering tool, none of which meet Gary's needs.
+"""
+
+[[oir.questions]]
+question = "Tim wants to check the status of malware infections in his organization using the organization's security information and event  management (SIEM) device. What SIEM dashboard will tell him about whether there are more malware infections in the past few days than normal"
+answers =  ["The trends dashboard"]
+alternatives = [
+    "The alerts dashboard",
+    "The sensors dashboard",
+    "The bandwidth dashboard"
+]
+explanation ="""
+Gary should look at the trend information for malware
+detections to check to see if there are more infections being
+detected than during recent weeks. This can be a useful
+indicator of a change, either due to a new malware technique or
+package, a successful attack that has resulted in staff members
+clicking on malicious links or opening malicious emails, or other
+paths into the organization. Gary could then check with users
+whose systems reported the malware to see what had occurred.
+Alerts might show the infections but would not show the data
+over time as easily as trends. Sensors will show individual places
+data is gathered, and bandwidth dashboards can show useful
+information about which systems are using more or less
+bandwidth, but the trends dashboard remains the right place for
+him to look in this situation.
+"""
+
+[[oir.questions]]
+question = "Warren is gathering information about an incident and wants to follow up on a report from an end user. What digital forensic technique is often used when end users are a key part of the initial incident report"
+answers = ["Interviews"]
+alternatives = [
+    "Email forensics",
+    "Disk forensics",
+    "Chain of custody"
+]
+explanation ="""
+Although it can be easy to focus on the digital part of digital
+forensics, interviews with end users and others involved in an
+incident can be a key element of a forensic investigation.
+Investigators still need to gather information and record what
+they found, but an interview can provide firsthand knowledge
+and additional details that may not be able to be recovered via
+technical means like email or disk forensics. A chain of custody
+does not provide information about reports from end users.
+"""
+
+[[oir.questions]]
+question = "Aaron wants to use a multiplatform logging tool that supports both Windows and Unix/Linux systems and many log formats. Which of the following tools should he use to ensure that his logging environment can accept and process these logs"
+answers = ["NXLog"]
+alternatives = [
+    "IPFIX",
+    "syslog",
+    "journalctl"
+]
+explanation = """
+The only option on this list that supports Aaron's
+requirements is NXLog. Syslog can receive Windows events if
+they are converted to syslog, but it isn't a native feature. IPFIX is
+a network flow standard, and journalctl is used to access the
+systemd journal.
+"""
+
+[[oir.questions]]
+question = "1Which of the following is not a common type of incident response exercise"
+answers = ["Drills"]
+alternatives = [
+    "Simulations",
+    "Tabletop",
+    "Walk-throughs"
+]
+explanation = """
+Typical exercise types for most organizations include
+simulations that emulate an actual incident response process,
+walk-throughs that guide staff through an event, and tabletop
+exercises that are gamed out without taking actual action. Drills
+are classified as more focused on specific actions or functions,
+and they are less common because they can result in inadvertent
+action or mistakes and do not cover the breadth of an incident.
+141. A. Of the options listed, netstat is the only tool that will not
+perform a port scan.
+"""
+[[oir.questions]]
+question = "Susan needs to run a port scan of a network. Which of the following tools would not allow her to perform that type of scan"
+answers = ["netstat"]
+alternatives = [
+    "netcat",
+    "nmap",
+    "Nessus"
+]
+explanation = """
+Of the options listed, netstat is the only tool that will not
+perform a port scan.
+"""
+
+[[oir.questions]]
+question = "The government agency that Vincent works for has received a Freedom of Information Act (FoIA) request and needs to provide the requested information from its email servers. What is this process called"
+answers =  ["e-discovery"]
+alternatives = [
+    "Email forensics", 
+    "An inquisition", 
+    "Provenance"
+]
+explanation = """
+Electronic discovery, or e-discovery, is the legal proceeding
+involved in litigation, FoIA requests, and similar efforts that
+produce information in electronic form. Email forensics could
+be required to recover data in an investigation, but there is no
+indication in the question of any need for forensic investigation.
+Inquisitions and provenance are not concepts for the Security+
+exam.
+"""
