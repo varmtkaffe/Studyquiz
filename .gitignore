@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 
 # Test versions
-**/exam*.*
+**/exam*.*"__pycache__"
+".bak"
