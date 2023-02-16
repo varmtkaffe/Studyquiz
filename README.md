@@ -22,3 +22,6 @@ The subject is study material the CompTIA Security+ Exam Sy0-601,
 # Notes
  - First iteration of this app had the questions in the same file as the functions
  - I decided to not use a SQL database because it would be easier to scale the growing amount of questions
+
+# Environment
+ - Python 3.11
