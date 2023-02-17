@@ -1,1 +1,9 @@
-tomli
+certifi      2022.9.24
+pip          22.2.2
+setuptools   65.5.0
+style        1.1.0
+toml         0.10.2
+tomli        2.0.1
+update       0.0.1
+wheel        0.37.1
+wincertstore 0.2
